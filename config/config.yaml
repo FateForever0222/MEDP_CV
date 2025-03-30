@@ -1,0 +1,104 @@
+# 数据集配置
+data:
+  datasets:
+    - name: CSQA
+      path: data/raw/csqa
+      type: commonsense
+    - name: StrategyQA
+      path: data/raw/strategyqa
+      type: commonsense
+    - name: Letter
+      path: data/raw/letter
+      type: symbolic
+    - name: Coin
+      path: data/raw/coin
+      type: symbolic
+    - name: MultiArith
+      path: data/raw/multiarith
+      type: mathematical
+    - name: AQuA
+      path: data/raw/aqua
+      type: mathematical
+  
+  # 处理后数据保存路径
+  processed_path: data/processed
+  
+  # 专家库配置
+  expert_libraries:
+    path: data/expert_libraries
+    short_chain:
+      prompt_template: "Let's think this through step by step, but keep it brief."
+      step_range: [1, 3]
+    medium_chain:
+      prompt_template: "Let's think step by step."
+      step_range: [4, 6]
+    long_chain:
+      prompt_template: "Let's analyze this in detail step by step."
+      step_range: [7, 100]
+  
+  # 去重和过滤配置
+  deduplication:
+    algorithm: "minhash"
+    similarity_threshold: 0.9
+  quality_filter:
+    enabled: true
+
+# 专家模型配置
+experts:
+  embedding_dim: 768
+  hidden_dim: 512
+  dropout: 0.1
+
+# 门控网络配置
+gating:
+  model_type: "transformer"  # 可选: mlp, transformer
+  hidden_dims: [768, 512, 256]
+  dropout: 0.2
+  temperature: 1.0  # 用于softmax的温度参数
+
+# GRPO训练配置
+training:
+  grpo:
+    batch_size: 32
+    num_groups: 8  # 每批次生成的专家组数量
+    noise_std: 0.1  # 添加到专家权重的高斯噪声标准差
+    kl_coef: 0.2  # KL散度正则化系数
+    learning_rate: 0.0003
+    max_epochs: 100
+    early_stopping_patience: 10
+  
+  reward:
+    accuracy_weight: 0.7
+    confidence_weight: 0.2
+    step_score_weight: 0.1
+    use_non_linear: false  # 是否使用非线性奖励计算
+
+# 推理配置
+inference:
+  confidence_threshold: 0.7  # 低于此阈值触发重试
+  max_retries: 3
+  retry_strategies:
+    - change_expert
+    - adjust_prompt
+    - increase_experts
+
+# LLM配置
+llm:
+  model_name: "llama3"
+  api_url: "http://localhost:8000/v1/completions"
+  max_tokens: 1024
+  temperature: 0.0  # 推理时使用确定性输出
+  timeout: 30  # API调用超时时间(秒)
+
+# 评估配置
+evaluation:
+  metrics:
+    - accuracy
+    - consistency
+    - step_efficiency
+  test_split_ratio: 0.2
+
+# 日志配置
+logging:
+  level: "INFO"
+  save_path: "logs/"
