@@ -1,0 +1,1624 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "yaml",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "yaml",
+        "description": "yaml",
+        "detail": "yaml",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Set",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "hashlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "MinHash",
+        "importPath": "datasketch",
+        "description": "datasketch",
+        "isExtraImport": true,
+        "detail": "datasketch",
+        "documentation": {}
+    },
+    {
+        "label": "MinHashLSH",
+        "importPath": "datasketch",
+        "description": "datasketch",
+        "isExtraImport": true,
+        "detail": "datasketch",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "DataLoader",
+        "importPath": "src.data.data_loader",
+        "description": "src.data.data_loader",
+        "isExtraImport": true,
+        "detail": "src.data.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "DataLoader",
+        "importPath": "src.data.data_loader",
+        "description": "src.data.data_loader",
+        "isExtraImport": true,
+        "detail": "src.data.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "DataLoader",
+        "importPath": "src.data.data_loader",
+        "description": "src.data.data_loader",
+        "isExtraImport": true,
+        "detail": "src.data.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "DataLoader",
+        "importPath": "src.data.data_loader",
+        "description": "src.data.data_loader",
+        "isExtraImport": true,
+        "detail": "src.data.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "DataLoader",
+        "importPath": "src.data.data_loader",
+        "description": "src.data.data_loader",
+        "isExtraImport": true,
+        "detail": "src.data.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "LLMInterface",
+        "importPath": "src.llm.llm_interface",
+        "description": "src.llm.llm_interface",
+        "isExtraImport": true,
+        "detail": "src.llm.llm_interface",
+        "documentation": {}
+    },
+    {
+        "label": "LLMInterface",
+        "importPath": "src.llm.llm_interface",
+        "description": "src.llm.llm_interface",
+        "isExtraImport": true,
+        "detail": "src.llm.llm_interface",
+        "documentation": {}
+    },
+    {
+        "label": "LLMInterface",
+        "importPath": "src.llm.llm_interface",
+        "description": "src.llm.llm_interface",
+        "isExtraImport": true,
+        "detail": "src.llm.llm_interface",
+        "documentation": {}
+    },
+    {
+        "label": "LLMInterface",
+        "importPath": "src.llm.llm_interface",
+        "description": "src.llm.llm_interface",
+        "isExtraImport": true,
+        "detail": "src.llm.llm_interface",
+        "documentation": {}
+    },
+    {
+        "label": "LLMInterface",
+        "importPath": "src.llm.llm_interface",
+        "description": "src.llm.llm_interface",
+        "isExtraImport": true,
+        "detail": "src.llm.llm_interface",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "torch",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch",
+        "description": "torch",
+        "detail": "torch",
+        "documentation": {}
+    },
+    {
+        "label": "torch.nn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch.nn",
+        "description": "torch.nn",
+        "detail": "torch.nn",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "cosine_similarity",
+        "importPath": "sklearn.metrics.pairwise",
+        "description": "sklearn.metrics.pairwise",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics.pairwise",
+        "documentation": {}
+    },
+    {
+        "label": "BaseExpert",
+        "importPath": "src.experts.base_expert",
+        "description": "src.experts.base_expert",
+        "isExtraImport": true,
+        "detail": "src.experts.base_expert",
+        "documentation": {}
+    },
+    {
+        "label": "BaseExpert",
+        "importPath": "src.experts.base_expert",
+        "description": "src.experts.base_expert",
+        "isExtraImport": true,
+        "detail": "src.experts.base_expert",
+        "documentation": {}
+    },
+    {
+        "label": "BaseExpert",
+        "importPath": "src.experts.base_expert",
+        "description": "src.experts.base_expert",
+        "isExtraImport": true,
+        "detail": "src.experts.base_expert",
+        "documentation": {}
+    },
+    {
+        "label": "BaseExpert",
+        "importPath": "src.experts.base_expert",
+        "description": "src.experts.base_expert",
+        "isExtraImport": true,
+        "detail": "src.experts.base_expert",
+        "documentation": {}
+    },
+    {
+        "label": "BaseExpert",
+        "importPath": "src.experts.base_expert",
+        "description": "src.experts.base_expert",
+        "isExtraImport": true,
+        "detail": "src.experts.base_expert",
+        "documentation": {}
+    },
+    {
+        "label": "BaseExpert",
+        "importPath": "src.experts.base_expert",
+        "description": "src.experts.base_expert",
+        "isExtraImport": true,
+        "detail": "src.experts.base_expert",
+        "documentation": {}
+    },
+    {
+        "label": "torch.nn.functional",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch.nn.functional",
+        "description": "torch.nn.functional",
+        "detail": "torch.nn.functional",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "ShortChainExpert",
+        "importPath": "src.experts.short_chain_expert",
+        "description": "src.experts.short_chain_expert",
+        "isExtraImport": true,
+        "detail": "src.experts.short_chain_expert",
+        "documentation": {}
+    },
+    {
+        "label": "ShortChainExpert",
+        "importPath": "src.experts.short_chain_expert",
+        "description": "src.experts.short_chain_expert",
+        "isExtraImport": true,
+        "detail": "src.experts.short_chain_expert",
+        "documentation": {}
+    },
+    {
+        "label": "ShortChainExpert",
+        "importPath": "src.experts.short_chain_expert",
+        "description": "src.experts.short_chain_expert",
+        "isExtraImport": true,
+        "detail": "src.experts.short_chain_expert",
+        "documentation": {}
+    },
+    {
+        "label": "MediumChainExpert",
+        "importPath": "src.experts.medium_chain_expert",
+        "description": "src.experts.medium_chain_expert",
+        "isExtraImport": true,
+        "detail": "src.experts.medium_chain_expert",
+        "documentation": {}
+    },
+    {
+        "label": "MediumChainExpert",
+        "importPath": "src.experts.medium_chain_expert",
+        "description": "src.experts.medium_chain_expert",
+        "isExtraImport": true,
+        "detail": "src.experts.medium_chain_expert",
+        "documentation": {}
+    },
+    {
+        "label": "MediumChainExpert",
+        "importPath": "src.experts.medium_chain_expert",
+        "description": "src.experts.medium_chain_expert",
+        "isExtraImport": true,
+        "detail": "src.experts.medium_chain_expert",
+        "documentation": {}
+    },
+    {
+        "label": "LongChainExpert",
+        "importPath": "src.experts.long_chain_expert",
+        "description": "src.experts.long_chain_expert",
+        "isExtraImport": true,
+        "detail": "src.experts.long_chain_expert",
+        "documentation": {}
+    },
+    {
+        "label": "LongChainExpert",
+        "importPath": "src.experts.long_chain_expert",
+        "description": "src.experts.long_chain_expert",
+        "isExtraImport": true,
+        "detail": "src.experts.long_chain_expert",
+        "documentation": {}
+    },
+    {
+        "label": "LongChainExpert",
+        "importPath": "src.experts.long_chain_expert",
+        "description": "src.experts.long_chain_expert",
+        "isExtraImport": true,
+        "detail": "src.experts.long_chain_expert",
+        "documentation": {}
+    },
+    {
+        "label": "GatingNetwork",
+        "importPath": "src.gating.gating_network",
+        "description": "src.gating.gating_network",
+        "isExtraImport": true,
+        "detail": "src.gating.gating_network",
+        "documentation": {}
+    },
+    {
+        "label": "TransformerGatingNetwork",
+        "importPath": "src.gating.gating_network",
+        "description": "src.gating.gating_network",
+        "isExtraImport": true,
+        "detail": "src.gating.gating_network",
+        "documentation": {}
+    },
+    {
+        "label": "create_gating_network",
+        "importPath": "src.gating.gating_network",
+        "description": "src.gating.gating_network",
+        "isExtraImport": true,
+        "detail": "src.gating.gating_network",
+        "documentation": {}
+    },
+    {
+        "label": "GatingNetwork",
+        "importPath": "src.gating.gating_network",
+        "description": "src.gating.gating_network",
+        "isExtraImport": true,
+        "detail": "src.gating.gating_network",
+        "documentation": {}
+    },
+    {
+        "label": "TransformerGatingNetwork",
+        "importPath": "src.gating.gating_network",
+        "description": "src.gating.gating_network",
+        "isExtraImport": true,
+        "detail": "src.gating.gating_network",
+        "documentation": {}
+    },
+    {
+        "label": "create_gating_network",
+        "importPath": "src.gating.gating_network",
+        "description": "src.gating.gating_network",
+        "isExtraImport": true,
+        "detail": "src.gating.gating_network",
+        "documentation": {}
+    },
+    {
+        "label": "ConfidenceCalculator",
+        "importPath": "src.inference.confidence_calculator",
+        "description": "src.inference.confidence_calculator",
+        "isExtraImport": true,
+        "detail": "src.inference.confidence_calculator",
+        "documentation": {}
+    },
+    {
+        "label": "RetryMechanism",
+        "importPath": "src.inference.retry_mechanism",
+        "description": "src.inference.retry_mechanism",
+        "isExtraImport": true,
+        "detail": "src.inference.retry_mechanism",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "torch.optim",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch.optim",
+        "description": "torch.optim",
+        "detail": "torch.optim",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "DynamicRouter",
+        "importPath": "src.gating.router",
+        "description": "src.gating.router",
+        "isExtraImport": true,
+        "detail": "src.gating.router",
+        "documentation": {}
+    },
+    {
+        "label": "DynamicRouter",
+        "importPath": "src.gating.router",
+        "description": "src.gating.router",
+        "isExtraImport": true,
+        "detail": "src.gating.router",
+        "documentation": {}
+    },
+    {
+        "label": "DynamicRouter",
+        "importPath": "src.gating.router",
+        "description": "src.gating.router",
+        "isExtraImport": true,
+        "detail": "src.gating.router",
+        "documentation": {}
+    },
+    {
+        "label": "RewardModel",
+        "importPath": "src.training.reward_model",
+        "description": "src.training.reward_model",
+        "isExtraImport": true,
+        "detail": "src.training.reward_model",
+        "documentation": {}
+    },
+    {
+        "label": "GroupSampler",
+        "importPath": "src.training.group_sampling",
+        "description": "src.training.group_sampling",
+        "isExtraImport": true,
+        "detail": "src.training.group_sampling",
+        "documentation": {}
+    },
+    {
+        "label": "ReasoningPipeline",
+        "importPath": "src.inference.reasoning_pipeline",
+        "description": "src.inference.reasoning_pipeline",
+        "isExtraImport": true,
+        "detail": "src.inference.reasoning_pipeline",
+        "documentation": {}
+    },
+    {
+        "label": "ReasoningPipeline",
+        "importPath": "src.inference.reasoning_pipeline",
+        "description": "src.inference.reasoning_pipeline",
+        "isExtraImport": true,
+        "detail": "src.inference.reasoning_pipeline",
+        "documentation": {}
+    },
+    {
+        "label": "ReasoningPipeline",
+        "importPath": "src.inference.reasoning_pipeline",
+        "description": "src.inference.reasoning_pipeline",
+        "isExtraImport": true,
+        "detail": "src.inference.reasoning_pipeline",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "DataPreprocessor",
+        "importPath": "src.data.preprocessing",
+        "description": "src.data.preprocessing",
+        "isExtraImport": true,
+        "detail": "src.data.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "DataPreprocessor",
+        "importPath": "src.data.preprocessing",
+        "description": "src.data.preprocessing",
+        "isExtraImport": true,
+        "detail": "src.data.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "GRPOTrainer",
+        "importPath": "src.training.grpo_trainer",
+        "description": "src.training.grpo_trainer",
+        "isExtraImport": true,
+        "detail": "src.training.grpo_trainer",
+        "documentation": {}
+    },
+    {
+        "label": "GRPOTrainer",
+        "importPath": "src.training.grpo_trainer",
+        "description": "src.training.grpo_trainer",
+        "isExtraImport": true,
+        "detail": "src.training.grpo_trainer",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "DataLoader",
+        "kind": 6,
+        "importPath": "src.data.data_loader",
+        "description": "src.data.data_loader",
+        "peekOfCode": "class DataLoader:\n    def __init__(self, config_path: str = \"config/config.yaml\"):\n        \"\"\"\n        初始化数据加载器\n        Args:\n            config_path: 配置文件路径\n        \"\"\"\n        with open(config_path, 'r', encoding='utf-8') as f:\n            self.config = yaml.safe_load(f)['data']\n        self.datasets_config = self.config['datasets']",
+        "detail": "src.data.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.data.data_loader",
+        "description": "src.data.data_loader",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass DataLoader:\n    def __init__(self, config_path: str = \"config/config.yaml\"):\n        \"\"\"\n        初始化数据加载器\n        Args:\n            config_path: 配置文件路径\n        \"\"\"\n        with open(config_path, 'r', encoding='utf-8') as f:\n            self.config = yaml.safe_load(f)['data']",
+        "detail": "src.data.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "DataPreprocessor",
+        "kind": 6,
+        "importPath": "src.data.preprocessing",
+        "description": "src.data.preprocessing",
+        "peekOfCode": "class DataPreprocessor:\n    def __init__(self, config_path: str = \"config/config.yaml\", llm_interface=None):\n        \"\"\"\n        初始化数据预处理器\n        Args:\n            config_path: 配置文件路径\n            llm_interface: LLM接口实例，如果为None则创建新实例\n        \"\"\"\n        with open(config_path, 'r', encoding='utf-8') as f:\n            config = yaml.safe_load(f)",
+        "detail": "src.data.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.data.preprocessing",
+        "description": "src.data.preprocessing",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass DataPreprocessor:\n    def __init__(self, config_path: str = \"config/config.yaml\", llm_interface=None):\n        \"\"\"\n        初始化数据预处理器\n        Args:\n            config_path: 配置文件路径\n            llm_interface: LLM接口实例，如果为None则创建新实例\n        \"\"\"\n        with open(config_path, 'r', encoding='utf-8') as f:",
+        "detail": "src.data.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "BaseExpert",
+        "kind": 6,
+        "importPath": "src.experts.base_expert",
+        "description": "src.experts.base_expert",
+        "peekOfCode": "class BaseExpert(ABC):\n    \"\"\"\n    专家模型基类，定义了专家模型的通用接口和功能\n    \"\"\"\n    def __init__(self, expert_type: str, config_path: str = \"config/config.yaml\"):\n        \"\"\"\n        初始化专家模型\n        Args:\n            expert_type: 专家类型（'short_chain', 'medium_chain', 'long_chain'）\n            config_path: 配置文件路径",
+        "detail": "src.experts.base_expert",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.experts.base_expert",
+        "description": "src.experts.base_expert",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass BaseExpert(ABC):\n    \"\"\"\n    专家模型基类，定义了专家模型的通用接口和功能\n    \"\"\"\n    def __init__(self, expert_type: str, config_path: str = \"config/config.yaml\"):\n        \"\"\"\n        初始化专家模型\n        Args:\n            expert_type: 专家类型（'short_chain', 'medium_chain', 'long_chain'）",
+        "detail": "src.experts.base_expert",
+        "documentation": {}
+    },
+    {
+        "label": "LongChainExpert",
+        "kind": 6,
+        "importPath": "src.experts.long_chain_expert",
+        "description": "src.experts.long_chain_expert",
+        "peekOfCode": "class LongChainExpert(BaseExpert):\n    \"\"\"\n    长链专家模型，擅长复杂深入的推理，步骤数通常为7步或更多\n    \"\"\"\n    def __init__(self, config_path: str = \"config/config.yaml\"):\n        \"\"\"\n        初始化长链专家\n        Args:\n            config_path: 配置文件路径\n        \"\"\"",
+        "detail": "src.experts.long_chain_expert",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.experts.long_chain_expert",
+        "description": "src.experts.long_chain_expert",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass LongChainExpert(BaseExpert):\n    \"\"\"\n    长链专家模型，擅长复杂深入的推理，步骤数通常为7步或更多\n    \"\"\"\n    def __init__(self, config_path: str = \"config/config.yaml\"):\n        \"\"\"\n        初始化长链专家\n        Args:\n            config_path: 配置文件路径",
+        "detail": "src.experts.long_chain_expert",
+        "documentation": {}
+    },
+    {
+        "label": "MediumChainExpert",
+        "kind": 6,
+        "importPath": "src.experts.medium_chain_expert",
+        "description": "src.experts.medium_chain_expert",
+        "peekOfCode": "class MediumChainExpert(BaseExpert):\n    \"\"\"\n    中链专家模型，擅长中等复杂度的推理，步骤数通常为4-6步\n    \"\"\"\n    def __init__(self, config_path: str = \"config/config.yaml\"):\n        \"\"\"\n        初始化中链专家\n        Args:\n            config_path: 配置文件路径\n        \"\"\"",
+        "detail": "src.experts.medium_chain_expert",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.experts.medium_chain_expert",
+        "description": "src.experts.medium_chain_expert",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass MediumChainExpert(BaseExpert):\n    \"\"\"\n    中链专家模型，擅长中等复杂度的推理，步骤数通常为4-6步\n    \"\"\"\n    def __init__(self, config_path: str = \"config/config.yaml\"):\n        \"\"\"\n        初始化中链专家\n        Args:\n            config_path: 配置文件路径",
+        "detail": "src.experts.medium_chain_expert",
+        "documentation": {}
+    },
+    {
+        "label": "ShortChainExpert",
+        "kind": 6,
+        "importPath": "src.experts.short_chain_expert",
+        "description": "src.experts.short_chain_expert",
+        "peekOfCode": "class ShortChainExpert(BaseExpert):\n    \"\"\"\n    短链专家模型，擅长简单直接的推理，步骤数通常为1-3步\n    \"\"\"\n    def __init__(self, config_path: str = \"config/config.yaml\"):\n        \"\"\"\n        初始化短链专家\n        Args:\n            config_path: 配置文件路径\n        \"\"\"",
+        "detail": "src.experts.short_chain_expert",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.experts.short_chain_expert",
+        "description": "src.experts.short_chain_expert",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass ShortChainExpert(BaseExpert):\n    \"\"\"\n    短链专家模型，擅长简单直接的推理，步骤数通常为1-3步\n    \"\"\"\n    def __init__(self, config_path: str = \"config/config.yaml\"):\n        \"\"\"\n        初始化短链专家\n        Args:\n            config_path: 配置文件路径",
+        "detail": "src.experts.short_chain_expert",
+        "documentation": {}
+    },
+    {
+        "label": "GatingNetwork",
+        "kind": 6,
+        "importPath": "src.gating.gating_network",
+        "description": "src.gating.gating_network",
+        "peekOfCode": "class GatingNetwork(nn.Module):\n    \"\"\"\n    门控网络，用于动态选择最合适的专家\n    \"\"\"\n    def __init__(self, input_dim: int, hidden_dims: List[int], num_experts: int = 3, \n                dropout: float = 0.2, temperature: float = 1.0):\n        \"\"\"\n        初始化门控网络\n        Args:\n            input_dim: 输入特征维度",
+        "detail": "src.gating.gating_network",
+        "documentation": {}
+    },
+    {
+        "label": "TransformerGatingNetwork",
+        "kind": 6,
+        "importPath": "src.gating.gating_network",
+        "description": "src.gating.gating_network",
+        "peekOfCode": "class TransformerGatingNetwork(nn.Module):\n    \"\"\"\n    基于Transformer的门控网络，可以处理序列特征\n    \"\"\"\n    def __init__(self, input_dim: int, hidden_dim: int, num_experts: int = 3,\n                nhead: int = 4, num_layers: int = 2, dropout: float = 0.2, \n                temperature: float = 1.0):\n        \"\"\"\n        初始化Transformer门控网络\n        Args:",
+        "detail": "src.gating.gating_network",
+        "documentation": {}
+    },
+    {
+        "label": "create_gating_network",
+        "kind": 2,
+        "importPath": "src.gating.gating_network",
+        "description": "src.gating.gating_network",
+        "peekOfCode": "def create_gating_network(config_path: str = \"config/config.yaml\") -> Union[GatingNetwork, TransformerGatingNetwork]:\n    \"\"\"\n    根据配置创建门控网络\n    Args:\n        config_path: 配置文件路径\n    Returns:\n        门控网络实例\n    \"\"\"\n    with open(config_path, 'r', encoding='utf-8') as f:\n        config = yaml.safe_load(f)",
+        "detail": "src.gating.gating_network",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.gating.gating_network",
+        "description": "src.gating.gating_network",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass GatingNetwork(nn.Module):\n    \"\"\"\n    门控网络，用于动态选择最合适的专家\n    \"\"\"\n    def __init__(self, input_dim: int, hidden_dims: List[int], num_experts: int = 3, \n                dropout: float = 0.2, temperature: float = 1.0):\n        \"\"\"\n        初始化门控网络\n        Args:",
+        "detail": "src.gating.gating_network",
+        "documentation": {}
+    },
+    {
+        "label": "DynamicRouter",
+        "kind": 6,
+        "importPath": "src.gating.router",
+        "description": "src.gating.router",
+        "peekOfCode": "class DynamicRouter:\n    \"\"\"\n    动态路由器，负责将问题路由到最合适的专家\n    \"\"\"\n    def __init__(self, config_path: str = \"config/config.yaml\"):\n        \"\"\"\n        初始化动态路由器\n        Args:\n            config_path: 配置文件路径\n        \"\"\"",
+        "detail": "src.gating.router",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.gating.router",
+        "description": "src.gating.router",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass DynamicRouter:\n    \"\"\"\n    动态路由器，负责将问题路由到最合适的专家\n    \"\"\"\n    def __init__(self, config_path: str = \"config/config.yaml\"):\n        \"\"\"\n        初始化动态路由器\n        Args:\n            config_path: 配置文件路径",
+        "detail": "src.gating.router",
+        "documentation": {}
+    },
+    {
+        "label": "ConfidenceCalculator",
+        "kind": 6,
+        "importPath": "src.inference.confidence_calculator",
+        "description": "src.inference.confidence_calculator",
+        "peekOfCode": "class ConfidenceCalculator:\n    \"\"\"\n    置信度计算器，用于评估推理结果的可信度\n    \"\"\"\n    def __init__(self, config_path: str = \"config/config.yaml\"):\n        \"\"\"\n        初始化置信度计算器\n        Args:\n            config_path: 配置文件路径\n        \"\"\"",
+        "detail": "src.inference.confidence_calculator",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.inference.confidence_calculator",
+        "description": "src.inference.confidence_calculator",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass ConfidenceCalculator:\n    \"\"\"\n    置信度计算器，用于评估推理结果的可信度\n    \"\"\"\n    def __init__(self, config_path: str = \"config/config.yaml\"):\n        \"\"\"\n        初始化置信度计算器\n        Args:\n            config_path: 配置文件路径",
+        "detail": "src.inference.confidence_calculator",
+        "documentation": {}
+    },
+    {
+        "label": "ReasoningPipeline",
+        "kind": 6,
+        "importPath": "src.inference.reasoning_pipeline",
+        "description": "src.inference.reasoning_pipeline",
+        "peekOfCode": "class ReasoningPipeline:\n    \"\"\"\n    推理流水线，用于执行完整的推理过程\n    \"\"\"\n    def __init__(self, config_path: str = \"config/config.yaml\"):\n        \"\"\"\n        初始化推理流水线\n        Args:\n            config_path: 配置文件路径\n        \"\"\"",
+        "detail": "src.inference.reasoning_pipeline",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.inference.reasoning_pipeline",
+        "description": "src.inference.reasoning_pipeline",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass ReasoningPipeline:\n    \"\"\"\n    推理流水线，用于执行完整的推理过程\n    \"\"\"\n    def __init__(self, config_path: str = \"config/config.yaml\"):\n        \"\"\"\n        初始化推理流水线\n        Args:\n            config_path: 配置文件路径",
+        "detail": "src.inference.reasoning_pipeline",
+        "documentation": {}
+    },
+    {
+        "label": "RetryMechanism",
+        "kind": 6,
+        "importPath": "src.inference.retry_mechanism",
+        "description": "src.inference.retry_mechanism",
+        "peekOfCode": "class RetryMechanism:\n    \"\"\"\n    重试机制，用于处理低置信度推理结果\n    \"\"\"\n    def __init__(self, config_path: str = \"config/config.yaml\"):\n        \"\"\"\n        初始化重试机制\n        Args:\n            config_path: 配置文件路径\n        \"\"\"",
+        "detail": "src.inference.retry_mechanism",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.inference.retry_mechanism",
+        "description": "src.inference.retry_mechanism",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass RetryMechanism:\n    \"\"\"\n    重试机制，用于处理低置信度推理结果\n    \"\"\"\n    def __init__(self, config_path: str = \"config/config.yaml\"):\n        \"\"\"\n        初始化重试机制\n        Args:\n            config_path: 配置文件路径",
+        "detail": "src.inference.retry_mechanism",
+        "documentation": {}
+    },
+    {
+        "label": "LLMInterface",
+        "kind": 6,
+        "importPath": "src.llm.llm_interface",
+        "description": "src.llm.llm_interface",
+        "peekOfCode": "class LLMInterface:\n    \"\"\"\n    LLM接口类，用于与本地或远程的大语言模型进行交互\n    \"\"\"\n    def __init__(self, config_path: str = \"config/config.yaml\"):\n        \"\"\"\n        初始化LLM接口\n        Args:\n            config_path: 配置文件路径\n        \"\"\"",
+        "detail": "src.llm.llm_interface",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.llm.llm_interface",
+        "description": "src.llm.llm_interface",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass LLMInterface:\n    \"\"\"\n    LLM接口类，用于与本地或远程的大语言模型进行交互\n    \"\"\"\n    def __init__(self, config_path: str = \"config/config.yaml\"):\n        \"\"\"\n        初始化LLM接口\n        Args:\n            config_path: 配置文件路径",
+        "detail": "src.llm.llm_interface",
+        "documentation": {}
+    },
+    {
+        "label": "GroupSampler",
+        "kind": 6,
+        "importPath": "src.training.group_sampling",
+        "description": "src.training.group_sampling",
+        "peekOfCode": "class GroupSampler:\n    \"\"\"\n    组采样器，用于GRPO训练中的专家组合采样\n    \"\"\"\n    def __init__(self, num_groups: int = 8, noise_std: float = 0.1):\n        \"\"\"\n        初始化组采样器\n        Args:\n            num_groups: 采样组数\n            noise_std: 噪声标准差",
+        "detail": "src.training.group_sampling",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.training.group_sampling",
+        "description": "src.training.group_sampling",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass GroupSampler:\n    \"\"\"\n    组采样器，用于GRPO训练中的专家组合采样\n    \"\"\"\n    def __init__(self, num_groups: int = 8, noise_std: float = 0.1):\n        \"\"\"\n        初始化组采样器\n        Args:\n            num_groups: 采样组数",
+        "detail": "src.training.group_sampling",
+        "documentation": {}
+    },
+    {
+        "label": "GRPOTrainer",
+        "kind": 6,
+        "importPath": "src.training.grpo_trainer",
+        "description": "src.training.grpo_trainer",
+        "peekOfCode": "class GRPOTrainer:\n    \"\"\"\n    GRPO (Group Relative Policy Optimization) 训练器\n    用于优化门控网络的策略\n    \"\"\"\n    def __init__(self, config_path: str = \"config/config.yaml\"):\n        \"\"\"\n        初始化GRPO训练器\n        Args:\n            config_path: 配置文件路径",
+        "detail": "src.training.grpo_trainer",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.training.grpo_trainer",
+        "description": "src.training.grpo_trainer",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass GRPOTrainer:\n    \"\"\"\n    GRPO (Group Relative Policy Optimization) 训练器\n    用于优化门控网络的策略\n    \"\"\"\n    def __init__(self, config_path: str = \"config/config.yaml\"):\n        \"\"\"\n        初始化GRPO训练器\n        Args:",
+        "detail": "src.training.grpo_trainer",
+        "documentation": {}
+    },
+    {
+        "label": "RewardModel",
+        "kind": 6,
+        "importPath": "src.training.reward_model",
+        "description": "src.training.reward_model",
+        "peekOfCode": "class RewardModel:\n    \"\"\"\n    奖励模型，用于计算专家推理的奖励\n    \"\"\"\n    def __init__(self, config_path: str = \"config/config.yaml\"):\n        \"\"\"\n        初始化奖励模型\n        Args:\n            config_path: 配置文件路径\n        \"\"\"",
+        "detail": "src.training.reward_model",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.training.reward_model",
+        "description": "src.training.reward_model",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass RewardModel:\n    \"\"\"\n    奖励模型，用于计算专家推理的奖励\n    \"\"\"\n    def __init__(self, config_path: str = \"config/config.yaml\"):\n        \"\"\"\n        初始化奖励模型\n        Args:\n            config_path: 配置文件路径",
+        "detail": "src.training.reward_model",
+        "documentation": {}
+    },
+    {
+        "label": "example_preprocessing",
+        "kind": 2,
+        "importPath": "example",
+        "description": "example",
+        "peekOfCode": "def example_preprocessing():\n    \"\"\"数据预处理示例\"\"\"\n    print(\"\\n===== 数据预处理示例 =====\")\n    preprocessor = DataPreprocessor(CONFIG_PATH)\n    # 预处理单个数据集\n    dataset_name = \"CSQA\"  # 可以根据需要更改为其他数据集\n    print(f\"预处理数据集: {dataset_name}\")\n    processed_data = preprocessor.preprocess_dataset(dataset_name)\n    print(f\"处理后数据示例：\\n{processed_data.head()}\")\n    # 生成专家示例库",
+        "detail": "example",
+        "documentation": {}
+    },
+    {
+        "label": "example_experts_and_routing",
+        "kind": 2,
+        "importPath": "example",
+        "description": "example",
+        "peekOfCode": "def example_experts_and_routing():\n    \"\"\"专家模型和路由示例\"\"\"\n    print(\"\\n===== 专家模型和路由示例 =====\")\n    # 创建专家模型\n    short_chain_expert = ShortChainExpert(CONFIG_PATH)\n    medium_chain_expert = MediumChainExpert(CONFIG_PATH)\n    long_chain_expert = LongChainExpert(CONFIG_PATH)\n    # 测试问题\n    simple_question = \"如果一个袋子里有3个红球和2个蓝球，随机抽取一个球，抽到红球的概率是多少？\"\n    medium_question = \"一个盒子里有红球5个，蓝球8个，绿球4个，随机抽取2个球，求抽到的两个球颜色不同的概率。\"",
+        "detail": "example",
+        "documentation": {}
+    },
+    {
+        "label": "example_inference",
+        "kind": 2,
+        "importPath": "example",
+        "description": "example",
+        "peekOfCode": "def example_inference():\n    \"\"\"推理流水线示例\"\"\"\n    print(\"\\n===== 推理流水线示例 =====\")\n    # 创建推理流水线\n    pipeline = ReasoningPipeline(CONFIG_PATH)\n    # 创建动态路由器\n    router = DynamicRouter(CONFIG_PATH)\n    # 测试问题\n    question = \"如果一个盒子里有3个红球，4个蓝球和5个绿球，随机取出2个球，求取出的两个球都是红球的概率。\"\n    # 执行推理",
+        "detail": "example",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "example",
+        "description": "example",
+        "peekOfCode": "def main():\n    \"\"\"主函数，运行所有示例\"\"\"\n    print(\"======= MEDP-CV 模型框架示例 =======\")\n    # 运行数据预处理示例\n    try:\n        example_preprocessing()\n    except Exception as e:\n        print(f\"预处理示例失败: {e}\")\n    # 运行专家和路由示例\n    try:",
+        "detail": "example",
+        "documentation": {}
+    },
+    {
+        "label": "CONFIG_PATH",
+        "kind": 5,
+        "importPath": "example",
+        "description": "example",
+        "peekOfCode": "CONFIG_PATH = \"config/config.yaml\"\ndef example_preprocessing():\n    \"\"\"数据预处理示例\"\"\"\n    print(\"\\n===== 数据预处理示例 =====\")\n    preprocessor = DataPreprocessor(CONFIG_PATH)\n    # 预处理单个数据集\n    dataset_name = \"CSQA\"  # 可以根据需要更改为其他数据集\n    print(f\"预处理数据集: {dataset_name}\")\n    processed_data = preprocessor.preprocess_dataset(dataset_name)\n    print(f\"处理后数据示例：\\n{processed_data.head()}\")",
+        "detail": "example",
+        "documentation": {}
+    },
+    {
+        "label": "setup_logging",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def setup_logging(log_level=\"INFO\"):\n    \"\"\"设置日志配置\"\"\"\n    log_dir = Path(\"logs\")\n    log_dir.mkdir(exist_ok=True)\n    log_file = log_dir / \"medp_cv.log\"\n    logging.basicConfig(\n        level=getattr(logging, log_level),\n        format=\"%(asctime)s - %(name)s - %(levelname)s - %(message)s\",\n        handlers=[\n            logging.FileHandler(log_file),",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "parse_args",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def parse_args():\n    \"\"\"解析命令行参数\"\"\"\n    parser = argparse.ArgumentParser(description=\"MEDP-CV: 多专家动态提示生成与可信度投票\")\n    parser.add_argument(\"--config\", type=str, default=\"config/config.yaml\",\n                        help=\"配置文件路径\")\n    parser.add_argument(\"--log-level\", type=str, default=\"INFO\",\n                        choices=[\"DEBUG\", \"INFO\", \"WARNING\", \"ERROR\", \"CRITICAL\"],\n                        help=\"日志级别\")\n    parser.add_argument(\"--mode\", type=str, required=True,\n                        choices=[\"preprocess\", \"train\", \"evaluate\", \"inference\"],",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "preprocess_data",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def preprocess_data(config_path, dataset_name=None):\n    \"\"\"预处理数据并构建专家库\"\"\"\n    preprocessor = DataPreprocessor(config_path)\n    if dataset_name:\n        # 处理指定数据集\n        preprocessor.preprocess_dataset(dataset_name)\n        # 为该数据集生成专家示例\n        expert_libraries = preprocessor.generate_expert_examples(dataset_name)\n    else:\n        # 处理所有数据集",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "train_model",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def train_model(config_path, dataset_name):\n    \"\"\"训练门控网络\"\"\"\n    if not dataset_name:\n        logging.error(\"训练模式需要指定数据集\")\n        return\n    trainer = GRPOTrainer(config_path)\n    trainer.train(dataset_name)\n    logging.info(f\"在数据集 {dataset_name} 上完成门控网络训练\")\ndef evaluate_model(config_path, dataset_name):\n    \"\"\"评估模型性能\"\"\"",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "evaluate_model",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def evaluate_model(config_path, dataset_name):\n    \"\"\"评估模型性能\"\"\"\n    if not dataset_name:\n        logging.error(\"评估模式需要指定数据集\")\n        return\n    trainer = GRPOTrainer(config_path)\n    metrics = trainer.evaluate(dataset_name)\n    logging.info(f\"在数据集 {dataset_name} 上的评估指标:\")\n    for metric, value in metrics.items():\n        if isinstance(value, dict):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "run_inference",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def run_inference(config_path, question, options=None):\n    \"\"\"运行推理\"\"\"\n    if not question:\n        logging.error(\"推理模式需要输入问题\")\n        return\n    # 创建动态路由器\n    router = DynamicRouter(config_path)\n    # 创建推理流水线\n    pipeline = ReasoningPipeline(config_path)\n    # 执行推理",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def main():\n    \"\"\"主函数\"\"\"\n    args = parse_args()\n    # 设置日志\n    setup_logging(args.log_level)\n    logging.info(f\"开始运行 MEDP-CV，模式: {args.mode}\")\n    if args.mode == \"preprocess\":\n        preprocess_data(args.config, args.dataset)\n    elif args.mode == \"train\":\n        train_model(args.config, args.dataset)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "test_ollama_call",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def test_ollama_call():\n    \"\"\"测试 Ollama API 调用\"\"\"\n    url = \"http://localhost:11434/api/generate\"\n    headers = {'Content-Type': 'application/json'}\n    data = {\n        'model': 'llama3',  # 或使用 'llama2:13b'\n        'prompt': '如果一个袋子里有3个红球和2个蓝球，随机抽取一个球，抽到红球的概率是多少？请一步步计算。',\n        'options': {\n            'temperature': 0.0,\n            'num_predict': 512",
+        "detail": "test",
+        "documentation": {}
+    }
+]
