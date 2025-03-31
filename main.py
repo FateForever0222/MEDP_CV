@@ -7,12 +7,10 @@ from pathlib import Path
 
 from src.data.data_loader import DataLoader
 from src.data.preprocessing import DataPreprocessor
-from src.experts.short_chain_expert import ShortChainExpert
-from src.experts.medium_chain_expert import MediumChainExpert
-from src.experts.long_chain_expert import LongChainExpert
-from src.gating.router import DynamicRouter
-from src.training.grpo_trainer import GRPOTrainer
-from src.inference.reasoning_pipeline import ReasoningPipeline
+from src.experts.expert_models import ShortChainExpert, MediumChainExpert, LongChainExpert
+from src.gating.expert_router import ExpertRouter
+from src.training.training import GRPOTrainer
+from src.inference.inference_engine import InferenceEngine
 
 # 设置日志
 def setup_logging(log_level="INFO"):
@@ -114,14 +112,14 @@ def run_inference(config_path, question, options=None):
         logging.error("推理模式需要输入问题")
         return
     
-    # 创建动态路由器
-    router = DynamicRouter(config_path)
+    # 创建专家路由器
+    router = ExpertRouter(config_path)
     
-    # 创建推理流水线
-    pipeline = ReasoningPipeline(config_path)
+    # 创建推理引擎
+    engine = InferenceEngine(config_path)
     
     # 执行推理
-    result = pipeline.reason(question, options, router=router)
+    result = engine.reason(question, options, router=router)
     
     # 打印结果
     logging.info("推理结果:")

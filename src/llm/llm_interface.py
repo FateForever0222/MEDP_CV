@@ -1,16 +1,22 @@
-import json
 import yaml
 import logging
-import requests
+import re
+import json
 import time
+from typing import Dict, List, Tuple, Optional, Any, Union
 import numpy as np
-from typing import Dict, List, Any, Optional
+
+# 导入ollama库
+import ollama
+
+# 导入sentence_transformers用于嵌入
+from sentence_transformers import SentenceTransformer
 
 logger = logging.getLogger(__name__)
 
 class LLMInterface:
     """
-    LLM接口类，用于与ollama进行交互
+    LLM接口，用于与Ollama托管的语言模型交互
     """
     
     def __init__(self, config_path: str = "config/config.yaml"):
@@ -21,98 +27,101 @@ class LLMInterface:
             config_path: 配置文件路径
         """
         with open(config_path, 'r', encoding='utf-8') as f:
-            self.config = yaml.safe_load(f)['llm']
+            self.config = yaml.safe_load(f)
         
-        self.model_name = self.config['model_name']
-        self.api_url = "http://localhost:11434/api/generate"  # ollama的API
-        self.max_tokens = self.config['max_tokens']
-        self.temperature = self.config['temperature']
-        self.timeout = self.config['timeout']
+        # 加载LLM配置
+        self.llm_config = self.config.get('llm', {})
         
-        logger.info(f"Initialized LLM interface for {self.model_name}")
-    
-    def generate_text(self, prompt: str, temperature: Optional[float] = None) -> str:
-        """
-        生成文本
+        # 设置默认模型
+        self.model_name = self.llm_config.get('model_name', 'llama2')
         
-        Args:
-            prompt: 输入提示
-            temperature: 温度参数(可选)，如果为None则使用配置值
-            
-        Returns:
-            生成的文本
-        """
-        if temperature is None:
-            temperature = self.temperature
-        
-        try:
-            response = self._call_api(prompt, temperature)
-            return response
-        except Exception as e:
-            logger.error(f"Error generating text: {e}")
-            raise
-    
-    def generate_with_confidence(self, prompt: str, temperature: Optional[float] = None) -> tuple:
-        """
-        生成文本并返回置信度
-        
-        Args:
-            prompt: 输入提示
-            temperature: 温度参数(可选)
-            
-        Returns:
-            (生成的文本, 置信度)元组
-        """
-        if temperature is None:
-            temperature = self.temperature
-        
-        try:
-            text = self._call_api(prompt, temperature)
-            # 由于ollama没有提供置信度，我们使用一个固定值
-            confidence = 0.8  
-            return text, confidence
-        except Exception as e:
-            logger.error(f"Error generating text with confidence: {e}")
-            raise
-    
-    def _call_api(self, prompt: str, temperature: float) -> str:
-        """
-        调用ollama API
-        
-        Args:
-            prompt: 输入提示
-            temperature: 温度参数
-            
-        Returns:
-            生成的文本
-        """
-        data = {
-            "model": self.model_name,
-            "prompt": prompt,
-            "stream": False,
-            "temperature": temperature
+        # 生成参数
+        self.gen_params = {
+            'temperature': self.llm_config.get('temperature', 0.7),
+            'top_p': self.llm_config.get('top_p', 0.9),
+            'num_predict': self.llm_config.get('max_tokens', 2048),
+            'presence_penalty': self.llm_config.get('presence_penalty', 0.0),
+            'frequency_penalty': self.llm_config.get('frequency_penalty', 0.0),
         }
         
-        retries = 3
-        for attempt in range(retries):
-            try:
-                response = requests.post(
-                    self.api_url,
-                    json=data,
-                    timeout=self.timeout
-                )
-                response.raise_for_status()
-                result = response.json()
-                return result['response']
-            except requests.exceptions.RequestException as e:
-                logger.warning(f"API request failed (attempt {attempt+1}/{retries}): {e}")
-                if attempt == retries - 1:
-                    raise
-                time.sleep(2 ** attempt)  # 指数退避
+        # 初始化sentence-transformer作为嵌入模型
+        self.embedding_model_name = self.llm_config.get('embedding_model', 'all-MiniLM-L6-v2')
+        try:
+            self.embedding_model = SentenceTransformer(self.embedding_model_name)
+            logger.info(f"加载嵌入模型: {self.embedding_model_name}")
+        except Exception as e:
+            logger.error(f"加载嵌入模型失败: {e}")
+            self.embedding_model = None
+        
+        logger.info(f"Initialized LLMInterface with model {self.model_name}")
+    
+    def generate(self, prompt: str) -> str:
+        """
+        生成文本响应
+        
+        Args:
+            prompt: 输入提示
+            
+        Returns:
+            生成的响应
+        """
+        try:
+            logger.info(f"向 {self.model_name} 发送请求...")
+            start_time = time.time()
+            
+            # 使用ollama Python库生成
+            response = ollama.generate(
+                model=self.model_name,
+                prompt=prompt,
+                options=self.gen_params
+            )
+            
+            text = response.get('response', '')
+            
+            elapsed_time = time.time() - start_time
+            logger.info(f"请求完成，耗时: {elapsed_time:.2f}秒")
+            
+            return text
+        
+        except Exception as e:
+            logger.error(f"生成过程中出错: {e}")
+            return f"生成过程中出错: {str(e)}"
+    
+    def generate_with_confidence(self, prompt: str) -> Tuple[str, float]:
+        """
+        生成文本响应并让模型自己估算置信度
+        
+        Args:
+            prompt: 输入提示
+            
+        Returns:
+            (生成的响应, 置信度)元组
+        """
+        # 修改提示，要求模型在回答后给出置信度
+        confidence_prompt = f"{prompt}\n\nAfter you provide your answer, please rate your confidence in your answer on a scale from 0.0 to 1.0, where 0.0 means completely uncertain and 1.0 means absolutely certain. Format your confidence as 'Confidence: [0.0-1.0]' on a new line after your answer."
+        
+        full_response = self.generate(confidence_prompt)
+        
+        # 尝试从响应中提取答案和置信度
+        confidence_pattern = r"Confidence:\s*(0?\.\d+|1\.0)"
+        confidence_match = re.search(confidence_pattern, full_response, re.IGNORECASE)
+        
+        if confidence_match:
+            # 提取置信度
+            confidence = float(confidence_match.group(1))
+            # 移除置信度部分以获取纯答案
+            answer = re.sub(r"\n*Confidence:\s*0?\.\d+\s*$", "", full_response, flags=re.IGNORECASE)
+        else:
+            # 如果没有找到置信度格式，使用默认置信度
+            answer = full_response
+            confidence = 0.7  # 默认中等置信度
+            logger.warning("模型未提供置信度，使用默认值0.7")
+        
+        return answer, confidence
     
     def get_embedding(self, text: str) -> List[float]:
         """
-        使用SentenceTransformer获取文本的嵌入向量
+        获取文本的嵌入向量，使用sentence-transformers
         
         Args:
             text: 输入文本
@@ -120,60 +129,19 @@ class LLMInterface:
         Returns:
             嵌入向量
         """
-        try:
-            # 加载模型（首次运行会下载模型）
-            from sentence_transformers import SentenceTransformer
-            
-            # 使用静态变量存储模型实例以避免重复加载
-            if not hasattr(self, 'embedding_model'):
-                # 使用与您之前相同的模型（如果您指定了特定模型，请替换此处）
-                self.embedding_model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
-            
-            # 获取嵌入
-            embedding = self.embedding_model.encode([text])[0]
-            return embedding.tolist()
-        except Exception as e:
-            logger.error(f"Error in SentenceTransformer embedding: {e}")
-            # 使用备选方案
-            import numpy as np
-            
-            # 使用简单的词袋+哈希方法
-            text = text.lower()
-            import re
-            words = re.findall(r'\w+', text)
-            
-            # 创建固定维度的向量
-            dim = 300
-            vec = np.zeros(dim)
-            
-            # 对每个词进行简单编码
-            for word in words:
-                # 使用词的哈希值来确定向量的位置和值
-                h = hash(word) % dim
-                vec[h] += 1
-            
-            # 归一化
-            norm = np.linalg.norm(vec)
-            if norm > 0:
-                vec = vec / norm
-            
-            return vec.tolist()
-    def batch_generate(self, prompts: List[str], temperature: Optional[float] = None) -> List[str]:
-        """
-        批量生成文本
+        if self.embedding_model is None:
+            logger.error("嵌入模型未加载，无法获取嵌入")
+            # 返回零向量作为回退
+            return [0.0] * 384  # all-MiniLM-L6-v2的默认维度
         
-        Args:
-            prompts: 输入提示列表
-            temperature: 温度参数(可选)
+        try:
+            # 使用sentence-transformers获取嵌入
+            embedding = self.embedding_model.encode(text)
             
-        Returns:
-            生成的文本列表
-        """
-        results = []
-        for prompt in prompts:
-            try:
-                results.append(self.generate_text(prompt, temperature))
-            except Exception as e:
-                logger.error(f"Error in batch generation for prompt: {prompt[:50]}...: {e}")
-                results.append("")
-        return results
+            # 转换为Python列表并返回
+            return embedding.tolist()
+            
+        except Exception as e:
+            logger.error(f"获取嵌入时出错: {e}")
+            # 返回零向量作为回退
+            return [0.0] * 384
