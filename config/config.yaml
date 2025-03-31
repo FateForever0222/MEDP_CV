@@ -84,8 +84,8 @@ inference:
 
 # LLM配置
 llm:
-  model_name: "llama3"
-  api_url: "http://localhost:8000/v1/completions"
+  model_name: "llama2:13B"  # 与您拉取的模型名匹配
+  api_url: "http://localhost:11434/api/generate"  # ollama的默认API端点
   max_tokens: 1024
   temperature: 0.0  # 推理时使用确定性输出
   timeout: 30  # API调用超时时间(秒)
