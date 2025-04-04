@@ -66,7 +66,7 @@ class LLMInterface:
             生成的响应
         """
         try:
-            logger.info(f"向 {self.model_name} 发送请求...")
+            logger.debug(f"向 {self.model_name} 发送请求...")
             start_time = time.time()
             
             # 使用ollama Python库生成
@@ -79,7 +79,7 @@ class LLMInterface:
             text = response.get('response', '')
             
             elapsed_time = time.time() - start_time
-            logger.info(f"请求完成，耗时: {elapsed_time:.2f}秒")
+            logger.debug(f"请求完成，耗时: {elapsed_time:.2f}秒")
             
             return text
         

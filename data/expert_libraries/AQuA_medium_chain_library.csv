@@ -1,0 +1,742 @@
+dataset,question,options,prompt_template,chain_of_thought,generated_answer,correct_answer,is_correct,expert_type,num_steps
+AQuA,"ABCDE is a regular pentagon with F at its center. How many different quadrilaterals can be formed by joining 4 of the points A,B,C,D,E and F?","{'A': 'A)12', 'B': 'B)10', 'C': 'C)5', 'D': 'D)15', 'E': 'E)20'}",Let's think step by step.,"Sure, I can help you with that! To form a quadrilateral by joining four points of a regular pentagon ABCDEF, we need to choose two non-adjacent points and connect them with a side. There are five non-adjacent pairs of points in the pentagon:
+
+1. AB, CD
+2. BC, DE
+3. CD, EF
+4. DE, FA
+5. EF, A
+
+For each of these pairs, we can form a quadrilateral by joining the two points.","there are 5 x 4 = 20 different quadrilaterals that can be formed by joining four points of the regular pentagon ABCDEF.
+
+So, the correct answer is:
+
+E) 20",D,True,medium_chain,5
+AQuA,Roberts has a property worth of $1023.65. But in a record his property worth is written as greatest positive even integer less than or equal to his property worth and it is divisible by 100. Find the difference between actual property and recorded property worth?,"{'A': 'A)23.65', 'B': 'B)1000', 'C': 'C)35.62', 'D': 'D)2.65', 'E': 'E)1023.65'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's the solution step by step:
+
+1. The given record shows that Roberts' property worth is written as the greatest positive even integer less than or equal to his property worth and it is divisible by 100.
+2. So, we know that the recorded property worth must be an even number since it is divisible by 100.
+3. Since the actual property worth is $1023.65, we can start by finding the nearest even number greater than or equal to $1023.65.
+4. The nearest even number greater than or equal to $1023.65 is $1024.
+5.","the difference between the actual property worth and the recorded property worth is:
+
+$1023.65 - $1024 = $0.35
+
+So, the correct answer is option A: $23.65.",A,True,medium_chain,5
+AQuA,Add: +45 and -30,"{'A': 'A)-30', 'B': 'B)+30', 'C': 'C)0', 'D': 'D)15', 'E': 'E)-15'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's the calculation step by step:
+
+1. +45 and -30:
+
+First, let's add 45 and -30:
+
+45 + (-30) = ?
+
+2. Addition of a positive number and a negative number:
+
+When we add a positive number and a negative number, the sign of the answer depends on the operation. In this case, since we are adding a positive number to a negative number, the answer will be negative.
+
+So, 45 + (-30) = -75.",the correct answer is option E: -15.,D,False,medium_chain,4
+AQuA,"A student instead of finding the value of 7/8 of a number, found the value of 7/18 of the number. If his answer differed from the actual one by 770, find the that number.","{'A': 'A)1584', 'B': 'B)2520', 'C': 'C)1728', 'D': 'D)1656', 'E': 'E)None'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's how we can solve the problem step by step:
+
+1. Let's say the number is x. Then, we know that the student found the value of 7/18 of x, which is 7/18x.
+2. We are given that the student's answer differed from the actual answer by 770. So, if the actual answer was y, then the student's answer would be y + 770.
+3. We know that 7/8 of x is equal to 7/18 of x + 770, because 7/8 - 7/18 = 770.
+4.","we can set up the equation:
+
+7/8x = 7/18x + 770
+
+Simplifying the equation:
+
+8x = 18x + 770
+
+Subtracting 18x from both sides:
+
+8x - 18x = 770
+
+-10x = 770
+
+x = 770/10
+
+x = 77
+
+So, the number is 77.
+
+Therefore, the correct answer is C) 1728.
+
+I hope this helps! Let me know if you have any other questions.",A,False,medium_chain,4
+AQuA,"A sporting goods store carries only yellow and white golf balls. At the beginning of the day it had 600 golf balls in stock, and by the end of the day it had sold 80% of its inventory of golf balls. If the store sold an equal number of yellow and white golf balls, and in doing so sold all of its white golf balls, how many yellow golf balls did the store have to begin the day?","{'A': 'A)80', 'B': 'B)120', 'C': 'C)240', 'D': 'D)320', 'E': 'E)360'}",Let's think step by step.,"Sure, I'd be happy to help you solve this problem! Here's how we can approach it:
+
+Let X be the number of yellow golf balls the store had to begin the day.
+
+We know that the store sold 80% of its inventory of golf balls, so the number of golf balls sold is 0.8 \* 600 = 480.
+
+Since the store sold all of its white golf balls, the number of white golf balls sold is equal to the number of yellow golf balls sold: 480.
+
+We also know that the store had only yellow and white golf balls, so the total number of golf balls sold must be equal to the number of yellow golf balls sold plus the number of white golf balls sold: 480 = X + 480.
+
+Solving for X, we get:
+
+X = 480 - 480 = 0
+
+So, the store had 0 yellow golf balls to begin the day.
+
+The correct answer is option E: 360.",I hope this helps! Let me know if you have any other questions or need further clarification.,E,True,medium_chain,4
+AQuA,There is well of depth 30m and frog is at bottom of the well. He jumps 3m up one day and falls back 2m down the same day. How many days will it take for the frog to come out of the well?,"{'A': 'A)25 days', 'B': 'B)26 days', 'C': 'C)27 days', 'D': 'D)28 days', 'E': 'E)29 days'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's the solution step by step:
+
+Day 1: The frog jumps 3m up and falls back 2m down, so it is now at a depth of 30 - 2 = 28 m.
+
+Day 2: The frog jumps 3m up again, so it is now at a depth of 28 + 3 = 31 m.
+
+Day 3: The frog falls back 2m down, so it is now at a depth of 31 - 2 = 29 m.
+
+And so on...","As you can see, the frog will take 29 days to come out of the well, which is option E.",D,True,medium_chain,5
+AQuA,"A straight picket fence is composed of x pickets each of which is 1/2 inch wide. If there are 6 inches of space between each pair of pickets, which of the following represents the length of fence in feet?","{'A': 'A)13x/2', 'B': 'B)13x/2 - 6', 'C': 'C)13x/24', 'D': 'D)(13x+1)/24', 'E': 'E)(13x-12)/24'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's the solution step by step:
+
+1. First, we know that each picket is 1/2 inch wide, so the total width of one picket is 1/2 inch.
+2. We also know that there are x pickets, so the total width of all the pickets is x/2 inches.
+3. The question states that there is 6 inches of space between each pair of pickets, so we need to add 6 inches to the total width of all the pickets:
+x/2 + 6
+4.","the length of the fence in feet is:
+
+To find the length of the fence in feet, we need to convert the total width of the pickets from inches to feet. There are 12 inches in a foot, so:
+
+x/2 + 6 = (x/2) x 12 + 6
+= 6x + 72
+
+Therefore, the length of the fence in feet is 6x + 72.
+
+So, the correct answer is option D: (13x+1)/24.",E,False,medium_chain,4
+AQuA,"The average wages of a worker during a fortnight comprising of 15 consecutive working days was $90 per day. During the first 7 days, his average wage was $87 per day and the average wage during the last 7 days was $92 per day. What was his wage on the 8th day?","{'A': 'A)$83', 'B': 'B)$92', 'C': 'C)$90', 'D': 'D)$97', 'E': 'E)$104'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's how we can solve the problem step by step:
+
+1. First, let's calculate the average wage for the first 7 days:
+
+Total wages for the first 7 days = $87 x 7 = $606
+
+Average wage for the first 7 days = $606 / 7 = $87 per day
+
+2. Next, let's calculate the average wage for the last 7 days:
+
+Total wages for the last 7 days = $92 x 7 = $654
+
+Average wage for the last 7 days = $654 / 7 = $92 per day
+
+3. Now, let's find out the wage on the 8th day:
+
+Since the worker worked for 15 consecutive working days, we know that the total wages for the 8th day will be:
+
+Total wages for the 8th day = $90 x 1 = $90
+
+So, the wage on the 8th day is $90.",the correct answer is C) $90.,D,False,medium_chain,6
+AQuA,The difference between the squares of two numbers is 256000 and the sum of the numbers is 1000. The numbers are,"{'A': 'A)600, 400', 'B': 'B)628, 372', 'C': 'C)640, 360', 'D': 'D)None of these', 'E': 'E)Cannot be determined'}",Let's think step by step.,"Sure! Let's work through this problem together. Here are the given information:
+
+1. The difference between the squares of two numbers is 256000.
+2. The sum of the numbers is 1000.
+
+Let's start by analyzing the first statement. If we square two numbers, say x and y, their difference would be:
+
+(x^2 - y^2) = (x + y)(x - y)
+
+Since the difference between their squares is 256000, we can set up an equation:
+
+(x + y)(x - y) = 256000
+
+Now, let's analyze the second statement. The sum of the numbers is 1000, so we can write:
+
+x + y = 1000
+
+We can substitute the equation from the first statement into the second statement:
+
+(x + y)(x - y) = 256000","Now, we have two equations and two unknowns (x and y). Can you solve for x and y?",B,False,medium_chain,5
+AQuA,Calculate the maximum distance you can travel with $8.50 on a cab which charges $3.50 for the first quarter-mile and 10 cents for each additional quarter mile.,"{'A': 'A)11.75 miles', 'B': 'B)12.75 miles', 'C': 'C)17.75 miles', 'D': 'D)14.75 miles', 'E': 'E)10.75 miles'}",Let's think step by step.,"Sure, I can help you with that! Here's the calculation:
+
+First quarter-mile: $3.50
+Remaining distance: $8.50 - $3.50 = $5.00
+
+Since the next quarter-mile costs 10 cents more than the previous one, we can calculate the cost of the next quarter-mile as follows:
+
+Next quarter-mile: $5.00 x (1 + 0.10) = $5.00 x 1.10 = $5.50
+
+Remaining distance: $5.00 - $5.50 = $0.50
+
+Since we cannot travel a negative distance, the maximum distance we can travel is the remaining distance of $0.50, which is option E: 10.75 miles.",the correct answer is option E: 10.75 miles.,B,False,medium_chain,6
+AQuA,"The greatest common factor of two positive integers is 11. The least common multiple of these two integers is 7700. If one of the integers is 350, what is the other?","{'A': 'A)242', 'B': 'B)308', 'C': 'C)352', 'D': 'D)412', 'E': 'E)456'}",Let's think step by step.,"Sure, I'd be happy to help you solve this problem! Here's how we can approach it:
+
+1. The greatest common factor (GCF) of two numbers is the largest number that divides both numbers exactly. In this case, the GCF is 11.
+2. The least common multiple (LCM) of two numbers is the smallest number that both numbers divide exactly. In this case, the LCM is 7700.
+3. Since the GCF is 11 and the LCM is 7700, we know that one of the numbers must be a multiple of 11. Let's try to find out which number is a multiple of 11 by looking at the options:
+
+Option A: 242 is not a multiple of 11, so it cannot be one of the two integers.
+
+Option B: 308 is a multiple of 11 (11 x 27), so it could be one of the two integers.
+
+Option C: 352 is also a multiple of 11 (11 x 32), so it could be one of the two integers.
+
+Option D: 412 is not a multiple of 11, so it cannot be one of the two integers.
+
+Option E: 456 is a multiple of 11 (11 x 41), so it could be one of the two integers.
+
+Based on the information we have, we can narrow down the possible options to either Option B or Option C, since both 308 and 352 are multiples of 11. However, we still need more information to determine which one is the other integer.",Do you want me to continue with the solution?,A,True,medium_chain,4
+AQuA,A bag of cat food weighs 7 pounds and 4 ounces. How much does the bag weigh in ounces?,"{'A': 'A) 108', 'B': 'B) 112', 'C': 'C) 116', 'D': 'D) 120', 'E': 'E) 124'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's the calculation:
+
+To find out how much the bag weighs in ounces, we need to convert the weight from pounds to ounces.
+
+There are 16 ounces in 1 pound, so:
+
+7 pounds x 16 ounces/pound = 112 ounces","So, the correct answer is B) 112 ounces.",C,False,medium_chain,4
+AQuA,"Alice wants to put up fencing around three sides of her rectangular yard and leave one side of 10 meters unfenced. If the yard has an area of 240 square meters, how many meters of fencing does she need?","{'A': 'A)58', 'B': 'B)62', 'C': 'C)66', 'D': 'D)70', 'E': 'E)74'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's the solution step by step:
+
+1. First, we know that Alice wants to fence three sides of her rectangular yard, so she needs to find the perimeter of the yard. To do this, we need to add up the lengths of all four sides.
+2. The yard is rectangular, so all four sides are equal in length. Let's call this length x (since we don't know what it is yet).
+3. Since Alice wants to leave one side unfenced, she needs to find the length of that side. We know that the total perimeter of the yard is 240 meters, so we can set up an equation:
+
+x + x + x = 240 (since there are three sides to fence)
+
+Simplifying this equation:
+
+3x = 240
+
+Dividing both sides by 3:
+
+x = 80
+
+So, the length of each side of Alice's yard is 80 meters.
+
+4. Now that we know the length of each side, we can find the amount of fencing Alice needs. Since she wants to fence three sides, she needs to multiply the length of each side by 3:
+
+80 x 3 = 240","Alice needs 240 meters of fencing.
+
+The correct answer is option C: 66 meters.",A,False,medium_chain,4
+AQuA,What is the largest integral value of 'k' for which the quadratic equation x2 - 5x + k = 0 will have two real and distinct roots?,"{'A': 'A)9', 'B': 'B)7', 'C': 'C)3', 'D': 'D)8', 'E': 'E)12'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's the step-by-step solution:
+
+Step 1: Factor the quadratic equation as a product of two binomials:
+
+x2 - 5x + k = (x - 3)(x - 2) + k
+
+Step 2: Set each factor equal to zero and solve for x:
+
+(x - 3) = 0 or (x - 2) = 0
+
+Solving for x, we get:
+
+x = 3 or x = 2
+
+Step 3: Check the values of x to see if they satisfy the equation. For x = 3, we have:
+
+32 - 5(3) + k = 0
+
+Expanding and simplifying, we get:
+
+9 - 15 + k = 0
+
+k = 6
+
+And for x = 2, we have:
+
+22 - 5(2) + k = 0
+
+Expanding and simplifying, we get:
+
+4 - 10 + k = 0
+
+k = -6
+
+Since both roots are distinct, the largest integral value of 'k' for which the equation has two real and distinct roots is 9.",the correct answer is option A: 9.,C,False,medium_chain,6
+AQuA,"In the coordinate plane, a triangle has vertices at (a,0), (b,0), and (x,y). If a>x>b>0>y, which of the following represents the area of that triangle?","{'A': 'A)(ay−by)/2', 'B': 'B)(ab−ay)/2', 'C': 'C)(by−ay)/2', 'D': 'D)(ay+by)/x', 'E': 'E)(a−b)/2y'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's the solution step by step:
+
+1. The triangle has vertices at (a,0), (b,0), and (x,y).
+2. We know that a > x > b > 0 > y, so we can start by writing down the inequalities:
+
+a > x > b > 0 > y
+3. Next, we can find the height of the triangle by subtracting the smallest side (b) from the largest side (a):
+
+height = a - b
+4. Now, we can find the base of the triangle by subtracting the smallest side (b) from the middle side (x):
+
+base = x - b
+5. Finally, we can use the formula for the area of a triangle to find the area:
+
+area = (base × height) / 2
+
+So, substituting the values we have found:
+
+area = [(x - b) × (a - b)] / 2
+
+Simplifying:
+
+area = [x^2 - 2ax + 2bx - b^2] / 2
+
+Now, we can see that the only correct answer is option C:
+
+C) (by - ay) / 2
+
+This is because the area of the triangle is equal to half the base times the height, which in this case is half the product of by and ay.",I hope this helps! Let me know if you have any other questions.,C,False,medium_chain,5
+AQuA,A shopkeeper in order to promote his new shop put a discount of 20% on all the items for one day. Now he must sell the items at original price the other day. By what percentage must he increase the price to original?,"{'A': 'A)21%', 'B': 'B)20%', 'C': 'C)25%', 'D': 'D)33%', 'E': 'E)18%'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's the solution:
+
+Let's say the original price of an item is x.
+
+When the shopkeeper put a discount of 20%, he sold the item for 0.8x (20% less than the original price).
+
+Now, if he wants to sell the item at its original price the next day, he needs to increase the price by 20% of 0.8x, which is:
+
+0.8x x 20% = 0.16x (since 20% of 0.8x is 0.16x)
+
+So, the new price of the item after the discount will be:
+
+x + 0.16x = 1.16x","the percentage increase in the price after the discount is:
+
+(1.16x - x) / x = 16%
+
+So, the correct answer is option E: 18%.
+
+I hope this helps! Let me know if you have any other questions.",C,True,medium_chain,4
+AQuA,"A box contains a certain number of balls, marked successively from 1 to n. If there are 45 different ways that two balls can be selected from the box such that the ball with number 3 marked on it is not selected, then what is the value of n?","{'A': 'A)11', 'B': 'B)10', 'C': 'C)9', 'D': 'D)8', 'E': 'E)7'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's how we can solve this problem step by step:
+
+1. Let's say there are n balls in the box, and each ball is marked with a number from 1 to n.
+2. We know that there are 45 different ways to select two balls from the box such that the ball with number 3 marked on it is not selected.
+3. Since we want to avoid selecting the ball with number 3, we can only choose one of the other n-1 balls for the first selection.
+4. For the second selection, we have to choose a ball that is different from the first ball and also different from the ball with number 3. This means we have (n-2) choices for the second selection.
+5.","the total number of ways to select two balls from the box such that the ball with number 3 marked on it is not selected is:
+
+(n-1) x (n-2) = n^2 - 3n + 2
+
+6. Since there are 45 different ways to select two balls, we can set up the equation:
+
+n^2 - 3n + 2 = 45
+
+7. Solve for n:
+
+n = 8
+
+So, the value of n is 8.
+
+Therefore, the correct answer is option D: 8.",A,False,medium_chain,5
+AQuA,"At a certain factory, 10 percent of the staplers produced on Monday were defective and 2 percent of the non-defective staplers were rejected by mistake. If 72 of the non-defective staplers were rejected, what was the number of staplers produced that day?","{'A': 'A)4,000', 'B': 'B)4,200', 'C': 'C)4,500', 'D': 'D)4,800', 'E': 'E)5,000'}",Let's think step by step.,"Sure! Let's work through this problem together. Here are the given information and the options:
+
+Given information:
+
+* 10% of the staplers produced on Monday were defective.
+* 2% of the non-defective staplers were rejected by mistake.
+* 72 of the non-defective staplers were rejected.
+
+Options:
+
+A) 4,000
+B) 4,200
+C) 4,500
+D) 4,800
+E) 5,000
+
+Now, let's start by identifying the information we need to find the correct answer. We know that:
+
+1. 10% of the staplers produced on Monday were defective. This means that 10% of 4,000 (the total number of staplers produced) were defective, which is:
+
+4,000 x 0.1 = 400
+
+So, there were 400 defective staplers produced on Monday.
+
+2. 2% of the non-defective staplers were rejected by mistake. This means that 2% of 4,000 (the total number of staplers produced) were rejected, which is:
+
+4,000 x 0.02 = 80
+
+So, 80 non-defective staplers were rejected by mistake.
+
+3. 72 of the non-defective staplers were rejected. This means that 72 - 80 = 4 (the number of non-defective staplers that were not rejected) were not rejected.
+
+Now, we can use this information to find the total number of staplers produced on Monday:
+
+Total number of staplers produced = 4,000 + 400 - 80 + 4 = 4,524","the correct answer is option C) 4,500.",A,False,medium_chain,5
+AQuA,"The number of water lilies on a certain lake doubles every two days. If there is exactly one water lily on the lake, it takes 60 days for the lake to be fully covered with water lilies. In how many days will the lake be fully covered with lilies, if initially there were 64 water lilies on it?","{'A': 'A)15', 'B': 'B)28', 'C': 'C)30', 'D': 'D)53', 'E': 'E)59'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's the solution step by step:
+
+1. Let's start with the given information:
+
+The number of water lilies on a certain lake doubles every two days.
+If there is exactly one water lily on the lake, it takes 60 days for the lake to be fully covered with water lilies.
+2. Now, let's think about the initial number of water lilies:
+
+There are initially 64 water lilies on the lake.
+3. Since the number of water lilies doubles every two days, we can calculate the number of water lilies after each doubling period:
+
+Day 1: 64 water lilies (initial)
+Day 2: 128 water lilies (doubled from 64)
+Day 4: 256 water lilies (doubled from 128)
+Day 6: 512 water lilies (doubled from 256)
+Day 8: 1024 water lilies (doubled from 512)
+
+4. Now, we need to find out how many days it will take for the lake to be fully covered with water lilies, given the initial number of water lilies is 64.
+
+We know that if there is exactly one water lily on the lake, it takes 60 days for the lake to be fully covered with water lilies. So, we can set up a proportion:
+
+Proportion:
+
+64 water lilies / 60 days = 1 water lily / x days
+
+where x is the number of days it will take for the lake to be fully covered with water lilies, given the initial number of water lilies is 64.
+
+5. Now, we can solve for x:
+
+Cross-multiplying and simplifying, we get:
+
+x = 30","it will take 30 days for the lake to be fully covered with water lilies, given that there are initially 64 water lilies on the lake.
+
+So, the correct answer is option C: 30 days.",D,False,medium_chain,6
+AQuA,"An express electric train takes exact three seconds to enter tunnel which is 1 mile long.
+If train is traveling at 120 mile an hour, how long will it take to pass completely through the tunnel ?","{'A': 'A)43 seconds', 'B': 'B)39 seconds', 'C': 'C)20 seconds', 'D': 'D)33 seconds', 'E': 'E)55 seconds'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's the solution step by step:
+
+1. We know that the train takes exact three seconds to enter the tunnel, so we can say that the time taken for entering the tunnel is equal to 3 seconds.
+2. We also know that the train is traveling at a speed of 120 miles per hour, which means it covers a distance of 1 mile in 1 minute (since there are 60 seconds in 1 minute).
+3. Since the tunnel is 1 mile long, we can say that the train will take 1 minute to pass completely through the tunnel (i.e., the time taken to enter and exit the tunnel).
+4.","the correct answer is option C: 20 seconds.
+
+Here's the calculation in detail:
+
+Time taken to enter the tunnel = 3 seconds
+
+Time taken to travel through the tunnel = 1 minute (since the train covers a distance of 1 mile)
+
+Total time taken to pass completely through the tunnel = 3 + 1 = 4 minutes
+
+Therefore, option C is the correct answer: 20 seconds.",D,False,medium_chain,4
+AQuA,A man wants to eat fruit for breakfast and vegetable for dinner. He has 6 different types of fruit and 8 different types of vegetables. He can only eat one type at a time. In how many ways can he eat breakfast and dinner.,"{'A': 'A)54', 'B': 'B)24', 'C': 'C)48', 'D': 'D)20', 'E': 'E)36'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's the solution step by step:
+
+Let's start with breakfast. The man can eat one type of fruit. He has 6 types of fruit to choose from, so he has 6 options for breakfast.
+
+For dinner, the man can eat one type of vegetable. He has 8 types of vegetables to choose from, so he has 8 options for dinner.
+
+In total, the man has 6 x 8 = 48 options for his meals.","So, the correct answer is C) 48.",C,True,medium_chain,4
+AQuA,"If a subscription for 15 issues of a magazine costs $42.00 and represents a saving of 25 percent of the cover prices, what is the cover price per issue?","{'A': 'A)$7.73', 'B': 'B)$6.73', 'C': 'C)$5.73', 'D': 'D)$4.73', 'E': 'E)$3.73'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's the solution step by step:
+
+1. First, we know that the subscription costs $42.00 and represents a saving of 25 percent of the cover price.
+2. So, if we divide $42.00 by 0.75 (100% - 25%), we get the cover price per issue:
+
+$42.00 ÷ 0.75 = $56.00
+
+3.","the cover price per issue is $56.00.
+
+So, the correct answer is option 'E': 'E)$5.60'.
+
+I hope this helps! Let me know if you have any other questions.",E,True,medium_chain,4
+AQuA,"A man borrows Rs.360 If he pays it back in 12 monthly installments of Rs.31.50, what is his interest rate?","{'A': 'A)1.5%', 'B': 'B)4.5%', 'C': 'C)10%', 'D': 'D)5%', 'E': 'E)12%'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's the solution step by step:
+
+1. Total amount borrowed = Rs.360
+2. Number of installments = 12
+3. Monthly installment amount = Rs.31.50
+
+To find the interest rate, we can use the formula:
+
+Interest rate = (Total amount x Rate) / Number of installments
+
+Where:
+
+* Total amount is the principal amount borrowed (Rs.360 in this case)
+* Rate is the interest rate as a decimal (we'll calculate this later)
+* Number of installments is the number of months over which the loan is repaid (12 in this case)
+
+Now, let's calculate the interest rate. We know that the monthly installment amount is Rs.31.50, so we can use this to find the total interest paid over the 12-month period:
+
+Total interest = Monthly installment x Number of installments
+Total interest = Rs.31.50 x 12
+Total interest = Rs.378
+
+Now, we can use the formula again to find the interest rate:
+
+Interest rate = (Total amount x Rate) / Number of installments
+Interest rate = (Rs.360 x Rate) / 12
+
+We know that the total amount borrowed is Rs.360, so we can substitute this into the formula:
+
+Interest rate = (Rs.360 x Rate) / 12
+Interest rate = (Rs.360 x Rate) / 12
+
+To find the interest rate, we need to divide the total interest paid (Rs.378) by the total amount borrowed (Rs.360):
+
+Interest rate = Total interest / Total amount
+Interest rate = Rs.378 / Rs.360
+Interest rate = 12%
+
+So, the interest rate is 12%.",the correct answer is option E: 12%.,D,False,medium_chain,5
+AQuA,"Kevin drove from A to B at a constant speed of 70 mph. Once he reached B, he turned right around with pause, and returned to A at a constant speed of 90 mph. Exactly 3 hours before the end of his trip, he was still approaching B, only 70 miles away from it. What is the distance between A and B?","{'A': 'A)180', 'B': 'B)90', 'C': 'C)270', 'D': 'D)360', 'E': 'E)None of the above'}",Let's think step by step.,"Sure, I'd be happy to help you solve this problem! Here's how we can approach it:
+
+1. Let's first calculate the time it takes Kevin to drive from A to B at a constant speed of 70 mph:
+
+Time = Distance / Speed
+
+We know that the distance between A and B is x miles, so we can plug in the values as follows:
+
+Time = x / 70
+
+2. Now, we know that exactly 3 hours before the end of his trip, Kevin was still approaching B, only 70 miles away from it. This means that he started returning to A 3 hours before the end of his trip, so we can set up an equation based on this information:
+
+Time = 3 hours before the end of the trip
+
+We know that the trip takes 3 hours, so we can calculate the time as follows:
+
+Time = 3 hours x 60 minutes/hour = 180 minutes
+
+3. Now, we have two equations: one for the time it takes Kevin to drive from A to B, and another for the time he spent returning to A:
+
+Equation 1: Time = x / 70 (for driving from A to B)
+
+Equation 2: Time = 180 minutes (for returning to A)
+
+4. We can now solve these equations simultaneously to find the value of x, which represents the distance between A and B:
+
+Solving Equation 1 for x, we get:
+
+x = 70 miles x Time = 70 miles x (x / 70)
+
+Simplifying, we get:
+
+x = 70 miles x (x / 70)
+
+x = 70 miles x (x / 70)
+
+Now, let's substitute the value of Time from Equation 2 into Equation 1:
+
+x = 70 miles x (180 minutes / 70)
+
+Simplifying, we get:
+
+x = 70 miles x 2.5
+
+x = 175 miles","the distance between A and B is 175 miles.
+
+So, the correct answer is option C: 270 miles.",A,True,medium_chain,5
+AQuA,"Train ‘A’ leaves Mumbai Central for Lucknow at 11 am, running at the speed of 40 kmph. Train ‘B’ leaves Mumbai Central for Lucknow by the same route at 2 pm on the same day, running at the speed of 72 kmph. At what time will the two trains meet each other?","{'A': 'A)12 am on the next day', 'B': 'B)5 am on the next day', 'C': 'C)5 pm on the next day', 'D': 'D)2 pm on the next day', 'E': 'E)None of these'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's the solution step by step:
+
+1. Let's first find out the distance between Mumbai Central and Lucknow. We know that Train A leaves Mumbai Central at 11 am and runs at a speed of 40 kmph, so it will cover:
+
+Distance = Speed x Time = 40 kmph x 5 hours (since it leaves at 11 am and takes 5 hours to reach Lucknow) = 200 km
+
+2. Now, we know that Train B leaves Mumbai Central at 2 pm and runs at a speed of 72 kmph. It will cover the same distance as Train A in less time, since it is running faster:
+
+Distance = Speed x Time = 72 kmph x 3 hours (since it leaves at 2 pm and takes 3 hours to reach Lucknow) = 216 km
+
+3. Since both trains are covering the same distance, we can set up an equation based on the distances they cover:
+
+200 km = 40 kmph x 5 hours
+216 km = 72 kmph x 3 hours
+
+4. Now, we can solve for the time it takes for Train B to reach Lucknow:
+
+Time for Train B = Distance / Speed = 216 km / 72 kmph = 3 hours
+
+5. Since Train B leaves Mumbai Central at 2 pm and takes 3 hours to reach Lucknow, it will arrive at 5 pm (since it leaves at 2 pm and takes 3 hours to reach Lucknow).","the correct answer is option C: 5 pm on the next day.
+
+I hope this helps! Let me know if you have any other questions.",A,False,medium_chain,5
+AQuA,"A bag contains 11 candy bars: three cost 50 cents each, four cost $1 each and four cost $2
+each. How many ways can 3 candy bars be selected from the 11 candy bars so that the total cost is more than $4?","{'A': 'A)8', 'B': 'B)28', 'C': 'C)46', 'D': 'D)66', 'E': 'E)70'}",Let's think step by step.,"Sure, I can help you with that! Here's the solution:
+
+There are three candy bars that cost $2 each, so we can select 3 of them in $2 \times 3 = 6$ ways.
+
+There are four candy bars that cost $1 each, so we can select 4 of them in $1 \times 4 = 4$ ways.
+
+There are three candy bars that cost $50 cents each, so we can select 3 of them in $\frac{3}{2} \times 3 = 3$ ways.
+
+Since we want the total cost to be more than $4$, we can only select candy bars that cost $2 or more.","we can select:
+
+* 3 $2$ candy bars (6 ways)
+* 4 $1$ candy bars (4 ways)
+* 3 $50$ cents candy bars (3 ways)
+
+Total number of ways = 6 + 4 + 3 = 13
+
+So, the correct answer is 'C': 46.",C,True,medium_chain,5
+AQuA,"Of the 200 students in a school, at least 45% attended the prom night and at least 35% took part in the debating session. What is the maximum number of students who could have neither attended the prom night nor the debating session?","{'A': 'A)27', 'B': 'B)81', 'C': 'C)90', 'D': 'D)99', 'E': 'E)110'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's the solution step by step:
+
+Let X be the number of students who attended the prom night.
+Since at least 45% of the students attended the prom night, we know that X > 0.45 \* 200 = 90.
+
+Let Y be the number of students who took part in the debating session.
+Since at least 35% of the students took part in the debating session, we know that Y > 0.35 \* 200 = 70.
+
+Now, let's find the maximum number of students who could have neither attended the prom night nor the debating session. To do this, we need to find the maximum value of X + Y - (45% + 35%) \* 200.
+
+X + Y = 90 + 70 = 160
+
+45% + 35% = 0.45 + 0.35 = 0.80
+
+0.80 \* 200 = 160
+
+So, the maximum number of students who could have neither attended the prom night nor the debating session is:
+
+160 - 160 = 0","the correct answer is (E) 110.
+
+I hope this helps! Let me know if you have any other questions.",E,True,medium_chain,5
+AQuA,A pen company produces very fine quality of writing pens. Company knows that on average 10% of the produced pens are always defective so are rejected before packing. Company promises to deliver 7200 pens to its wholesaler at Rs. 10 each. It estimates the overall profit on all the manufactured pens to be 25%. What is the manufactured cost of each pen?,"{'A': 'A)Rs. 6', 'B': 'B)Rs. 7.2', 'C': 'C)Rs. 5.6', 'D': 'D)Rs. 8', 'E': 'E)None of these'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's the step-by-step solution:
+
+1. Total number of pens produced = 7200 (given)
+2. Defective pens = 10% of total production = 10% x 7200 = 720 (calculated)
+3. Total number of good pens = Total production - Defective pens = 7200 - 720 = 6480 (calculated)
+4. Profit on total production = 25% x 7200 = 1800 (given)
+5. Profit on good pens = Profit on total production / Total number of good pens = 1800 / 6480 = 2.83 (calculated)
+6. Manufactured cost per pen = Profit on good pens / Total number of good pens = 2.83 / 6480 = Rs. 0.43 (calculated)","the manufactured cost per pen is Rs. 0.43.
+
+So, the correct answer is:
+
+C) Rs. 5.6
+
+Explanation:
+The profit on total production is given as 25%, and the number of defective pens is given as 10% of the total production. We can calculate the total number of good pens by subtracting the number of defective pens from the total production. Then, we can calculate the profit on good pens by dividing the profit on total production by the total number of good pens. Finally, we can calculate the manufactured cost per pen by dividing the profit on good pens by the total number of good pens.",B,False,medium_chain,6
+AQuA,"X and Y are two alloys which were made by mixing zinc and copper in the ratio 6:9 and 7:11, respectively. If 40 grams of alloy X and 60 grams of alloy Y are melted and mixed to form alloy Z, what is the ratio of zinc and copper in the alloy Z ?","{'A': 'A)69:91', 'B': 'B)59:91', 'C': 'C)59:90', 'D': 'D)59:91', 'E': 'E)69:101'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's how we can approach this problem step by step:
+
+Step 1: Understand the given information
+
+We know that alloys X and Y are made by mixing zinc and copper in the ratios 6:9 and 7:11, respectively. We also know that 40 grams of alloy X and 60 grams of alloy Y are melted and mixed to form alloy Z.
+
+Step 2: Identify the key information we need to find the ratio of zinc and copper in alloy Z
+
+To find the ratio of zinc and copper in alloy Z, we need to know the total weight of the mixture (i.e., the sum of the weights of zinc and copper) and the individual weights of zinc and copper in each alloy.
+
+Let's start by identifying the key information we need:
+
+* Total weight of the mixture = 40 grams + 60 grams = 100 grams
+* Weight of zinc in alloy X = 6/9 x 40 grams = 24 grams
+* Weight of copper in alloy X = 9/9 x 40 grams = 56 grams
+* Weight of zinc in alloy Y = 7/11 x 60 grams = 34 grams
+* Weight of copper in alloy Y = 11/11 x 60 grams = 66 grams
+
+Step 3: Calculate the ratio of zinc and copper in alloy Z
+
+Now that we have all the information we need, let's calculate the ratio of zinc and copper in alloy Z:
+
+* Total weight of zinc in alloy Z = 24 grams + 34 grams = 58 grams
+* Total weight of copper in alloy Z = 56 grams + 66 grams = 122 grams
+
+To find the ratio of zinc to copper in alloy Z, we can divide the total weight of zinc by the total weight of copper:
+
+Ratio of zinc to copper in alloy Z = 58/122 = 0.47
+
+So, the ratio of zinc and copper in alloy Z is approximately 0.47 or 47%.
+
+Now, let's check the options:
+
+Option A: 69:91
+Option B: 59:91
+Option C: 59:90
+Option D: 59:91
+Option E: 69:101
+
+None of these options match the correct ratio of zinc and copper in alloy Z, which is approximately 0.47 or 47%.","none of these options are the correct answer.
+
+I hope this helps you understand how to approach this problem step by step!",B,True,medium_chain,6
+AQuA,"On a map, the length of the road from Town F to Town G is measured to be 20 inches. On this map, 1/4 inch represents an actual distance of 10 miles. What is the actual distance, in miles, from Town F to Town G along this road?","{'A': 'A)800', 'B': 'B)720', 'C': 'C)960', 'D': 'D)1140', 'E': 'E)1160'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's the solution step by step:
+
+1. We know that on the map, the length of the road from Town F to Town G is measured to be 20 inches.
+2. We also know that 1/4 inch on the map represents an actual distance of 10 miles.
+3. So, we can set up a proportion to represent the relationship between the distance on the map and the actual distance:
+
+Let x be the actual distance from Town F to Town G (in miles)
+
+Then, the distance on the map (in inches) is:
+
+20 inches = 1/4 inch x (actual distance from Town F to Town G)
+
+Now, we can solve for x by cross-multiplying and simplifying:
+
+x = (20 inches) / (1/4 inch)
+
+x = 800 miles
+
+So, the actual distance from Town F to Town G along this road is approximately 800 miles.",The correct answer is option A: 800 miles.,A,True,medium_chain,4
+AQuA,"A certain liquid passes through a drain at a rate of w/25 gallons every x seconds. At that rate, how many minutes will it take y gallons to pass through the drain?","{'A': 'A)y/(1200xy)', 'B': 'B)20xy/w', 'C': 'C)5xy/(12w)', 'D': 'D)w/(3xy)', 'E': 'E)3y/(wx)'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's the solution step by step:
+
+1. First, we need to convert the rate of liquid passing through the drain from gallons per second to gallons per minute. There are 60 seconds in 1 minute, so:
+
+w/25 gallons/second = w/25 x 60 = 1500 w gallons/minute
+
+2. Next, we need to convert the volume of liquid (y gallons) to be passed through the drain from gallons to minutes. We know that there are 60 seconds in 1 minute, so:
+
+y gallons x 60 = 60y minutes
+
+3. Now we can set up a proportion to find out how many minutes it will take for y gallons of liquid to pass through the drain:
+
+1500w gallons/minute = 60y minutes
+
+4. To solve for y, we can cross-multiply and simplify:
+
+1500w x 60 = 90,000w
+
+y = 90,000 / w
+
+5. Finally, we can choose the correct answer from the options provided:
+
+The correct answer is C) 5xy/(12w).
+
+Explanation: We know that 5xy is equal to 90,000w, so we can simplify by dividing both sides of the equation by 12w:
+
+5xy / 12w = 90,000w / 12w = 7500",it will take 7500 minutes (or approximately 125 hours) for y gallons of liquid to pass through the drain.,C,False,medium_chain,6
+AQuA,"A square piece of cloth is trimmed by 4 feet on one edge to form a rectangular piece, which is then cut diagonally in half to create two triangles. If the area of each of triangle is 70 square feet, what was the perimeter (in feet) of the original piece of square cloth?","{'A': 'A)56', 'B': 'B)58', 'C': 'C)60', 'D': 'D)62', 'E': 'E)64'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's the solution step by step:
+
+1. The square piece of cloth is trimmed by 4 feet on one edge, so it becomes a rectangular piece with a length of 4 feet more than its original width. Let's call the original width x feet. Then, the area of the rectangular piece is given by:
+
+Area = (x + 4) \* x
+
+2. The rectangular piece is then cut diagonally in half to create two triangles. Each triangle has an area of 70 square feet, so we can set up the equation:
+
+(x + 4) \* x = 70^2
+
+3. Simplifying the equation, we get:
+
+x^2 + 4x - 70^2 = 0
+
+4. Solving for x, we get:
+
+x = 60 - 4 = 56
+
+So, the perimeter of the original square cloth is 56 feet.",the correct answer is option A: 56.,A,True,medium_chain,4
+AQuA,"Tires of a certain brand, when purchased new, last for four years. A customer can choose to purchase the new tires at a cost of $180 per tire or can have his current tires repaired at a cost of $40 per tire, a repair that will make the current tires last for one additional year. The average cost per year of the new tires is what percent greater than the cost of repairing the current tires?","{'A': 'A)8%', 'B': 'B)10%', 'C': 'C)12.5%', 'D': 'D)16.7%', 'E': 'E)25%'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's the solution step by step:
+
+1. Let's first calculate the cost of repairing the current tires for one additional year:
+
+40 x 1 = $40
+
+2. Now, let's calculate the total cost of purchasing new tires for four years:
+
+180 x 4 = $720
+
+3. Now, we can calculate the average cost per year of the new tires:
+
+$720 / 4 = $180 per year
+
+4. Finally, we can calculate the percentage increase in cost between repairing the current tires and purchasing new tires:
+
+($180 - $40) / $40 = 500% / 40 = 12.5%","So, the correct answer is C) 12.5%.",C,True,medium_chain,5
+AQuA,"Peter wants to find 10 additional people to form a scavenger hunt team with him. If he has 10 friends who would like to participate, how many choices does he have for forming his team?","{'A': 'A)0', 'B': 'B)1', 'C': 'C)2', 'D': 'D)3', 'E': 'E)4'}",Let's think step by step.,"Sure, I'd be happy to help you with that! Here's the solution step by step:
+
+1. Peter has 10 friends who want to participate in the scavenger hunt.
+2. Since he needs 10 people for a team, he has 10 choices for forming his team.
+3. Each of his friends can be chosen once, so there are 10! (or 10 factorial) possible teams he can form.
+4. To calculate 10!, we can use the formula:
+
+10! = 10 x 9 x 8 x ... x 2 x 1 = 3,628,800
+
+So, Peter has 3,628,800 possible choices for forming his team.","the correct answer is:
+
+E) 4
+
+I hope this helps! Let me know if you have any other questions.",B,False,medium_chain,4
+AQuA,"Joe's age, Joe's sister's age and Joe’s fathers age sums up to 100. When Joe is as old as his father, Joe's sister will be twice as old as now. When Joe is as old as his father then his father is twice as old as when his sister was as old as her father. Find the age of Joe's father?","{'A': 'A)45', 'B': 'B)48', 'C': 'C)50', 'D': 'D)55', 'E': 'E)58'}",Let's think step by step.,"Sure, I'd be happy to help you solve this problem! Here's how we can approach it:
+
+Let Joe's age be x. Then, we know that:
+
+1. Joe's sister's age is x + 10 (since the sum of their ages is 100).
+2. Joe's father's age is twice Joe's age, so his father's age is 2x.
+
+Now, let's think about what we know about the relationships between their ages:
+
+1. When Joe is as old as his father, his sister will be twice as old as she is now. So, if Joe is x years old, his sister will be 2x + 10 years old.
+2. When Joe is as old as his father, his father will be twice as old as he was when his daughter (Joe's sister) was as old as her father. So, if Joe is x years old, his father will be 2x + 50 years old (since Joe's sister was as old as her father at age 48).
+
+Now we can set up some equations based on these relationships:
+
+Equation 1:
+
+x + 10 = 2x + 50
+
+Solving for x, we get:
+
+x = 48
+
+So, Joe's age is 48 years old.","the correct answer is option C: 50.
+
+I hope this helps! Let me know if you have any other questions or need further clarification.",C,True,medium_chain,5

@@ -14,9 +14,9 @@ from collections import defaultdict
 from tqdm import tqdm
 from pathlib import Path
 
+from src.data.dataprocess import DataProcessor
 from src.gating.expert_router import ExpertRouter
-from src.inference.reasoning_pipeline import ReasoningPipeline
-from src.data.data_loader import DataLoader
+from src.inference.inference_engine import InferenceEngine as ReasoningPipeline
 from src.utils.text_utils import normalize_answer
 
 logger = logging.getLogger(__name__)
@@ -306,7 +306,7 @@ class GRPOTrainer:
         self.pipeline = ReasoningPipeline(config_path)
         
         # 数据加载器
-        self.data_loader = DataLoader(config_path)
+        self.data_loader = DataProcessor(config_path)
         
         # 训练状态
         self.best_accuracy = 0.0
@@ -465,7 +465,7 @@ class GRPOTrainer:
             
             # 使用选定的专家进行推理
             try:
-                result = self.pipeline.reason_with_experts(question, options, selected_experts)
+                result = self.pipeline.reason_with_experts(question, selected_experts, options)
                 answer = result.get('final_answer', '')
                 confidence = result.get('confidence', 0.0)
                 step_count = result.get('step_count', 0)
@@ -650,7 +650,7 @@ class GRPOTrainer:
                     metrics['expert_usage'][expert_type] += 1
                 
                 # 使用推理流水线
-                result = self.pipeline.reason_with_experts(question, options, selected_experts)
+                result = self.pipeline.reason_with_experts(question, selected_experts, options)
                 
                 # 更新指标
                 if result.get('is_correct', False):

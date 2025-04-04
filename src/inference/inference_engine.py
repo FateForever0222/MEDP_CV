@@ -6,7 +6,7 @@ import random
 from typing import Dict, List, Tuple, Optional, Any
 from collections import Counter
 
-from src.experts.base_expert import BaseExpert
+from src.experts.expert_models import BaseExpert
 from src.llm.llm_interface import LLMInterface
 
 logger = logging.getLogger(__name__)
@@ -415,10 +415,10 @@ class InferenceEngine:
             experts, expert_weights = router.route(question, options)
         
         # 使用专家进行推理
-        return self.reason_with_experts(question, options, experts)
+        return self.reason_with_experts(question, experts, options)
     
-    def reason_with_experts(self, question: str, options: Optional[str] = None,
-                           experts: List[BaseExpert]) -> Dict[str, Any]:
+    def reason_with_experts(self, question: str,
+                           experts: List[BaseExpert], options: Optional[str] = None) -> Dict[str, Any]:
         """
         使用指定的专家进行推理
         

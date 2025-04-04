@@ -13,7 +13,7 @@ from pathlib import Path
 from abc import ABC, abstractmethod
 from sklearn.metrics.pairwise import cosine_similarity
 
-from src.data.data_loader import DataLoader
+from src.data.dataprocess import DataProcessor
 from src.llm.llm_interface import LLMInterface
 
 logger = logging.getLogger(__name__)
@@ -44,7 +44,7 @@ class BaseExpert(ABC):
         self.llm = LLMInterface(config_path)
         
         # 加载数据
-        self.data_loader = DataLoader(config_path)
+        self.data_loader = DataProcessor(config_path)
         self.examples = self.data_loader.load_expert_library(expert_type)
         
         if self.examples.empty:

@@ -1,5 +1,8 @@
 # 数据集配置
 data:
+  # 原始数据路径
+  raw_path: data/raw
+  # 数据集列表
   datasets:
     - name: CSQA
       path: data/raw/csqa
@@ -100,5 +103,7 @@ evaluation:
 
 # 日志配置
 logging:
-  level: "INFO"
+  level: "INFO"  # 可以改为"WARNING"来减少信息量
   save_path: "logs/"
+  console_level: "WARNING"  # 控制台显示级别设为WARNING
+  file_level: "INFO"  # 文件日志保持INFO级别以便排错

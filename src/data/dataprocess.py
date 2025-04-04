@@ -8,7 +8,7 @@ from typing import Dict, List, Tuple, Optional
 from pathlib import Path
 from datasketch import MinHash, MinHashLSH
 from sklearn.model_selection import train_test_split
-
+from tqdm import tqdm  # 确保导入tqdm
 from src.llm.llm_interface import LLMInterface
 
 logger = logging.getLogger(__name__)
@@ -336,7 +336,10 @@ class DataProcessor:
         
         results = []
         
-        for _, row in df.iterrows():
+        for _, row in tqdm(df.iterrows(), 
+                     total=len(df), 
+                     desc=f"生成{expert_type}示例",
+                     ncols=80):
             question = row['question']
             answer = row['answer'] if 'answer' in row and not pd.isna(row['answer']) else None
             options = row['options'] if 'options' in row and not pd.isna(row['options']) else None

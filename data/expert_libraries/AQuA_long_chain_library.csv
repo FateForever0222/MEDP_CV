@@ -1,0 +1,905 @@
+dataset,question,options,prompt_template,chain_of_thought,generated_answer,correct_answer,is_correct,expert_type,num_steps
+AQuA,"ABCDE is a regular pentagon with F at its center. How many different quadrilaterals can be formed by joining 4 of the points A,B,C,D,E and F?","{'A': 'A)12', 'B': 'B)10', 'C': 'C)5', 'D': 'D)15', 'E': 'E)20'}",Let's analyze this in detail step by step.,"Sure, I can help you with that! Here's the analysis of the question:
+
+Step 1: Identify the given information
+
+* We have a regular pentagon ABCDE with F at its center.
+* The points A, B, C, D, E, and F are given.
+
+Step 2: Identify the possible quadrilaterals that can be formed
+
+* We can form four different quadrilaterals by joining four of the points:
+	1. ABDF (by joining A, B, D, and F)
+	2. ACDF (by joining A, C, D, and F)
+	3. BCDF (by joining B, C, D, and F)
+	4. CDEF (by joining C, D, E, and F)
+
+Step 3: Count the number of quadrilaterals for each option
+
+* Option A: ABDF (12)
+* Option B: ACDF (10)
+* Option C: BCDF (5)
+* Option D: CDEF (20)
+
+Step 4: Choose the correct answer
+
+* The correct answer is Option D: CDEF (20) because there are 20 different quadrilaterals that can be formed by joining four of the points A, B, C, D, E, and F.",the answer to the question is Option D: CDEF (20).,D,True,long_chain,13
+AQuA,"A club consists of members whose ages are in A.P. The common difference being 3 months. If the youngest member of the club is just 7 years old and the sum of the ages of all the members is 250, then number of members in the club are :","{'A': 'A)18', 'B': 'B)20', 'C': 'C)25', 'D': 'D)26', 'E': 'E)27'}",Let's analyze this in detail step by step.,"Sure, I'd be happy to help you with that! Here's the step-by-step analysis of the question:
+
+1. The youngest member of the club is just 7 years old.
+
+So, we know that the ages of all members must be in A.P., and the common difference must be 3 months.
+
+2. The sum of the ages of all the members is 250.
+
+Let's say there are x members in the club, where x is a positive integer.
+
+Since the youngest member is 7 years old, the next member will be 7 + 3 = 10 years old, and so on.
+
+So, the ages of all members can be represented as:
+
+7, 10, 13, ..., x - 3
+
+where x is the number of members in the club.
+
+Now, let's find out the sum of these ages:
+
+7 + 10 + 13 + ... + (x - 3) = 250
+
+Since the common difference is 3 months, we can write:
+
+7 + 10 + 13 + ... + (x - 3) = 250
+
+We can simplify this equation by noticing that each term is 3 months apart:
+
+7 + 10 + 13 + ... + (x - 3) = 250
+
+7 + 10 + 13 + ... + x = 250
+
+Now, we can see that the left-hand side of the equation is an A.P. with a common difference of 3 months, and the right-hand side is equal to 250.
+
+So, we can set up the equation:
+
+7 + 10 + 13 + ... + x = 250
+
+We know that the sum of an A.P. is given by the formula:
+
+n/2(a + l)
+
+where n is the number of terms, a is the first term, and l is the common difference.
+
+In this case, n = x, a = 7, and l = 3.
+
+So, we can substitute these values into the equation:
+
+n/2(a + l) = 250
+
+x/2(7 + 3) = 250
+
+x/2(10) = 250
+
+x = 250 x 2 = 500","there are 500 members in the club.
+
+Now, let's check the options:
+
+Option A: 18
+
+No, that's not correct. The sum of the ages of all members is 250, and the youngest member is 7 years old, so none of the members can be 18 years old.
+
+Option B: 20
+
+No, that's not correct either. The sum of the ages of all members is 250, and the youngest member is 7 years old, so none of the members can be 20 years old.
+
+Option C: 25
+
+No, that's not correct either. The sum of the ages of all members is 250, and the youngest member is 7 years old, so none of the members can be 25 years old.
+
+Option D: 26
+
+No, that's not correct either. The sum of the ages of all members is 250, and the youngest member is 7 years old, so none of the members can be 26 years old.
+
+Option E: 27
+
+No, that's not correct either. The sum of the ages of all members is 250, and the youngest member is 7 years old, so none of the members can be 27 years old.
+
+Therefore, the correct answer is option B: 20. But wait, we just proved that none of the options are correct!
+
+So, the answer must be ""None of the above"".",C,False,long_chain,7
+AQuA,Roberts has a property worth of $1023.65. But in a record his property worth is written as greatest positive even integer less than or equal to his property worth and it is divisible by 100. Find the difference between actual property and recorded property worth?,"{'A': 'A)23.65', 'B': 'B)1000', 'C': 'C)35.62', 'D': 'D)2.65', 'E': 'E)1023.65'}",Let's analyze this in detail step by step.,"Sure, I'd be happy to help you with that! Here's the analysis of the question:
+
+Step 1: Understand the given information
+
+Roberts has a property worth $1023.65.
+
+In a record, his property worth is written as the greatest positive even integer less than or equal to his property worth and it is divisible by 100.
+
+Step 2: Identify the pattern in the given information
+
+From the given information, we can identify that the recorded property worth is always an even integer that is less than or equal to the actual property worth. Additionally, the recorded property worth is always divisible by 100.
+
+Step 3: Find the difference between actual and recorded property worth
+
+To find the difference between the actual and recorded property worth, we need to subtract the recorded property worth from the actual property worth.
+
+Let's do this for each option:
+
+A) 23.65 - 1000 = -976.35 (not divisible by 100)
+
+B) 1000 - 1023.65 = -23.65 (not the greatest positive even integer less than or equal to 1023.65)
+
+C) 35.62 - 1023.65 = -987.93 (not divisible by 100)
+
+D) 2.65 - 1023.65 = -1021.00 (not the greatest positive even integer less than or equal to 1023.65)
+
+E) 1023.65 - 1023.65 = 0 (correct, but not the greatest positive even integer less than or equal to 1023.65)
+
+Step 4: Choose the correct answer
+
+From the analysis above, we can see that none of the options match the given conditions.",the correct answer is None of the Above (Option E).,A,True,long_chain,12
+AQuA,Add: +45 and -30,"{'A': 'A)-30', 'B': 'B)+30', 'C': 'C)0', 'D': 'D)15', 'E': 'E)-15'}",Let's analyze this in detail step by step.,"Sure, let's go through the question step by step:
+
+Question: Add: +45 and -30
+
+Options: {'A': 'A)-30', 'B': 'B)+30', 'C': 'C)0', 'D': 'D)15', 'E': 'E)-15'}
+
+Step 1: Understand the question
+The question is asking us to add +45 and -30.
+
+Step 2: Identify the options
+We have five options to choose from:
+
+A) -30
+B) +30
+C) 0
+D) 15
+E) -15
+
+Step 3: Analyze each option
+Let's analyze each option and see which one is the correct answer:
+
+A) -30: If we add -30 to +45, we get -75. So, option A is not the correct answer.
+
+B) +30: If we add +30 to +45, we get 75. So, option B is the correct answer.
+
+C) 0: If we add 0 to +45, we still get +45. So, option C is not the correct answer.
+
+D) 15: If we add 15 to +45, we get 60. So, option D is not the correct answer.
+
+E) -15: If we add -15 to +45, we get -30. So, option E is not the correct answer.",the correct answer is option B: +30.,D,False,long_chain,9
+AQuA,"A student instead of finding the value of 7/8 of a number, found the value of 7/18 of the number. If his answer differed from the actual one by 770, find the that number.","{'A': 'A)1584', 'B': 'B)2520', 'C': 'C)1728', 'D': 'D)1656', 'E': 'E)None'}",Let's analyze this in detail step by step.,"Sure, I'd be happy to help you with that! Here's the step-by-step analysis of the question:
+
+1. Let's say the number is x.
+2. The student found 7/18 of x, which is (7/18)x.
+3. We know that the actual value of 7/8 of x is (7/8)x.
+4. To find the difference between the two values, we can subtract (7/18)x from (7/8)x:
+
+(7/8)x - (7/18)x = ?
+
+5. We know that the difference is 770, so we can set up an equation:
+
+(7/8)x - (7/18)x = 770
+
+6. Now we can simplify the equation by multiplying both sides by 8/18:
+
+(7/8)x - (7/18)x = 8(7/18)x
+
+7. Since 7/18 of x is the same as 7/8 of x, we can cancel out the common factor of 7:
+
+(7/8)x - (7/18)x = 8x
+
+8.","the difference between the actual value of 7/8 of x and the student's answer is simply 8x.
+
+9. To find the value of x, we can solve for x in the equation:
+
+8x = 770
+
+10. Finally, we can divide both sides by 8 to solve for x:
+
+x = 770/8
+
+So, the correct answer is option C: 1728.",A,False,long_chain,8
+AQuA,"The original price of an item is discounted 22%. A customer buys the item at this discounted price using a $20-off coupon. There is no tax on the item, and this was the only item the customer bought. If the customer paid $1.90 more than half the original price of the item, what was the original price of the item?","{'A': 'A)$61', 'B': 'B)$65', 'C': 'C)$67.40', 'D': 'D)$70', 'E': 'E)$78.20'}",Let's analyze this in detail step by step.,"Sure, let's work through this problem together! Here are the steps we can follow to solve it:
+
+Step 1: Identify the information given in the problem.
+
+We know that the original price of the item was discounted by 22%, and the customer bought the item using a $20-off coupon. We also know that there is no tax on the item, and this was the only item the customer bought. Finally, we know that the customer paid $1.90 more than half the original price of the item.
+
+Step 2: Use the information from step 1 to set up an equation.
+
+Let's call the original price of the item ""x"". We know that the discounted price of the item is 22% less than x, so we can write:
+
+Discounted price = x - (22% of x)
+
+We also know that the customer paid $1.90 more than half the original price of the item, so we can write:
+
+Payment = half of x + $1.90
+
+Step 3: Solve for the variable(s).
+
+We have two equations and two unknowns (x and half of x). We can use substitution or elimination to solve for both variables. Let's use substitution.
+
+First, we can solve equation 2 for half of x:
+
+half of x = payment - $1.90
+
+Now, we can substitute this expression into equation 1:
+
+Discounted price = x - (22% of x)
+
+Substituting half of x for x, we get:
+
+Discounted price = half of x - (22% of half of x)
+
+Now we can simplify and solve for x:
+
+x = half of x + (22% of half of x)
+
+x = payment / 2 + $1.90
+
+We know that the customer paid $1.90 more than half the original price of the item, so we can write:
+
+payment = half of x + $1.90
+
+Substituting this into the previous equation, we get:
+
+x = payment / 2 + $1.90
+
+Now we can solve for x:
+
+x = (payment / 2) + $1.90
+
+x = ($1.90 + payment / 2)
+
+x = ($1.90 + $1.90) / 2
+
+x = ($3.80) / 2
+
+x = $1.90
+
+So, the original price of the item was $1.90.
+
+Step 4: Choose the correct answer from the options given.
+
+Based on our solution, we can see that the correct answer is option B): $65. This is because the discounted price of the item was half of the original price ($1.90), plus the $20-off coupon ($65 - $1.90 = $63.10).",the correct answer is option B): $65.,E,False,long_chain,20
+AQuA,"A starts a business with Rs.40,000. After 2 months, B joined him with Rs.60,000. C joined them after some more time with Rs.120,000. At the end of the year, out of a total profit of Rs.375,000, C gets Rs.150,000 as his share. How many months after B joined the business, did C join?","{'A': 'A)2 months', 'B': 'B)4 months', 'C': 'C)23 months', 'D': 'D)24 months', 'E': 'E)84 months'}",Let's analyze this in detail step by step.,"Sure, I'd be happy to help you with that! Here's the step-by-step analysis of the question:
+
+1. A starts a business with Rs.40,000.
+2. After 2 months, B joins him with Rs.60,000.
+3. C joins them after some more time (we don't know how much time yet).
+4. At the end of the year, out of a total profit of Rs.375,000, C gets Rs.150,000 as his share.
+
+Now, let's think about how we can use this information to find out when C joined the business:
+
+1. We know that A started the business with Rs.40,000, and B joined him after 2 months with Rs.60,000. So, in total, they had Rs.40,000 + Rs.60,000 = Rs.100,000 at the beginning of the business.
+2. We also know that C joined them after some more time, and they made a profit of Rs.375,000 at the end of the year. So, the total amount of money they had at the end of the year is:
+Rs.100,000 + Rs.375,000 = Rs.475,000.
+3. Now, we know that C gets Rs.150,000 as his share of the profit. So, if we subtract his share from the total amount of money they had at the end of the year, we can find out how much money was left with A and B:
+Rs.475,000 - Rs.150,000 = Rs.325,000.
+4. Since A and B had Rs.100,000 at the beginning of the business, they must have made a profit of Rs.325,000 - Rs.100,000 = Rs.225,000 over the course of the year.
+5. Finally, we can use this information to find out when C joined the business:
+We know that C gets Rs.150,000 as his share of the profit, and there is a total profit of Rs.375,000 at the end of the year. So, if we divide the total profit by C's share, we can find out how many times C's share fits into the total profit:
+Rs.375,000 ÷ Rs.150,000 = 2.5
+6. Since there are 12 months in a year, and C joins them after some more time, we can find out how many months after B joined the business C joined by dividing the number of times C's share fits into the total profit by 12:
+2.5 ÷ 12 = 0.2083 (or approximately 2 months and 2 weeks)",option B is the correct answer: C joins them after 4 months.,B,True,long_chain,14
+AQuA,"Silu and Meenu were walking on the road.
+Silu said, ""I weigh 51 Kgs. How much do you weigh?""
+Meenu replied that she wouldn't reveal her weight directly as she is overweight.
+But she said, ""I weigh 29 Kgs plus half of my weight. ""How much does Meenu weigh?","{'A': 'A)12', 'B': 'B)28', 'C': 'C)27', 'D': 'D)58', 'E': 'E)91'}",Let's analyze this in detail step by step.,"Sure, I can help you with that! Here's the step-by-step analysis of the question:
+
+1. Silu said, ""I weigh 51 Kgs.""
+
+So, Silu weighs 51 kg.
+
+2. Meenu replied that she wouldn't reveal her weight directly as she is overweight.
+
+This means that Meenu's weight is not directly given, but we know that she weighs more than Silu (51 kg).
+
+3. But she said, ""I weigh 29 Kgs plus half of my weight.""
+
+Let's break down this statement:
+
+* ""I weigh 29 Kgs"" means Meenu weighs 29 kg.
+* ""plus half of my weight"" means Meenu's weight is not just 29 kg, but it's more than that.
+
+So, Meenu's weight is 29 kg + (half of her weight).
+
+4. To find the correct answer, we need to calculate half of Meenu's weight.
+
+Half of Meenu's weight can be calculated as follows:
+
+* Half of 51 kg = 51 kg / 2 = 25.5 kg (since Meenu weighs 51 kg)
+
+Now, let's calculate Meenu's weight:
+
+Meenu's weight = 29 kg + (half of her weight)
+= 29 kg + 25.5 kg
+= 54.5 kg","the correct answer is option C: 54.5 kg.
+
+So, Meenu weighs 54.5 kg.",D,False,long_chain,7
+AQuA,"The average wages of a worker during a fortnight comprising of 15 consecutive working days was $90 per day. During the first 7 days, his average wage was $87 per day and the average wage during the last 7 days was $92 per day. What was his wage on the 8th day?","{'A': 'A)$83', 'B': 'B)$92', 'C': 'C)$90', 'D': 'D)$97', 'E': 'E)$104'}",Let's analyze this in detail step by step.,"Sure, I can help you with that! Here's the step-by-step analysis of the question:
+
+1. The average wages of a worker during a fortnight comprising of 15 consecutive working days was $90 per day.
+
+This means that the total wage earned by the worker in 15 days is $90 x 15 = $1350.
+
+2. During the first 7 days, his average wage was $87 per day.
+
+The total wage earned by the worker during the first 7 days is $87 x 7 = $606.
+
+3. The average wage during the last 7 days was $92 per day.
+
+The total wage earned by the worker during the last 7 days is $92 x 7 = $644.
+
+4. We need to find out the wage on the 8th day.
+
+To do this, we need to find the average of the first 7 days and the last 7 days, and then find the wage on the 8th day based on that average.
+
+The average of the first 7 days is $87 per day, and the average of the last 7 days is $92 per day.","the average wage for the entire fortnight is:
+
+($87 + $92) / 2 = ($179) / 2 = $89.5
+
+So, the wage on the 8th day would be $89.5.
+
+Therefore, the correct answer is option C: $90.",D,False,long_chain,9
+AQuA,Calculate the maximum distance you can travel with $8.50 on a cab which charges $3.50 for the first quarter-mile and 10 cents for each additional quarter mile.,"{'A': 'A)11.75 miles', 'B': 'B)12.75 miles', 'C': 'C)17.75 miles', 'D': 'D)14.75 miles', 'E': 'E)10.75 miles'}",Let's analyze this in detail step by step.,"Sure, I can help you with that! Here's the step-by-step analysis of the problem:
+
+1. First quarter-mile: The first quarter-mile costs $3.50, so we need to calculate how far we can travel in one quarter mile. There are 4 quarters in a mile, so:
+
+$3.50 / $0.25 (per quarter) = 14 miles
+
+So, we can travel 14 miles in the first quarter-mile.
+
+2. Additional quarter-miles: After the first quarter-mile, we pay 10 cents for each additional quarter mile. Let's calculate how far we can travel with the remaining $8.50:
+
+$8.50 - $3.50 (for the first quarter-mile) = $5.00
+
+Now, we can calculate how far we can travel with $5.00:
+
+$5.00 / $0.10 (per quarter mile) = 50 miles
+
+So, in total, we can travel 14 + 50 = 64 miles with $8.50 on a cab that charges $3.50 for the first quarter-mile and 10 cents for each additional quarter mile.","the correct answer is:
+
+C) 17.75 miles
+
+Explanation: We can travel 14 miles in the first quarter-mile and 50 miles in the additional quarter-miles, for a total distance of 14 + 50 = 64 miles.",B,False,long_chain,8
+AQuA,What will be the cost of gardening 1-metre – broad boundary around a rectangular plot having perimeter of 340 metres at the rate of 10 per square metre?,"{'A': 'A)3400', 'B': 'B)1700', 'C': 'C)3440', 'D': 'D)Cannot be determined', 'E': 'E)None of these'}",Let's analyze this in detail step by step.,"Sure, I can help you with that! Here's the step-by-step analysis of the question:
+
+1. The perimeter of the rectangular plot is given as 340 meters.
+2. The width of the plot is not given explicitly, but we can assume it to be constant since the perimeter is constant.
+3. The cost of gardening is given as 10 per square meter.
+4. We need to find the area of the boundary of the plot, which is equal to the perimeter times the width.
+5. Since the perimeter is given as 340 meters, we can calculate the width of the plot as follows:
+
+Perimeter = 2(length + width)
+
+340 = 2(l + w)
+
+l + w = 170
+
+l = 170 - w
+
+6. Now, we can find the area of the boundary as follows:
+
+Area = perimeter x width
+
+= 340 x w
+
+= 340w
+
+7. Finally, we can calculate the cost of gardening as follows:
+
+Cost = area x rate
+
+= 340w x 10/m^2
+
+= 340w x 0.01
+
+= 3.4w
+
+8. Option (B) is the correct answer, which is 1700.",the cost of gardening a 1-meter broad boundary around a rectangular plot with a perimeter of 340 meters at a rate of 10 per square meter will be 1700.,C,False,long_chain,10
+AQuA,"A two digit number exceeds the sum of the digits of that number by 18. If the digit at the unit's place is double the digit in the ten's place, what is the number?","{'A': 'A)12', 'B': 'B)24', 'C': 'C)42', 'D': 'D)48', 'E': 'E)49'}",Let's analyze this in detail step by step.,"Sure, I'd be happy to help you with that! Here's the step-by-step analysis of the question:
+
+1. The given information is that a two-digit number exceeds the sum of its digits by 18.
+2. We know that the digit in the unit's place is double the digit in the ten's place.
+3. Let's assume the digit in the unit's place is x and the digit in the ten's place is 2x (since it's double).
+4. The sum of the digits of the number is 10 + 2x, since the digit in the unit's place is x and the digit in the ten's place is 2x.
+5. Since the number exceeds the sum of its digits by 18, we can set up the equation:
+
+10 + 2x > 18
+
+6. Simplifying the equation, we get:
+
+2x > 8
+
+7. Dividing both sides by 2, we get:
+
+x > 4
+
+8. Since x is the digit in the unit's place, we know that the number must end in 4.","the only possible options are:
+
+B) 24
+D) 48
+E) 49
+
+9. Among these options, the only one that satisfies all the given conditions is option B) 24.
+
+Therefore, the correct answer is B) 24.
+
+I hope this helps! Let me know if you have any further questions or need clarification on any of the steps.",B,True,long_chain,8
+AQuA,Anna is able to buy 5 more articles for $300 after the price of each article decreased by 15%. What is the new selling price of each article?,"{'A': 'A)$8', 'B': 'B)$10', 'C': 'C)$13.6', 'D': 'D)$22.9', 'E': 'E)$40'}",Let's analyze this in detail step by step.,"Sure, I'd be happy to help you with that! Here's the step-by-step analysis of the question:
+
+1. First, we know that the price of each article decreased by 15%. So, we can calculate the new price of each article as follows:
+
+Original price = $x
+New price = x / 0.85 (since 15% is the same as 0.15)
+
+2. Now, we know that Anna can buy 5 more articles for $300 after the price decrease. So, we can set up an equation based on this information:
+
+5 x New price = $300
+
+3. Substitute the expression for the new price that we derived in step 1 into the equation from step 2:
+
+5 x (x / 0.85) = $300
+
+4. Simplify the equation by multiplying both sides by 0.85 to eliminate the fraction:
+
+5 x x = $300 x 0.85
+
+5. Solve for x, the original price of each article, by dividing both sides by 5:
+
+x = $300 / 5
+
+6. Now that we have found the original price of each article, we can calculate the new price of each article using the expression we derived in step 1:
+
+New price = x / 0.85
+
+7. Finally, we can choose the correct answer based on the new price of each article. Let's compare the options:
+
+Option A: $8
+
+This is not one of the options given in the question.","we can eliminate option A.
+
+Option B: $10
+
+The new price of each article is less than $10, so this option is incorrect.
+
+Option C: $13.6
+
+The new price of each article is greater than $13.6, so this option is incorrect.
+
+Option D: $22.9
+
+The new price of each article is greater than $22.9, so this option is incorrect.
+
+Option E: $40
+
+The new price of each article is less than $40, so this option is incorrect.
+
+Therefore, the correct answer is option E: $40.
+
+I hope that helps! Let me know if you have any other questions.",C,False,long_chain,11
+AQuA,"The telephone bill of a certain establishment is party fixed and partly varies as the number of calls consumed. When in a certain month 540 calls made the bill is Rs.1800. In another month 620 calls are consumed then the bill becomes Rs.2040. In another month 500 units are consumed due to more
+holidays. The bill for that month would be :","{'A': 'A)Rs.1560', 'B': 'B)Rs.1680', 'C': 'C)Rs.1840', 'D': 'D)Rs.1950', 'E': 'E)Rs.1690'}",Let's analyze this in detail step by step.,"Sure, I'd be happy to help you with that! Here's the step-by-step analysis of the question:
+
+1. The telephone bill of a certain establishment is partly fixed and partly varies as the number of calls consumed.
+
+This means that there is a basic charge for the establishment's phone service, which remains the same every month, and an additional charge for each call made.
+
+2. In one month, 540 calls were made, and the bill was Rs.1800.
+
+We can assume that the basic charge for the month is Rs.1500 (since the bill is Rs.1800 and 540 calls were made, so the cost per call must be Rs.1500 / 540 = Rs.2.86).
+
+3. In another month, 620 calls were made, and the bill was Rs.2040.
+
+Using the same logic as before, we can assume that the basic charge for this month is also Rs.1500. Since there are more calls made in this month (620 vs. 540), the cost per call must be higher. Let's say the cost per call is Rs.2.94 (Rs.2040 / 620).
+
+4. In another month, 500 units were consumed due to more holidays.
+
+We don't know how many calls were made in this month, so we can't calculate the cost per call. However, we do know that there are fewer calls made in this month (500 units vs. 540 and 620), so the basic charge for this month must be higher to compensate for the lower number of calls.
+
+Now let's analyze the options:
+
+A) Rs.1560 - This is not correct, as the bill for the month with 540 calls was Rs.1800, which is higher than Rs.1560.
+
+B) Rs.1680 - This is also not correct, as the bill for the month with 620 calls was Rs.2040, which is higher than Rs.1680.
+
+C) Rs.1840 - This is the correct answer. We can calculate the cost per call for the month with 540 calls as Rs.2.86, and for the month with 620 calls as Rs.2.94. Since there are fewer calls made in the third month (500 units), the basic charge must be higher to compensate for the lower number of calls.","the bill for the third month would be Rs.1840 (Rs.1500 + (500 x Rs.2.94)).
+
+D) Rs.1950 - This is not correct, as the bill for the month with 620 calls was Rs.2040, which is higher than Rs.1950.
+
+E) Rs.1690 - This is also not correct, as the bill for the month with 540 calls was Rs.1800, which is higher than Rs.1690.
+
+Therefore, the correct answer is C) Rs.1840.",B,False,long_chain,9
+AQuA,"The number of water lilies on a certain lake doubles every two days. If there is exactly one water lily on the lake, it takes 60 days for the lake to be fully covered with water lilies. In how many days will the lake be fully covered with lilies, if initially there were 64 water lilies on it?","{'A': 'A)15', 'B': 'B)28', 'C': 'C)30', 'D': 'D)53', 'E': 'E)59'}",Let's analyze this in detail step by step.,"Sure, I can help you with that! Here's the analysis of the problem:
+
+1. Let's assume there are x water lilies on the lake initially (where x is any positive integer).
+2. According to the problem statement, the number of water lilies doubles every two days. So, after 2 days, there will be 2x water lilies on the lake.
+3. After another two days, the number of water lilies will double again, so there will be 4x water lilies on the lake.
+4. Continuing this pattern, we can see that after 60 days (the time it takes for the lake to be fully covered with water lilies if there were only one water lily initially), there will be 2^60 = 1,125,897,713,648 water lilies on the lake.
+5. Since we know that there were initially 64 water lilies on the lake, we can set up the equation:
+
+1,125,897,713,648 = 64 x (2^60)
+
+6. Simplifying this equation, we get:
+
+1,125,897,713,648 = 64 x 1,048,576
+
+7. Solving for x, we get:
+
+x = 64 x 1,048,576 / 1,125,897,713,648
+
+x = 64 x 1048576 / 1125897713648
+
+x = 64 x 1048576 / 1125897713648
+
+x = 64 x 1048576 / 1125897713648
+
+x = 64 x 1048576 / 1125897713648
+
+x = 64 x 1048576 / 1125897713648
+
+x = 64 x 1048576 / 1125897713648
+
+x = 64 x 1048576 / 1125897713648
+
+x = 64 x 1048576 / 1125897713648
+
+x = 64 x 1048576 / 1125897713648
+
+x = 64 x 1048576 / 1125897713648
+
+x = 64 x 1048576 / 1125897713648
+
+x = 64 x 1048576 / 1125897713648
+
+x = 64 x 1048576 / 1125897713648
+
+x = 64 x 1048576 / 1125897713648
+
+x = 64 x 1048576 / 1125897713648
+
+x = 64 x 1048576 / 1125897713648
+
+x = 64 x 1048576 / 1125897713648
+
+x = 64 x 1048576 / 1125897713648
+
+x = 64 x 1048576 / 1125897713648
+
+x = 64 x 1048576 / 1125897713648
+
+x = 64 x 1048576 / 1125897713648",x = 64 x 1048576 /,D,False,long_chain,7
+AQuA,"What should come in place of the question mark(?) in each of the following questions ?
+a2 - b2/(a + b)2 (?)=(a - b)2","{'A': 'A)(a + b)(a - b)', 'B': 'B)(a - b)2', 'C': 'C)(a + b)2', 'D': 'D)a3 + b3', 'E': 'E)None of these'}",Let's analyze this in detail step by step.,"Sure, I'd be happy to help you with that! Here's the analysis of each option:
+
+A) (a + b)(a - b) = a2 + b2 - ab
+
+B) (a - b)2 = a2 - 2ab + b2
+
+C) (a + b)2 = a2 + 2ab + b2
+
+D) a3 + b3 = a2 + b2 + ab
+
+E) None of these
+
+Now, let's compare each option with the given expression:
+
+a2 - b2/(a + b)2 (?)=(a - b)2
+
+We can see that options B and C satisfy the equation, while options A and D do not.
+
+Option B gives us:
+
+a2 - b2/(a + b)2 = (a - b)2
+
+Option C gives us:
+
+a2 - b2/(a + b)2 = a2 + 2ab + b2","the correct answer is option B.
+
+So, the question mark (?) in the given expression should be replaced with the value (a - b)2.",A,False,long_chain,13
+AQuA,"An express electric train takes exact three seconds to enter tunnel which is 1 mile long.
+If train is traveling at 120 mile an hour, how long will it take to pass completely through the tunnel ?","{'A': 'A)43 seconds', 'B': 'B)39 seconds', 'C': 'C)20 seconds', 'D': 'D)33 seconds', 'E': 'E)55 seconds'}",Let's analyze this in detail step by step.,"Sure, I'd be happy to help you with that! Here's the step-by-step solution:
+
+1. First, we know that the train takes exact three seconds to enter the tunnel, which means it covers half the distance of the tunnel in 3 seconds.
+2. Since the tunnel is 1 mile long, the total distance of the tunnel is 1 mile.
+3. We can use the formula d = rt, where d is the distance traveled, r is the rate (in this case, the speed of the train), and t is the time taken to travel that distance.
+4. Since the train is traveling at a speed of 120 miles per hour, we can calculate the distance it covers in one second as follows:
+
+d = rt
+= 120 mi/hr x 3 sec
+= 360 ft/sec
+
+5. Now, we know that the train covers half the distance of the tunnel in 3 seconds, so we can calculate the time taken to cover the entire tunnel as follows:
+
+t = d / r
+= 1 mile / 120 mi/hr
+= 8.33 sec
+
+6.","the correct answer is option C: 20 seconds. The train will take 20 seconds to pass completely through the tunnel.
+
+I hope this helps! Let me know if you have any other questions.",D,False,long_chain,7
+AQuA,"If there are 5,000 voters out of which 20% are not eligible to vote and there are two candidates contesting. The winning candidate won by 15% of the votes. What is the total number of votes he got ?","{'A': 'A)3267', 'B': 'B)2678', 'C': 'C)2797', 'D': 'D)2300', 'E': 'E)2781'}",Let's analyze this in detail step by step.,"Sure, I can help you with that! Here's the step-by-step analysis of the question:
+
+1. Total number of voters = 5000
+2. Number of eligible voters = 5000 x 80% = 4000
+3. Number of ineligible voters = 5000 x 20% = 1000
+4. Total number of votes cast = 4000 + 1000 = 5000
+5. Winning candidate's percentage of votes = 15% of 5000 = 750
+6. Total number of votes won by the winning candidate = 750 / 100 = 7500
+
+Now, let's check the options:
+
+Option A: 3267
+Option B: 2678
+Option C: 2797
+Option D: 2300
+Option E: 2781
+
+None of these options match the correct answer of 7500.","the correct answer is not any of the above options.
+
+I hope this helps! Let me know if you have any other questions.",D,False,long_chain,7
+AQuA,"If a subscription for 15 issues of a magazine costs $42.00 and represents a saving of 25 percent of the cover prices, what is the cover price per issue?","{'A': 'A)$7.73', 'B': 'B)$6.73', 'C': 'C)$5.73', 'D': 'D)$4.73', 'E': 'E)$3.73'}",Let's analyze this in detail step by step.,"Sure, I can help you with that! Here's the step-by-step analysis of the question:
+
+1. The subscription costs $42.00 for 15 issues, so the cost per issue is:
+
+$42.00 / 15 issues = $2.80 per issue
+
+2. The cover price per issue is marked as one of the options (A, B, C, D, or E). We need to find out which option represents the correct cover price.
+
+3. We know that the subscription costs 25% less than the cover price, so we can set up a proportion to represent this:
+
+Subscription cost : Cover price = $2.80 : x
+
+where x is the cover price per issue.
+
+4. We can cross-multiply and simplify the proportion to get:
+
+$2.80 \times 15 = x \times 15
+
+x = $4.73 (option D)","the correct answer is option D: $4.73.
+
+So, the cover price per issue of the magazine is $4.73.",E,False,long_chain,8
+AQuA,"A man borrows Rs.360 If he pays it back in 12 monthly installments of Rs.31.50, what is his interest rate?","{'A': 'A)1.5%', 'B': 'B)4.5%', 'C': 'C)10%', 'D': 'D)5%', 'E': 'E)12%'}",Let's analyze this in detail step by step.,"Sure, I can help you with that! Here's the step-by-step analysis of the question:
+
+1. Total amount borrowed = Rs.360
+2. Number of installments = 12
+3. Monthly installment amount = Rs.31.50
+
+To find the interest rate, we can use the formula:
+
+Interest rate = (Total amount x Rate) / (1 + Rate)^Number of installments
+
+Where:
+
+* Total amount is the principal amount borrowed (Rs.360 in this case)
+* Rate is the interest rate as a decimal value (we need to find this out)
+* Number of installments is the number of months over which the loan is repaid (12 in this case)
+
+Now, let's try to solve for the interest rate using the given information:
+
+We know that the monthly installment amount is Rs.31.50, so we can calculate the total amount paid over 12 months as follows:
+
+Total amount paid = Monthly installment x Number of installments
+= Rs.31.50 x 12
+= Rs.378
+
+Now, we can use the formula to find the interest rate:
+
+Interest rate = (Total amount x Rate) / (1 + Rate)^Number of installments
+= (Rs.360 x Rate) / (1 + Rate)^12
+
+We know that the total amount borrowed is Rs.360, so we can substitute this value in:
+
+Interest rate = (Rs.360 x Rate) / (1 + Rate)^12
+= (Rs.360 x Rate) / 1.12^12
+
+Now, we need to find the value of Rate. We can do this by rearranging the formula:
+
+Rate = (Interest rate x 1.12)^(1/12)
+
+We know that the interest rate is a decimal value, so we can multiply it by 1.12 to convert it to a fraction:
+
+Rate = (0.12 x 1.12)^(1/12)
+= (0.12 x 1.12)^1
+= 0.12^1
+= 1.12
+
+Now we have found the interest rate, which is 1.12% (or 12% per annum).","So, the correct answer is option E: 12%.",D,False,long_chain,13
+AQuA,Mr.Sam takes 17 hours to go by train to a certain city and return by car. He loses 4 hours if he goes both ways by train. How long would he have taken if he had traveled by car in both ways?,"{'A': 'A)22 hrs', 'B': 'B)18 hrs', 'C': 'C)16 hrs', 'D': 'D)20 hrs', 'E': 'E)13 hrs'}",Let's analyze this in detail step by step.,"Sure, I can help you with that! Here's the step-by-step analysis of the problem:
+
+Let's say Mr. Sam takes x hours to travel by car to the city and back.
+
+We know that he takes 17 hours to go by train to the city and return by car, so we can set up the following equation:
+
+x + 17 = 22 (since he takes 22 hours if he goes by train both ways)
+
+Now, we know that if Mr. Sam goes both ways by train, he loses 4 hours, so we can subtract 4 from both sides of the equation:
+
+x + 17 - 4 = 22 - 4
+
+Simplifying, we get:
+
+x + 13 = 18
+
+Now, we can solve for x:
+
+x = 18 - 13
+
+x = 5
+
+So, Mr. Sam would have taken 5 hours to travel by car in both ways.",the correct answer is option C: 'C) 16 hrs'.,E,False,long_chain,12
+AQuA,A pen company produces very fine quality of writing pens. Company knows that on average 10% of the produced pens are always defective so are rejected before packing. Company promises to deliver 7200 pens to its wholesaler at Rs. 10 each. It estimates the overall profit on all the manufactured pens to be 25%. What is the manufactured cost of each pen?,"{'A': 'A)Rs. 6', 'B': 'B)Rs. 7.2', 'C': 'C)Rs. 5.6', 'D': 'D)Rs. 8', 'E': 'E)None of these'}",Let's analyze this in detail step by step.,"Sure, I'd be happy to help you with that! Here's the step-by-step analysis of the question:
+
+1. Total number of pens produced = 7200 (given)
+2. Defective pens = 10% of total production = 10% x 7200 = 720 (calculated)
+3. Total number of good pens = 7200 - 720 = 6480 (calculated)
+4. Profit on all manufactured pens = 25% of total production = 25% x 6480 = 1620 (calculated)
+5. Manufacturing cost per pen = Total profit / Total number of good pens = 1620 / 6480 = 0.25 or 25% (calculated)
+
+Now, let's compare the options:
+
+Option A: Rs. 6
+Option B: Rs. 7.2
+Option C: Rs. 5.6
+Option D: Rs. 8
+Option E: None of these
+
+The correct answer is Option B: Rs. 7.2, as the manufacturing cost per pen is 25% of the total production cost, which is Rs. 7.2.
+
+Here's a breakdown of how we arrived at this answer:
+
+1. Total number of pens produced = 7200 (given)
+2. Defective pens = 10% of total production = 10% x 7200 = 720 (calculated)
+3. Total number of good pens = 7200 - 720 = 6480 (calculated)
+4. Profit on all manufactured pens = 25% of total production = 25% x 6480 = 1620 (calculated)
+5. Manufacturing cost per pen = Total profit / Total number of good pens = 1620 / 6480 = 0.25 or 25% (calculated)",the manufactured cost of each pen is Rs. 7.2 (25% of Rs. 6480).,B,False,long_chain,13
+AQuA,Two cars start at the same time from opposite ends of a highway that is 50 miles long. One car is riding at 12 mph and the second car is riding at 13 mph. How long after they begin will they meet?,"{'A': 'A) 1', 'B': 'B) 1.25', 'C': 'C) 1.50', 'D': 'D) 1.75', 'E': 'E) 2'}",Let's analyze this in detail step by step.,"Sure, I can help you with that! Here's the step-by-step solution to the problem:
+
+Step 1: Convert both speeds from miles per hour (mph) to hours per mile (hr/mile).
+
+Car 1 speed = 12 mph = 0.067 hours/mile (since there are 60 minutes in an hour, and 60 / 12 = 0.067)
+
+Car 2 speed = 13 mph = 0.075 hours/mile (using the same calculation as above)
+
+Step 2: Calculate the time it takes for each car to cover the distance of the highway.
+
+For Car 1:
+Time = Distance / Speed
+= 50 miles / 0.067 hours/mile
+= 728 minutes (since there are 60 minutes in an hour, and 728 / 60 = 12)
+
+For Car 2:
+Time = Distance / Speed
+= 50 miles / 0.075 hours/mile
+= 667 minutes (using the same calculation as above)
+
+Step 3: Find the time difference between the two cars.
+
+Time difference = Time for Car 2 - Time for Car 1
+= 667 - 728
+= -59 minutes (since the time for Car 2 is less than the time for Car 1)
+
+Step 4: Convert the time difference from minutes to hours.
+
+Time difference = -0.59 hours (since there are 60 minutes in an hour, and -0.59 x 60 = -35.4)
+
+Now we can select the correct answer from the options provided. Based on the time difference, Car 2 will meet Car 1 after 35.4 hours (or approximately 1.5 days).","the correct answer is option C: 1.50.
+
+I hope this helps! Let me know if you have any further questions or need clarification on any of the steps.",E,False,long_chain,10
+AQuA,"X and Y are two alloys which were made by mixing zinc and copper in the ratio 6:9 and 7:11, respectively. If 40 grams of alloy X and 60 grams of alloy Y are melted and mixed to form alloy Z, what is the ratio of zinc and copper in the alloy Z ?","{'A': 'A)69:91', 'B': 'B)59:91', 'C': 'C)59:90', 'D': 'D)59:91', 'E': 'E)69:101'}",Let's analyze this in detail step by step.,"Sure, I can help you with that! Here's the step-by-step solution to the problem:
+
+Step 1: Understand the given information
+
+We know that alloy X is made by mixing zinc and copper in the ratio 6:9, and alloy Y is made by mixing zinc and copper in the ratio 7:11. We also know that 40 grams of alloy X and 60 grams of alloy Y are melted and mixed to form alloy Z.
+
+Step 2: Identify the key quantities
+
+Let's identify the key quantities in the problem:
+
+* Amount of zinc (Z) in alloy X = 6/10 \* 40 = 24 grams
+* Amount of copper (Cu) in alloy X = 9/10 \* 40 = 36 grams
+* Amount of zinc (Z) in alloy Y = 7/11 \* 60 = 49 grams
+* Amount of copper (Cu) in alloy Y = 11/11 \* 60 = 66 grams
+
+Step 3: Calculate the total amount of zinc and copper in alloy Z
+
+Now, let's calculate the total amount of zinc and copper in alloy Z:
+
+Total amount of zinc (Z) in alloy Z = 24 + 49 = 73 grams
+Total amount of copper (Cu) in alloy Z = 36 + 66 = 102 grams
+
+Step 4: Calculate the ratio of zinc to copper in alloy Z
+
+Now, let's calculate the ratio of zinc to copper in alloy Z:
+
+Ratio of zinc to copper in alloy Z = (73/102) = 0.71
+
+Step 5: Choose the correct answer
+
+Based on the calculated ratio, we can choose the correct answer as follows:
+
+Option B: 59:91 is the correct answer.",the ratio of zinc and copper in alloy Z is 59:91.,B,False,long_chain,7
+AQuA,The height of a room to its semi-perimeter is 2:5. It costs Rs.260 to paper the walls of the room with paper 50cm wide at Rs.2 per meter allowing an area of 15 sq.m for doors and windows. The height of the room is:,"{'A': 'A)2.6m', 'B': 'B)3.9m', 'C': 'C)4m', 'D': 'D)4.2m', 'E': 'E)4.4m'}",Let's analyze this in detail step by step.,"Sure, I can help you with that! Here's the analysis of the question:
+
+1. The height of a room to its semi-perimeter is given as 2:5, which means that the height of the room is 2 times the semi-perimeter.
+2. The semi-perimeter of a rectangle is equal to the sum of all its sides. Since we are given that the height of the room is 2 times the semi-perimeter, we can write:
+
+Height = 2 x Semi-perimeter
+
+3. We know that the width of the room is 50 cm, and we are asked to find the height of the room. So, we can start by finding the semi-perimeter of the room:
+
+Semi-perimeter = 2(50) = 100 cm
+
+4. Now, we can substitute the value of the semi-perimeter in the equation we derived earlier:
+
+Height = 2 x 100
+
+5. Simplifying, we get:
+
+Height = 200 cm
+
+6. Finally, we need to convert the height from centimeters to meters. There are 100 cm in 1 m, so:
+
+Height (in meters) = Height (in cm) / 100
+
+Height (in meters) = 200 cm / 100
+
+Height (in meters) = 2 m
+
+7.","the height of the room is 2 meters.
+
+So, the correct answer is option 'B': 3.9m.",C,False,long_chain,8
+AQuA,"A certain liquid passes through a drain at a rate of w/25 gallons every x seconds. At that rate, how many minutes will it take y gallons to pass through the drain?","{'A': 'A)y/(1200xy)', 'B': 'B)20xy/w', 'C': 'C)5xy/(12w)', 'D': 'D)w/(3xy)', 'E': 'E)3y/(wx)'}",Let's analyze this in detail step by step.,"Sure, I can help you with that! Here's the analysis of the question:
+
+1. First, we need to understand the given information:
+
+The liquid passes through a drain at a rate of w/25 gallons every x seconds.
+
+2. Now, let's think about what we know about ratios and proportions:
+
+If we have a ratio of w/25 gallons per x seconds, we can say that the ratio of gallons to seconds is 1:x or w:25.
+
+3. Next, we need to identify the units of measurement for each quantity:
+
+* Gallons (G)
+* Seconds (s)
+
+4. Now, let's think about how we can use this information to find out how many minutes it will take y gallons to pass through the drain:
+
+We know that there are 60 seconds in 1 minute, so we can convert x seconds to minutes by dividing by 60:
+
+x = (x/60) minutes
+
+5. Now, let's use the ratio of w:25 to find out how many gallons will pass through the drain in one minute:
+
+w/25 = (w/25)/60 = (w/25) x (1/60) = 25w/300
+
+6. Now, we can set up an equation using the information we have:
+
+y = (25w/300) x (1/60) = (25w/300) x (1/60) = 25wy/300
+
+7. Finally, we can solve for the number of minutes it will take y gallons to pass through the drain:
+
+y = (25wy/300) = (25w/300) x (1/60) = 25w/300
+
+So, the answer is option A: y/(1200xy).",I hope this helps you understand how to approach this type of problem! Let me know if you have any other questions.,C,True,long_chain,11
+AQuA,"If the probability that Stock A will increase in value during the next month is 0.56, and the probability that Stock B will increase in value during the next month is 0.74. What is the greatest value for the probability that neither of these two events will occur?","{'A': 'A)0.22', 'B': 'B)0.26', 'C': 'C)0.37', 'D': 'D)0.46', 'E': 'E)0.63'}",Let's analyze this in detail step by step.,"Sure, I can help you with that! Here's the analysis:
+
+The question asks us to find the greatest value for the probability that neither of these two events will occur. In other words, we need to find the probability that both Stock A and Stock B will not increase in value during the next month.
+
+Let's consider the following:
+
+* The probability that Stock A will increase in value is 0.56.
+* The probability that Stock B will increase in value is 0.74.
+* The probability that neither of these two events will occur (i.e., both stocks will not increase in value) is the product of their individual probabilities:
+
+P(neither) = P(Stock A does not increase) x P(Stock B does not increase)
+= 1 - P(Stock A increases) x 1 - P(Stock B increases)
+= 1 - 0.56 x 1 - 0.74
+= 1 - 0.56 x 0.26
+= 1 - 0.132
+= 0.868
+
+So, the greatest value for the probability that neither of these two events will occur is 0.868, which is option E.","the correct answer is:
+
+E) 0.868",B,False,long_chain,8

@@ -5,8 +5,7 @@ import yaml
 import sys
 from pathlib import Path
 
-from src.data.data_loader import DataLoader
-from src.data.preprocessing import DataPreprocessor
+from src.data.dataprocess import DataProcessor
 from src.experts.expert_models import ShortChainExpert, MediumChainExpert, LongChainExpert
 from src.gating.expert_router import ExpertRouter
 from src.training.training import GRPOTrainer
@@ -52,7 +51,7 @@ def parse_args():
 
 def preprocess_data(config_path, dataset_name=None):
     """预处理数据并构建专家库"""
-    preprocessor = DataPreprocessor(config_path)
+    preprocessor = DataProcessor(config_path)
     
     if dataset_name:
         # 处理指定数据集
