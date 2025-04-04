@@ -38,7 +38,7 @@ data:
     long_chain:
       prompt_template: "Let's analyze this in detail step by step."
       step_range: [7, 100]
-    examples_per_expert: 5  # 每个专家库中包含的示例数量
+    examples_per_expert: 80  # 每个专家库中包含的示例数量
   
   # 去重和过滤配置
   deduplication:
