@@ -210,57 +210,78 @@ class GroupSampler:
         return groups
     
     def sample_groups_cluster(self, gating_network: Any, features: torch.Tensor, 
-                             num_clusters: int = 3) -> List[torch.Tensor]:
-        """
-        采样多组专家权重，基于聚类的变种
-        
-        Args:
-            gating_network: 门控网络
-            features: 输入特征
-            num_clusters: 聚类数
+                            num_clusters: int = 3) -> List[torch.Tensor]:
+        """采样多组专家权重，基于聚类的变种"""
+        try:
+            # 检查输入
+            if num_clusters <= 0:
+                logger.error(f"无效的聚类数: {num_clusters}")
+                # 设置默认值
+                num_clusters = 3
+                
+            # 获取当前策略下的基准权重
+            with torch.no_grad():
+                base_weights = gating_network(features)
+                logger.debug(f"基准权重形状: {base_weights.shape}")
+                
+            # 检查权重维度
+            if base_weights.nelement() == 0:
+                logger.error("基准权重为空")
+                # 创建默认权重
+                base_weights = torch.ones(1, num_clusters) / num_clusters
+                
+            # 采样多组权重
+            groups = []
             
-        Returns:
-            专家权重组列表
-        """
-        # 获取当前策略下的基准权重
-        with torch.no_grad():
-            base_weights = gating_network(features)
-        
-        # 采样多组权重
-        groups = []
-        
-        # 首先添加基准权重（无噪声）
-        groups.append(base_weights.clone())
-        
-        # 为每个聚类创建代表性权重
-        for cluster in range(num_clusters):
-            # 创建偏向某个专家类型的权重
-            cluster_weights = torch.zeros_like(base_weights)
-            cluster_weights[0, cluster % base_weights.shape[1]] = 1.0
-            groups.append(cluster_weights)
-        
-        # 添加混合权重
-        remaining_groups = self.num_groups - len(groups)
-        for _ in range(remaining_groups):
-            # 在基准权重和聚类权重之间插值
-            alpha = np.random.beta(0.5, 0.5)  # Beta分布，偏向极端值
-            cluster_idx = np.random.randint(1, len(groups))
+            # 首先添加基准权重（无噪声）
+            groups.append(base_weights.clone())
             
-            mixed_weights = alpha * base_weights + (1 - alpha) * groups[cluster_idx]
+            # 为每个聚类创建代表性权重
+            for cluster in range(min(num_clusters, base_weights.shape[1])):
+                # 创建偏向某个专家类型的权重
+                cluster_weights = torch.zeros_like(base_weights)
+                cluster_weights[0, cluster] = 1.0
+                groups.append(cluster_weights)
             
-            # 添加少量噪声
-            noise = torch.randn_like(mixed_weights) * (self.noise_std / 2)
-            mixed_weights = mixed_weights + noise
+            # 添加混合权重
+            remaining_groups = self.num_groups - len(groups)
+            remaining_groups = max(0, remaining_groups)  # 确保不为负
             
-            # 确保权重非负
-            mixed_weights = torch.relu(mixed_weights)
+            for _ in range(remaining_groups):
+                # 在基准权重和聚类权重之间插值
+                alpha = np.random.beta(0.5, 0.5)  # Beta分布，偏向极端值
+                if len(groups) <= 1:
+                    # 如果没有足够的组可以混合，使用基准权重
+                    mixed_weights = base_weights.clone()
+                else:
+                    cluster_idx = np.random.randint(1, len(groups))
+                    mixed_weights = alpha * base_weights + (1 - alpha) * groups[cluster_idx]
+                
+                # 添加少量噪声
+                noise = torch.randn_like(mixed_weights) * (self.noise_std / 2)
+                mixed_weights = mixed_weights + noise
+                
+                # 确保权重非负
+                mixed_weights = torch.relu(mixed_weights)
+                
+                # 归一化权重
+                sum_weights = torch.sum(mixed_weights)
+                if sum_weights > 0:
+                    normalized_weights = mixed_weights / sum_weights
+                else:
+                    # 如果所有权重都为0，使用均匀分布
+                    normalized_weights = torch.ones_like(mixed_weights) / mixed_weights.shape[1]
+                
+                groups.append(normalized_weights)
             
-            # 归一化权重
-            normalized_weights = mixed_weights / (torch.sum(mixed_weights) + 1e-10)
+            return groups
             
-            groups.append(normalized_weights)
-        
-        return groups
+        except Exception as e:
+            logger.error(f"生成专家组时出错: {e}")
+            import traceback
+            logger.error(traceback.format_exc())
+            # 返回默认组
+            return [torch.ones(1, num_clusters) / num_clusters]
 
 
 class GRPOTrainer:
@@ -426,114 +447,126 @@ class GRPOTrainer:
         Returns:
             (损失, 奖励, 是否正确)元组
         """
-        # 获取问题特征
-        features = self.router._get_combined_features(question, options)
-        
-        logger.debug(f"问题特征: {features.squeeze().tolist()}")
-        
-        # 使用组采样生成多组专家权重 - 使用聚类采样确保多样性
-        expert_groups = self.group_sampler.sample_groups_cluster(
-            self.router.gating_network, 
-            features,
-            num_clusters=len(self.router.experts)
-        )
-        
-         # 记录专家组权重
-        logger.debug(f"生成了 {len(expert_groups)} 组专家权重:")
-        for i, group in enumerate(expert_groups):
-            logger.debug(f"组 {i} 权重: {group.squeeze().tolist()}")
-        
-        # 计算每组的奖励
-        group_rewards = []
-        group_results = []
-        best_result = None
-        is_correct = False
-        logger.debug(f"\n===== 问题: {question} =====")
-        if options:
-            logger.debug(f"选项: {options}")
-        logger.debug(f"正确答案: {correct_answer}")
-        for group_idx, group_weights in enumerate(expert_groups):
-            # 记录当前组权重
-            logger.debug(f"\n组 {group_idx} 权重: {group_weights.squeeze().tolist()}")
-            # 根据权重选择专家
-            selected_experts = []
-            expert_indices = []
-            for expert_idx, weight in enumerate(group_weights.squeeze().tolist()):
-                if weight > 0.1:  # 仅选择权重大于阈值的专家
-                    if expert_idx in self.router.experts:
-                        selected_experts.append(self.router.experts[expert_idx])
-                        expert_indices.append(expert_idx)
-            # 记录选择的专家
-            expert_names = [self.router.expert_names.get(idx, f"专家{idx}") for idx in expert_indices]
-            logger.debug(f"选择的专家: {expert_names}")
-            # 确保至少选择一个专家
-            if not selected_experts:
-                max_idx = torch.argmax(group_weights).item()
-                logger.debug(f"没有选择专家，默认选择权重最高的专家: {max_idx}")
-                if max_idx in self.router.experts:
-                    selected_experts = [self.router.experts[max_idx]]
-                else:
-                    # 无效的专家索引，使用第一个可用的专家
-                    if self.router.experts:
-                        selected_experts = [next(iter(self.router.experts.values()))]
-                    else:
-                        logger.error("No experts available")
-                        continue
-            
-            # 使用选定的专家进行推理
-            try:
-                result = self.pipeline.reason_with_experts(question, selected_experts, options)
-                answer = result.get('final_answer', '')
-                confidence = result.get('confidence', 0.0)
-                step_count = result.get('step_count', 0)
-                logger.debug(f"推理结果: {answer}")
-                logger.debug(f"置信度: {confidence:.4f}")
-                logger.debug(f"步骤数: {step_count}")
-                # 计算该组的奖励
-                reward = self.reward_model.calculate_reward(
-                    answer=answer,
-                    correct_answer=correct_answer,
-                    confidence=confidence,
-                    step_count=step_count,
-                    expert_types=[expert.expert_type for expert in selected_experts]
-                )
-                logger.debug(f"奖励: {reward:.4f}")
-                group_rewards.append(reward)
-                group_results.append(result)
-                
-                # 检查是否为最佳结果
-                if best_result is None or reward > max(group_rewards[:-1], default=0):
-                    best_result = result
-                    is_correct = result.get('is_correct', False)
-                    logger.debug(f"更新最佳结果，当前答案是否正确: {is_correct}")
-            
-            except Exception as e:
-                logger.error(f"组 {group_idx} 推理出错: {e}")
-                group_rewards.append(0.0)
-                group_results.append(None)
-        
-        # 如果所有组都失败了，返回零损失
-        if not group_rewards:
-            logger.warning(f"所有组都推理失败，返回零损失")
-            return 0.0, 0.0, False
-        
-        # 计算每组的相对优势
-        advantages = self._calculate_advantages(group_rewards)
-        logger.debug(f"各组奖励: {group_rewards}")
-        logger.debug(f"各组优势: {advantages}")
-                
-        # 更新门控网络
         try:
-            loss = self._update_policy(features, expert_groups, advantages)
-            logger.debug(f"策略更新，损失: {loss:.6f}")
+            # 获取问题特征
+            features = self.router._get_combined_features(question, options)
+            
+            logger.debug(f"问题特征: {features.squeeze().tolist()}")
+            try:
+                expert_groups = self.group_sampler.sample_groups_cluster(
+                    self.router.gating_network, 
+                    features,
+                    num_clusters=len(self.router.experts)
+                )
+                logger.debug(f"生成了 {len(expert_groups)} 组专家权重")
+            except Exception as e:
+                logger.error(f"组采样错误: {e}")
+                logger.error(f"专家数量: {len(self.router.experts)}")
+                return 0.0, 0.0, False
+            # 检查专家组是否为空
+            if not expert_groups:
+                logger.error("未生成任何专家组")
+                return 0.0, 0.0, False
+            # 记录专家组权重
+            logger.debug(f"生成了 {len(expert_groups)} 组专家权重:")
+            for i, group in enumerate(expert_groups):
+                logger.debug(f"组 {i} 权重: {group.squeeze().tolist()}")
+            
+            # 计算每组的奖励
+            group_rewards = []
+            group_results = []
+            best_result = None
+            is_correct = False
+            logger.debug(f"\n===== 问题: {question} =====")
+            if options:
+                logger.debug(f"选项: {options}")
+            logger.debug(f"正确答案: {correct_answer}")
+            for group_idx, group_weights in enumerate(expert_groups):
+                # 记录当前组权重
+                logger.debug(f"\n组 {group_idx} 权重: {group_weights.squeeze().tolist()}")
+                # 根据权重选择专家
+                selected_experts = []
+                expert_indices = []
+                for expert_idx, weight in enumerate(group_weights.squeeze().tolist()):
+                    if weight > 0.1:  # 仅选择权重大于阈值的专家
+                        if expert_idx in self.router.experts:
+                            selected_experts.append(self.router.experts[expert_idx])
+                            expert_indices.append(expert_idx)
+                # 记录选择的专家
+                expert_names = [self.router.expert_names.get(idx, f"专家{idx}") for idx in expert_indices]
+                logger.debug(f"选择的专家: {expert_names}")
+                # 确保至少选择一个专家
+                if not selected_experts:
+                    max_idx = torch.argmax(group_weights).item()
+                    logger.debug(f"没有选择专家，默认选择权重最高的专家: {max_idx}")
+                    if max_idx in self.router.experts:
+                        selected_experts = [self.router.experts[max_idx]]
+                    else:
+                        # 无效的专家索引，使用第一个可用的专家
+                        if self.router.experts:
+                            selected_experts = [next(iter(self.router.experts.values()))]
+                        else:
+                            logger.error("No experts available")
+                            continue
+                
+                # 使用选定的专家进行推理
+                try:
+                    result = self.pipeline.reason_with_experts(question, selected_experts, options)
+                    answer = result.get('final_answer', '')
+                    confidence = result.get('confidence', 0.0)
+                    step_count = result.get('step_count', 0)
+                    logger.debug(f"推理结果: {answer}")
+                    logger.debug(f"置信度: {confidence:.4f}")
+                    logger.debug(f"步骤数: {step_count}")
+                    # 计算该组的奖励
+                    reward = self.reward_model.calculate_reward(
+                        answer=answer,
+                        correct_answer=correct_answer,
+                        confidence=confidence,
+                        step_count=step_count,
+                        expert_types=[expert.expert_type for expert in selected_experts]
+                    )
+                    logger.debug(f"奖励: {reward:.4f}")
+                    group_rewards.append(reward)
+                    group_results.append(result)
+                    
+                    # 检查是否为最佳结果
+                    if best_result is None or reward > max(group_rewards[:-1], default=0):
+                        best_result = result
+                        is_correct = result.get('is_correct', False)
+                        logger.debug(f"更新最佳结果，当前答案是否正确: {is_correct}")
+                
+                except Exception as e:
+                    logger.error(f"组 {group_idx} 推理出错: {e}")
+                    group_rewards.append(0.0)
+                    group_results.append(None)
+            
+            # 如果所有组都失败了，返回零损失
+            if not group_rewards:
+                logger.warning(f"所有组都推理失败，返回零损失")
+                return 0.0, 0.0, False
+            
+            # 计算每组的相对优势
+            advantages = self._calculate_advantages(group_rewards)
+            logger.debug(f"各组奖励: {group_rewards}")
+            logger.debug(f"各组优势: {advantages}")
+                    
+            # 更新门控网络
+            try:
+                loss = self._update_policy(features, expert_groups, advantages)
+                logger.debug(f"策略更新，损失: {loss:.6f}")
+            except Exception as e:
+                logger.error(f"更新策略出错: {e}")
+                loss = 0.0
+            # 返回平均损失、平均奖励和是否正确
+            avg_reward = sum(group_rewards) / len(group_rewards)
+            logger.debug(f"样本训练完成，平均奖励: {avg_reward:.4f}, 损失: {loss:.6f}, 是否正确: {is_correct}")
+            return loss, avg_reward, is_correct
         except Exception as e:
-            logger.error(f"更新策略出错: {e}")
-            loss = 0.0
-        # 返回平均损失、平均奖励和是否正确
-        avg_reward = sum(group_rewards) / len(group_rewards)
-        logger.debug(f"样本训练完成，平均奖励: {avg_reward:.4f}, 损失: {loss:.6f}, 是否正确: {is_correct}")
-        return loss, avg_reward, is_correct
-    
+            logger.error(f"训练样本时出错: {e}")
+            import traceback
+            logger.error(traceback.format_exc())
+            return 0.0, 0.0, False
     def _calculate_advantages(self, rewards: List[float]) -> List[float]:
         """
         计算每组的相对优势
