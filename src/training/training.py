@@ -429,6 +429,8 @@ class GRPOTrainer:
         # 获取问题特征
         features = self.router._get_combined_features(question, options)
         
+        logger.debug(f"问题特征: {features.squeeze().tolist()}")
+        
         # 使用组采样生成多组专家权重 - 使用聚类采样确保多样性
         expert_groups = self.group_sampler.sample_groups_cluster(
             self.router.gating_network, 
@@ -436,23 +438,38 @@ class GRPOTrainer:
             num_clusters=len(self.router.experts)
         )
         
+         # 记录专家组权重
+        logger.debug(f"生成了 {len(expert_groups)} 组专家权重:")
+        for i, group in enumerate(expert_groups):
+            logger.debug(f"组 {i} 权重: {group.squeeze().tolist()}")
+        
         # 计算每组的奖励
         group_rewards = []
         group_results = []
         best_result = None
         is_correct = False
-        
+        logger.debug(f"\n===== 问题: {question} =====")
+        if options:
+            logger.debug(f"选项: {options}")
+        logger.debug(f"正确答案: {correct_answer}")
         for group_idx, group_weights in enumerate(expert_groups):
+            # 记录当前组权重
+            logger.debug(f"\n组 {group_idx} 权重: {group_weights.squeeze().tolist()}")
             # 根据权重选择专家
             selected_experts = []
+            expert_indices = []
             for expert_idx, weight in enumerate(group_weights.squeeze().tolist()):
                 if weight > 0.1:  # 仅选择权重大于阈值的专家
                     if expert_idx in self.router.experts:
                         selected_experts.append(self.router.experts[expert_idx])
-            
+                        expert_indices.append(expert_idx)
+            # 记录选择的专家
+            expert_names = [self.router.expert_names.get(idx, f"专家{idx}") for idx in expert_indices]
+            logger.debug(f"选择的专家: {expert_names}")
             # 确保至少选择一个专家
             if not selected_experts:
                 max_idx = torch.argmax(group_weights).item()
+                logger.debug(f"没有选择专家，默认选择权重最高的专家: {max_idx}")
                 if max_idx in self.router.experts:
                     selected_experts = [self.router.experts[max_idx]]
                 else:
@@ -469,7 +486,9 @@ class GRPOTrainer:
                 answer = result.get('final_answer', '')
                 confidence = result.get('confidence', 0.0)
                 step_count = result.get('step_count', 0)
-                
+                logger.debug(f"推理结果: {answer}")
+                logger.debug(f"置信度: {confidence:.4f}")
+                logger.debug(f"步骤数: {step_count}")
                 # 计算该组的奖励
                 reward = self.reward_model.calculate_reward(
                     answer=answer,
@@ -478,7 +497,7 @@ class GRPOTrainer:
                     step_count=step_count,
                     expert_types=[expert.expert_type for expert in selected_experts]
                 )
-                
+                logger.debug(f"奖励: {reward:.4f}")
                 group_rewards.append(reward)
                 group_results.append(result)
                 
@@ -486,28 +505,34 @@ class GRPOTrainer:
                 if best_result is None or reward > max(group_rewards[:-1], default=0):
                     best_result = result
                     is_correct = result.get('is_correct', False)
+                    logger.debug(f"更新最佳结果，当前答案是否正确: {is_correct}")
             
             except Exception as e:
-                logger.error(f"Error reasoning with experts for group {group_idx}: {e}")
+                logger.error(f"组 {group_idx} 推理出错: {e}")
                 group_rewards.append(0.0)
                 group_results.append(None)
         
         # 如果所有组都失败了，返回零损失
         if not group_rewards:
+            logger.warning(f"所有组都推理失败，返回零损失")
             return 0.0, 0.0, False
         
         # 计算每组的相对优势
         advantages = self._calculate_advantages(group_rewards)
-        
+        logger.debug(f"各组奖励: {group_rewards}")
+        logger.debug(f"各组优势: {advantages}")
+                
         # 更新门控网络
         try:
             loss = self._update_policy(features, expert_groups, advantages)
+            logger.debug(f"策略更新，损失: {loss:.6f}")
         except Exception as e:
-            logger.error(f"Error updating policy: {e}")
+            logger.error(f"更新策略出错: {e}")
             loss = 0.0
-        
         # 返回平均损失、平均奖励和是否正确
-        return loss, sum(group_rewards) / len(group_rewards), is_correct
+        avg_reward = sum(group_rewards) / len(group_rewards)
+        logger.debug(f"样本训练完成，平均奖励: {avg_reward:.4f}, 损失: {loss:.6f}, 是否正确: {is_correct}")
+        return loss, avg_reward, is_correct
     
     def _calculate_advantages(self, rewards: List[float]) -> List[float]:
         """

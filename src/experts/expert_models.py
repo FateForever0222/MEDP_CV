@@ -127,6 +127,7 @@ class BaseExpert(ABC):
             包含相似示例的DataFrame
         """
         if len(self.examples) <= num_examples:
+            logger.debug(f"示例总数少于要检索的数量，返回所有示例: {len(self.examples)}")
             return self.examples  # 如果示例总数少于要检索的数量，返回所有示例
         
         # 计算或获取问题的嵌入
@@ -165,7 +166,8 @@ class BaseExpert(ABC):
         
         # 获取最相似的示例索引
         similar_indices = sorted(similarities, key=similarities.get, reverse=True)[:num_examples]
-        
+        logger.debug(f"为问题 '{question[:30]}...' 检索到的相似示例索引: {similar_indices}")
+        logger.debug(f"对应相似度: {[similarities[idx] for idx in similar_indices]}")
         # 返回最相似的示例
         return self.examples.loc[similar_indices]
     
@@ -226,10 +228,10 @@ class BaseExpert(ABC):
         """
         # 生成提示
         prompt = self.generate_prompt(question, options)
-        
+        logger.debug(f"\n{self.expert_type} 提示:\n{prompt}")
         # 使用LLM进行推理
         response, confidence = self.llm.generate_with_confidence(prompt)
-        
+        logger.debug(f"{self.expert_type} 置信度: {confidence:.4f}")
         return response, confidence
     
     def get_expert_features(self, question: str, options: Optional[str] = None) -> torch.Tensor:
@@ -358,7 +360,7 @@ class ShortChainExpert(BaseExpert):
         
         # 修改专家身份特征
         features[4] = 1.0  # 短链专家
-        
+        logger.debug(f"{self.expert_type} 基础特征: {features}")
         return torch.tensor(features, dtype=torch.float)
 
 

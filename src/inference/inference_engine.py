@@ -382,9 +382,10 @@ class InferenceEngine:
         # 结果存储
         expert_results = []
         expert_confidences = []
-        
+        logger.debug(f"\n开始推理问题: {question}")
         # 使用每个专家进行推理
         for expert in experts:
+            logger.debug(f"\n使用 {expert.expert_type} 推理")
             response, confidence = expert.reason(question, options)
             
             # 提取思维链和最终答案
@@ -392,7 +393,9 @@ class InferenceEngine:
             
             # 计算步骤数
             step_count = self._count_reasoning_steps(cot)
-            
+            logger.debug(f"提取的答案: {answer}")
+            logger.debug(f"步骤数: {step_count}")
+            logger.debug(f"置信度: {confidence:.4f}")
             expert_results.append({
                 'expert_type': expert.expert_type,
                 'chain_of_thought': cot,
@@ -404,7 +407,8 @@ class InferenceEngine:
         
         # 计算最终答案和置信度
         final_answer, confidence = self._determine_final_answer(expert_results)
-        
+        logger.debug(f"\n最终答案: {final_answer}")
+        logger.debug(f"整体置信度: {confidence:.4f}")
         # 检查是否需要重试
         if confidence < self.confidence_threshold:
             retry_result = self.retry_mechanism.retry(
