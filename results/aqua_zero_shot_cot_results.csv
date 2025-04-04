@@ -1,0 +1,1428 @@
+question,options,correct_answer,response,extracted_answer,is_correct,time
+"You can purchase one soda and two energy bars for 150 cents, or two sodas and three energy bars for 300
+cents. If the costs of the items do not change, compute the cost in cents of six sodas and seven bars.","{'A': 'A)500', 'B': 'B)600', 'C': 'C)750', 'D': 'D)800', 'E': 'E)900'}",E," Sure, I'd be happy to help you with that! Here's the calculation step by step:
+
+1. First, let's calculate the cost of one soda and two energy bars:
+
+1 soda + 2 energy bars = 150 cents
+
+2. Now, let's calculate the cost of two sodas and three energy bars:
+
+2 sodas + 3 energy bars = 300 cents
+
+3. Next, we need to find out how much six sodas would cost:
+
+6 x 150 cents = 900 cents (option E)
+
+4. Now, let's calculate the cost of seven energy bars:
+
+7 x 150 cents = 1050 cents
+
+5. Finally, we can add up the costs of six sodas and seven energy bars to get our total:
+
+900 + 1050 = 2050 cents (option E)
+
+So, the cost in cents of six sodas and seven energy bars is option E: 2050 cents.",E,True,5.686330795288086
+Find the total no. of distinct bike no.'s that can beformed using 2 letters followed by 2 no.'s. How many letters need to be distinct?,"{'A': 'A)74453', 'B': 'B)64543', 'C': 'C)74325', 'D': 'D)65000', 'E': 'E)97656'}",D," Sure, let's break down the problem step by step to find the total number of distinct bike numbers that can be formed using 2 letters followed by 2 numbers.
+
+1. Let's first consider the letters:
+
+There are 5 distinct letters in the given options: 'A', 'B', 'C', 'D', and 'E'.
+
+2. Now, let's think about the number of distinct combinations we can form using these letters:
+
+For each letter, we have 2 options (either 'A' or 'B' or 'C' or 'D' or 'E'). Therefore, the total number of distinct combinations is:
+
+5 x 2 = 10
+
+So, there are 10 distinct combinations of letters.
+
+3. Now, let's consider the numbers:
+
+For each letter combination, we have 2 options for the first number (either '1' or '2') and 2 options for the second number (either '1' or '2'). Therefore, the total number of distinct combinations of letters and numbers is:
+
+10 x 2 x 2 = 40
+
+So, there are 40 distinct bike numbers that can be formed using 2 letters followed by 2 numbers.
+
+Therefore, the answer is (D) 65000.",D,True,4.430511236190796
+"Boomtown urban planners expect the city’s population to increase by 10% per year over the next two years. If that projection were to come true, the population two years from now would be exactly double the population of one year ago. Which of the following is closest to the percent population increase in Boomtown over the last year?","{'A': 'A)20%', 'B': 'B)40%', 'C': 'C)50%', 'D': 'D)65%', 'E': 'E)75%'}",D," Sure, let's work through this problem step by step!
+
+So, we know that the population of Boomtown is expected to increase by 10% per year over the next two years. That means that if the population one year ago was P, then the population today is P + 10% of P, and the population two years from now will be P + 20% of P.
+
+We're also given that the population two years from now is expected to be exactly double the population of one year ago. So we can set up an equation based on that:
+
+P + 20% of P = 2P
+
+Now, we need to find out what percentage increase this represents. To do that, we can divide both sides of the equation by P:
+
+(P + 20% of P) / P = 2
+
+Simplifying, we get:
+
+1 + 20% = 2
+
+1 + 20% = 2P
+
+Now, we can see that 20% is equal to 2/P, so the percentage increase in Boomtown's population over the last year is:
+
+20% = 2/P
+
+The closest answer choice to this percentage increase is:
+
+C) 50%
+
+Therefore, the correct answer is C) 50%.",C,False,4.540943384170532
+"A coin made of alloy of aluminum and silver measures 2 x 15 mm (it is 2 mm thick and its diameter is 15 mm). If the weight of the coin is 30 grams and the volume of aluminum in the alloy equals that of silver, what will be the weight of a coin measuring 1 x 30 mm made of pure aluminum if silver is twice as heavy as aluminum?","{'A': 'A)36 grams', 'B': 'B)40 grams', 'C': 'C)42 grams', 'D': 'D)48 grams', 'E': 'E)50 grams'}",B," Sure, let's work through this problem step by step!
+
+Given:
+
+* The coin made of alloy of aluminum and silver measures 2 x 15 mm (it is 2 mm thick and its diameter is 15 mm).
+* The weight of the coin is 30 grams.
+* The volume of aluminum in the alloy equals that of silver.
+
+We know that the weight of the coin is 30 grams, so we can start by finding the volume of the coin:
+
+Volume = π x (2 x 15 mm)² x 2 mm = 3.48 cm³
+
+Since the volume of aluminum in the alloy equals that of silver, we know that the volume of silver in the coin is also 3.48 cm³.
+
+We can find the weight of one unit volume of aluminum by using its density:
+
+Density of aluminum = 2.7 g/cm³
+
+Weight of one unit volume of aluminum = density x volume = 2.7 g/cm³ x 3.48 cm³ = 9.1 grams
+
+Now, we know that the weight of the coin is 30 grams, so we can set up an equation to represent this information:
+
+Weight of aluminum in the coin = Weight of coin - Weight of silver in the coin
+
+Substituting the values we have found, we get:
+
+Weight of aluminum in the coin = 30 grams - (2 x 3.48 cm³ x density of silver)
+
+Since the volume of silver in the coin is twice that of aluminum, we can substitute 2 times the weight of one unit volume of aluminum:
+
+Weight of aluminum in the coin = 30 grams - (2 x 3.48 cm³ x 2.7 g/cm³)
+
+Simplifying and solving for the weight of the aluminum, we get:
+
+Weight of aluminum in the coin = 30 grams - (2 x 3.48 cm³ x 2.7 g/cm³)
+= 30 grams - 14.96 grams
+= 15.04 grams
+
+Therefore, the weight of a coin measuring 1 x 30 mm made of pure aluminum if silver is twice as heavy as aluminum would be:
+
+Option C: 42 grams.",C,False,8.615045309066772
+A paper is in a square form whose one side is 20 cm. Two semi circles are drawn on its opposites as diameters. If these semi circles are cut down what is the area of the remaining paper?,"{'A': 'A)8.75', 'B': 'B)8.79', 'C': 'C)8.75', 'D': 'D)8.71', 'E': 'E)8.72'}",C," Sure, I'd be happy to help you with this problem! Here's how we can approach it:
+
+The paper is in a square form, and two semi-circles are drawn on its opposite sides as diameters. If these semi-circles are cut down, what is the area of the remaining paper?
+
+Let's start by identifying the given information:
+
+* The side length of the square paper is 20 cm.
+* Two semi-circles are drawn on the opposite sides of the square as diameters.
+
+Now, let's think about how we can find the area of the remaining paper after cutting down the semi-circles. Can you think of a way to do this?",A,False,2.423091411590576
+A can construct a wall in 40 min and B can construct the wall in 45 min. How many hours is needed to contruct a wall if both the person working together.,"{'A': 'A)20 min', 'B': 'B)22 min', 'C': 'C)23 min', 'D': 'D)21 min', 'E': 'E)20 min'}",D," Sure, let's break down the problem step by step!
+
+Let's say A and B work together to construct a wall.
+
+A can construct a wall in 40 minutes, so if A works alone, it will take:
+
+40 minutes = 0.4 hours (since there are 60 minutes in an hour)
+
+B can construct a wall in 45 minutes, so if B works alone, it will take:
+
+45 minutes = 0.45 hours (since there are 60 minutes in an hour)
+
+Now, let's think about how long it would take for both A and B to work together to construct the wall.
+
+Since they are working together, their combined time will be the sum of their individual times:
+
+0.4 + 0.45 = 0.85 hours (since there are 60 minutes in an hour)
+
+Therefore, it would take both A and B working together approximately 0.85 hours (or 51 minutes) to construct a wall.
+
+So, the correct answer is:
+
+E) 20 min + 20 min = 40 min + 45 min = 85 min = 1 hour 25 minutes.",E,False,4.183051109313965
+"All 250 files on Sam's hard drive are infected by either a virus or a worm or both. The number of files that are infected only by a worm is 2.5 times the number of files that are infected by both a virus and a worm. If 50% of the files were not infected by a virus, how many of Sam's files were NOT infected by a worm?","{'A': 'A)50', 'B': 'B)70', 'C': 'C)75', 'D': 'D)100', 'E': 'E)125'}",C," Sure, let's break down the problem step by step!
+
+Let X be the number of files infected only by a worm.
+Since 50% of the files were not infected by a virus, the number of files not infected by a virus is half of the total number of files, which is:
+
+250 / 2 = 125
+
+So, the number of files not infected by a worm is:
+
+X = 2.5 times 125
+
+X = 3125
+
+Therefore, the correct answer is option C: 75.
+
+Here's the step-by-step breakdown:
+
+1. Let X be the number of files infected only by a worm.
+2. Since 50% of the files were not infected by a virus, the number of files not infected by a virus is half of the total number of files:
+
+250 / 2 = 125
+3. So, the number of files not infected by a worm is:
+
+X = 2.5 times 125
+
+X = 3125
+4. Therefore, the correct answer is option C: 75.",C,True,4.235045671463013
+"Two ants are moving from their farms towards each other. Ant A is moving at a speed of 9 cm per hour and ant B is moving at a speed of 6 cm per hour. If the farms are 75 cm away from each other, what will be the distance (in cm) that ant A travels until meeting ant B?","{'A': 'A)45', 'B': 'B)48', 'C': 'C)51', 'D': 'D)54', 'E': 'E)57'}",A," Sure, let's solve this problem step by step!
+
+Let's say ant A starts moving at 9 cm per hour, so it will cover 9 cm in one hour. Since there are 60 minutes in an hour, ant A will cover 9 x 60 = 540 cm in 60 minutes.
+
+Now, let's find out how far ant B will travel in the same time period. Ant B is moving at a speed of 6 cm per hour, so it will cover 6 x 60 = 360 cm in 60 minutes.
+
+Since the farms are 75 cm away from each other, we know that ant A will travel 75 cm before meeting ant B. Therefore, the correct answer is:
+
+C) 51 cm
+
+Here's the step-by-step solution:
+
+1. Ant A moves at a speed of 9 cm per hour.
+2. In one hour, ant A covers 9 x 60 = 540 cm.
+3. Ant B moves at a speed of 6 cm per hour.
+4. In one hour, ant B covers 6 x 60 = 360 cm.
+5. The distance between the farms is 75 cm.
+6. Therefore, ant A travels 75 - 360 = 51 cm before meeting ant B.",C,False,4.723275423049927
+A sales person gets a 10% commission on each sale he makes. How many sales of $250 each must he make in order to reach a salary of at least $1000?,"{'A': 'A)15', 'B': 'B)24', 'C': 'C)25', 'D': 'D)40', 'E': 'E)52'}",D," Sure, let's work through this problem step by step!
+
+The sales person gets a 10% commission on each sale they make, so if they make $250 in sales, they will earn $25 (10% of $250).
+
+To reach a salary of at least $1000, the sales person must earn at least $1000 - $250 = $750 in commissions.
+
+So, we can set up an equation:
+
+$750 = 10% x (?)
+
+where ? is the amount of sales the sales person must make to earn $750 in commissions.
+
+We know that 10% of $250 is $25, so we can start by trying to find out how many times the sales person must sell $250 worth of products to reach $750 in commissions:
+
+$750 / $25 = ?
+
+Simplifying, we get:
+
+? = 750 / 25 = 30
+
+So, the sales person must make 30 sales of $250 each to reach a salary of at least $1000.
+
+Now, let's check the options:
+
+A) 15
+B) 24
+C) 25
+D) 40
+E) 52
+
+None of these options are correct, as they do not equal 30. Therefore, the correct answer is:
+
+C) 25
+
+The sales person must make 25 sales of $250 each to reach a salary of at least $1000.",C,False,5.7190492153167725
+"The original retail price of an appliance was 60 percent more than its wholesale cost. If the appliance was actually sold for 20 percent less than the original retail price, then it was sold for what percent more than its wholesale cost?","{'A': 'A)20%', 'B': 'B)28%', 'C': 'C)36%', 'D': 'D)40%', 'E': 'E)42%'}",B," Sure, let's work through this problem step by step!
+
+The original retail price of the appliance was 60% more than its wholesale cost, so we can set up an equation based on that:
+
+Retail price = Wholesale cost x 1.6
+
+Now, we know that the appliance was sold for 20% less than the original retail price, so we can set up another equation based on that:
+
+Sold price = Retail price x 0.8
+
+We can substitute the first equation into the second one to get:
+
+Sold price = Wholesale cost x 1.6 x 0.8
+
+Simplifying, we get:
+
+Sold price = Wholesale cost x 1.32
+
+Now, we need to find out what percent more than the wholesale cost the sold price is. To do this, we can divide the sold price by the wholesale cost and multiply by 100:
+
+(Sold price / Wholesale cost) x 100
+
+Substituting the values we have, we get:
+
+((Wholesale cost x 1.32) / Wholesale cost) x 100
+
+Simplifying and solving for the percentage, we get:
+
+(1.32 x 100) / 100 = 36%
+
+So the correct answer is C) 36%.",C,False,4.966996669769287
+A bee bypasses 0.05% of flowers it flies by because it can sense they don't have any nectar in them. How many flowers will the bee fly by to bypass 8 flowers?,"{'A': 'A)2000', 'B': 'B)4000', 'C': 'C)8000', 'D': 'D)16000', 'E': 'E)32000'}",D," Sure, let's work through this problem step by step!
+
+So, we know that the bee can sense when a flower does not have any nectar in it, and it bypasses those flowers. We also know that the bee flies by 2000 flowers in total.
+
+Let's say the bee bypasses x flowers that do not have any nectar. We can set up an equation based on the information given:
+
+x / 2000 = 0.05%
+
+To solve for x, we can multiply both sides of the equation by 100 to get rid of the percentage:
+
+x = 2000 x 0.05
+
+x = 100
+
+So, the bee bypasses 100 flowers that do not have any nectar.
+
+Now, we need to find out how many flowers the bee will fly by in total. We know that it flies by 2000 flowers in total, and it bypasses 100 of them:
+
+Total flowers = 2000 - 100
+
+Total flowers = 1900
+
+Therefore, the bee will fly by 1900 flowers to bypass 8 flowers. The correct answer is C) 8000.",C,False,4.527464389801025
+"Two numbers are in the ratio 3:5. If 9 is subtracted from each, the new numbers are in the ratio 12:23. The smaller number is?","{'A': 'A)21', 'B': 'B)33', 'C': 'C)35', 'D': 'D)42', 'E': 'E)58'}",B," Sure, let's work through this problem step by step!
+
+Given: Two numbers are in the ratio 3:5.
+
+Question: If 9 is subtracted from each number, what is the new ratio of the smaller number to the larger number?
+
+Let's call the smaller number x and the larger number y. We know that the ratio of x to y is 3:5, so we can write an equation based on that:
+
+x/y = 3/5
+
+Now, let's subtract 9 from both sides of the equation:
+
+x/y - 9 = 3/5 - 9
+
+Simplifying, we get:
+
+x/y = 12/23
+
+So, the smaller number is 12. The correct answer is option C: 35.",C,False,2.8554694652557373
+"If Q, a positive integer, has 5 factors, which of the following must be true about Q?
+I. Q is the square of a prime number.
+II. Q is the fourth power of a prime number.
+III. Q is the product of two prime numbers.","{'A': 'A)I only', 'B': 'B)III only', 'C': 'C)II only', 'D': 'D)I and II only', 'E': 'E)I and III only'}",B," Sure, let's go through the question step by step!
+
+If Q, a positive integer, has 5 factors, we know that:
+
+1. Q must be divisible by 1 and itself (since it has 5 factors).
+2. Q must be divisible by 2 (since it has 5 factors).
+3. Q must be divisible by 3 (since it has 5 factors).
+4. Q must be divisible by 4 (since it has 5 factors).
+5. Q must be divisible by 5 (since it has 5 factors).
+
+Now, let's analyze each option:
+
+A) Q is the square of a prime number.
+
+If Q were the square of a prime number, it would have only two factors: 1 and itself. However, since Q has 5 factors, this option is not possible. So, we can eliminate option A.
+
+B) Q is the fourth power of a prime number.
+
+If Q were the fourth power of a prime number, it would have four factors: 1, 2, 3, and itself. However, since Q has 5 factors, this option is also not possible. So, we can eliminate option B.
+
+C) Q is the product of two prime numbers.
+
+If Q were the product of two prime numbers, it would have four factors: 1, 2, 3, and itself. This is possible, but it's not necessarily true that Q has only five factors. So, we can't eliminate option C yet.
+
+D) Q is the square of a prime number and the product of two prime numbers.
+
+This option is not possible since Q cannot be both the square of a prime number and the product of two prime numbers at the same time. So, we can eliminate option D.
+
+E) Q is the product of two prime numbers and 3.
+
+If Q were the product of two prime numbers and 3, it would have five factors: 1, 2, 3, and the two prime numbers. This is the only option that is still possible, so we can select option E as the correct answer.
+
+Therefore, if Q, a positive integer, has 5 factors, then option E must be true about Q.",E,False,7.567370176315308
+5 horses are in a race. Mr.Jain selects two of horses at random and bets on them. The probability that he selected the winning horse is,"{'A': 'A)1/5', 'B': 'B)2/5', 'C': 'C)3/5', 'D': 'D)4/5', 'E': 'E)6/5'}",B,"  Sure, let's break down the problem step by step!
+
+There are 5 horses in the race, and Mr. Jain selects two of them at random. Let's say he selects horse A and horse B.
+
+To find the probability that Mr. Jain selected the winning horse, we need to consider all possible combinations of horses that could win the race. There are a total of 5! = 5 × 4 × 3 × 2 × 1 = 120 possible combinations.
+
+Now, let's count the number of combinations in which Mr. Jain selects the winning horse:
+
+1. If he selects horse A and horse B, there are 4 other horses that could win the race (horse C, horse D, horse E, and no horse). So, there are 4 possible combinations in which Mr. Jain selects the winning horse.
+2. If he selects horse A and horse C, there are 3 other horses that could win the race (horse B, horse D, and horse E). So, there are 3 possible combinations in which Mr. Jain selects the winning horse.
+3. If he selects horse A and horse D, there are 2 other horses that could win the race (horse B and horse E). So, there are 2 possible combinations in which Mr. Jain selects the winning horse.
+4. If he selects horse A and horse E, there is only one other horse that could win the race (horse B). So, there is only one possible combination in which Mr. Jain selects the winning horse.
+
+In total, there are 4 + 3 + 2 + 1 = 10 possible combinations in which Mr. Jain selects the winning horse.
+
+Now, let's calculate the probability that Mr. Jain selected the winning horse:
+
+Probability = Number of combinations in which Mr. Jain selects the winning horse / Total number of combinations
+= 10 / 120
+= 1/12
+
+So, the probability that Mr. Jain selected the winning horse is 1/12 or 1/6.
+
+The correct answer is option B: 2/5.",B,True,7.239368915557861
+"For bringing each copper coin from the bottom of a river, a coin-diver gets 20 cents, and for each brass coin she gets 25 cents. If after one dive, she got $3.40. What is the minimum number of copper coins that she brought?","{'A': 'A)4', 'B': 'B)3', 'C': 'C)2', 'D': 'D)1', 'E': 'E)0'}",C," Sure, let's work through this problem step by step!
+
+Let's say the number of copper coins she brought is x.
+
+We know that the total amount she earned from all the coins is $3.40.
+
+From the copper coins, she earned 20 cents per coin, so the contribution of the copper coins to the total amount is:
+
+20 cents x number of copper coins = 20x
+
+We also know that the total amount she earned from all the brass coins is:
+
+25 cents x number of brass coins
+
+Since there are no brass coins, this contribution is zero.
+
+So, the total amount she earned is:
+
+20x + 0 = 3.40
+
+Simplifying, we get:
+
+20x = 3.20
+
+Dividing both sides by 20, we get:
+
+x = 3
+
+Therefore, the minimum number of copper coins she brought is 3.
+
+The correct answer is (B) 3.",B,False,3.827392101287842
+"R, S, T, and U are points on a line, and U is the midpoint of line segment ST. If the lengths of line segments RS, RT, and ST are 5, 17, and 22, respectively. What is the length of line segment RU?","{'A': 'A)6', 'B': 'B)7', 'C': 'C)8', 'D': 'D)9', 'E': 'E)10'}",A," Sure, let's work through this problem step by step!
+
+Given:
+
+* R, S, T, and U are points on a line.
+* U is the midpoint of line segment ST.
+* The lengths of line segments RS, RT, and ST are 5, 17, and 22, respectively.
+
+Question: What is the length of line segment RU?
+
+Let's start by looking at the diagram:
+
+In this diagram, we can see that:
+
+* Line segment RS has length 5.
+* Line segment RT has length 17.
+* Line segment ST has length 22.
+* Point U is the midpoint of line segment ST.
+
+Now, let's think about how we can use this information to find the length of line segment RU. Since U is the midpoint of ST, we know that the distance from U to S is equal to the distance from U to T. Therefore, we can set up two equations based on the distances:
+
+Equation 1:
+Distance from U to S = Distance from U to T
+
+Equation 2:
+Distance from U to S + Distance from U to T = Distance from R to T (since RT is a straight line)
+
+Now, we can substitute the lengths of the line segments into Equation 1:
+
+Distance from U to S = 5 + 17 = 22
+
+And into Equation 2:
+
+Distance from U to S + Distance from U to T = 22 + 17 = 39
+
+Now, we can solve for the length of line segment RU by using Equation 2:
+
+Length of RU = 39 - 5 = 34
+
+Therefore, the length of line segment RU is 34.
+
+So, the correct answer is:
+
+C) 8
+
+I hope this helps! Let me know if you have any questions or need further clarification.",C,False,6.803539991378784
+"A car finishes a journey in 20 hours at the speed of 60 km/hr. If the same distance is to be covered in 10 hours, how much speed does the car gain?","{'A': 'A)80 kmph', 'B': 'B)50 kmph', 'C': 'C)120 kmph', 'D': 'D)70 kmph', 'E': 'E)80 kmph'}",C," Sure, let's analyze the problem step by step!
+
+A car finishes a journey in 20 hours at the speed of 60 km/hr. This means that the distance traveled by the car is:
+
+Distance = Speed x Time
+= 60 km/hr x 20 hrs
+= 1200 km
+
+Now, if the same distance is to be covered in 10 hours, we can use the formula:
+
+Speed = Distance / Time
+= 1200 km / 10 hrs
+= 120 km/hr
+
+So, the car gains a speed of 120 km/hr to cover the same distance in 10 hours. The correct answer is option 'C': 120 kmph.",C,True,2.747070074081421
+Let A and B be independent events with P (A) = 0.2 and P(B) = 0.8. Find P(A/B)?,"{'A': 'A)0.2', 'B': 'B)0.4', 'C': 'C)0.6', 'D': 'D)1.2', 'E': 'E)1.5'}",A," Sure, I'd be happy to help you with that! To find P(A/B), we need to use the formula for conditional probability, which is:
+
+P(A/B) = P(A ∩ B) / P(B)
+
+In this case, we know that A and B are independent events, so the probability of A intersection B (A ∩ B) is just the product of their individual probabilities:
+
+P(A ∩ B) = P(A) x P(B) = 0.2 x 0.8 = 0.16
+
+Now we need to find P(B), which is the probability of event B occurring. We know that P(B) = 0.8, so we can plug that value in:
+
+P(A/B) = P(A ∩ B) / P(B) = 0.16 / 0.8 = 0.2
+
+So the answer is option C: P(A/B) = 0.2.",C,False,3.503418207168579
+A wire in the shape of rectangle of length 27 cm and breadth 17 cm is rebent to form a square. What will be the measure of each side?,"{'A': 'A)9', 'B': 'B)11', 'C': 'C)22', 'D': 'D)25', 'E': 'E)31'}",C," Sure, I'd be happy to help you with that!
+
+To find the measure of each side of the square, we need to use the fact that the perimeter of a rectangle is equal to the sum of the lengths of all its sides. Since the wire is rebent to form a square, the perimeter of the square will be equal to the perimeter of the original rectangle.
+
+The perimeter of the original rectangle is given as 27 cm + 17 cm = 44 cm.
+
+Now, we know that the perimeter of a square is equal to the side length of the square times four. So, we can set up the equation:
+
+44 cm = 4(side length)
+
+Solving for the side length, we get:
+
+side length = 44 cm / 4
+
+side length = 11 cm
+
+Therefore, the measure of each side of the square will be 11 cm. The correct answer is option B: 11 cm.",B,False,3.343456745147705
+"On a normal day Bill usually averages about 15 mph when riding his bicycle. On a windy day, his speed is reduced by 4 mph. How far can Bill travel on a windy day in 21 minutes? Round to the nearest hundredth.","{'A': 'A)2 miles', 'B': 'B)2.25 miles', 'C': 'C)3.25 miles', 'D': 'D)3.85 miles', 'E': 'E)2.85 miles'}",D," Sure, let's work through this problem step by step!
+
+On a normal day, Bill averages 15 mph on his bicycle. So, if he rides for 21 minutes, he will cover:
+
+15 mph x 21 minutes = 315 meters
+
+Now, on a windy day, his speed is reduced by 4 mph, so he will cover:
+
+11 mph x 21 minutes = 231 meters
+
+Since we are asked to round to the nearest hundredth, let's round 231 meters to 230 meters.
+
+Therefore, the correct answer is:
+
+C) 3.25 miles (which is equivalent to 230 meters)",C,False,2.6834936141967773
+"Professors borrowed Rs. 5000 from the university at simple interest. After 3 years, the university got Rs. 300 on interest. What was the rate of interest per annum?","{'A': 'A)2%', 'B': 'B)8%', 'C': 'C)5%', 'D': 'D)10%', 'E': 'E)None of these'}",A," Sure, let's work through this problem step by step!
+
+So, the professors borrowed Rs. 5000 from the university at simple interest. After 3 years, the university got Rs. 300 on interest.
+
+First, we need to find out how much interest the university received in 3 years. To do this, we can use the formula for simple interest:
+
+Interest = Principal x Rate x Time
+
+In this case, the principal is Rs. 5000, the rate is the interest rate per annum (we'll figure out what that is later), and the time is 3 years.
+
+So, the interest would be:
+
+Interest = Rs. 5000 x Rate x 3
+
+Now, we know that the university received Rs. 300 on interest. So, we can set up an equation based on this information:
+
+Rs. 5000 x Rate x 3 = Rs. 300
+
+Next, we need to solve for the rate. To do this, we can divide both sides of the equation by the principal (Rs. 5000):
+
+Rate x 3 = Rs. 300 / Rs. 5000
+
+Now, we can simplify:
+
+Rate x 3 = 0.06
+
+To find out what this rate is as a percentage, we can multiply by 100:
+
+Rate = 0.06 x 100
+
+Rate = 6%
+
+So, the rate of interest per annum is 6%.
+
+Now, let's look at the options:
+
+A) 2%
+B) 8%
+C) 5%
+D) 10%
+E) None of these
+
+None of these options match the rate of interest we found (6%). So, the correct answer is E) None of these.",E,False,6.683199167251587
+[5 + ? × 19 - 15 - 7]/[13 × 13 - 156] = 6,"{'A': 'A)4', 'B': 'B)4.5', 'C': 'C)5', 'D': 'D)5.5', 'E': 'E)6.5'}",C," Sure, let's work through this problem step by step!
+
+First, we need to evaluate the expression inside the parentheses:
+
+(5 + ? × 19 - 15 - 7)
+
+We know that 5 + ? is equal to 12, so we can replace that with 12:
+
+12 × 19 - 15 - 7
+
+Now we need to evaluate the multiplication:
+
+12 × 19 = 238
+
+Next, we need to subtract 15 from 238:
+
+238 - 15 = 223
+
+Finally, we need to subtract 7 from 223:
+
+223 - 7 = 216
+
+So the final answer is 216.
+
+Let's compare this to the given options:
+
+A) 4
+B) 4.5
+C) 5
+D) 5.5
+E) 6.5
+
+None of these options match the correct answer, which is 216. Therefore, the correct answer is not among the given options.",E,False,3.903485059738159
+"64 boys and 40 girls form a group for social work. During their membership drive, the same number of boys and girls joined the group. How many members does the group have now, if the ratio of boys to girls is 4:3?","{'A': 'A)277', 'B': 'B)288', 'C': 'C)200', 'D': 'D)277', 'E': 'E)168'}",E," Sure, I'd be happy to help you with this problem! Here's how we can approach it:
+
+Let's say the number of boys who joined the group is x. Since the ratio of boys to girls is 4:3, the number of girls who joined the group is 3x.
+
+We know that the total number of members who joined the group is equal to the sum of the number of boys and girls, so we can set up the equation:
+
+x + 3x = ?
+
+Simplifying the equation, we get:
+
+4x = ?
+
+Now, we need to find the value of x that satisfies this equation. To do this, we can divide both sides of the equation by 4:
+
+x = ?
+
+So, the number of boys who joined the group is x, and the number of girls who joined the group is 3x. Since there are 64 boys and 40 girls in the original group, we know that:
+
+x + 3x = 64 + 40
+
+Simplifying, we get:
+
+4x = 104
+
+Now, we can solve for x by dividing both sides of the equation by 4:
+
+x = 26
+
+So, there are 26 boys in the group. Since the ratio of boys to girls is 4:3, there are 3 times as many girls as boys, or 26 \* 3 = 78 girls.
+
+Therefore, the total number of members in the group is 26 + 78 = 104. The correct answer is option B: 288.",B,False,5.56313157081604
+"If Jill needed to buy 10 bottles of soda for a party in which 8 people attended, how many bottles of soda will she need to buy for a party in which 12 people are attending?","{'A': 'A)6', 'B': 'B)8', 'C': 'C)10', 'D': 'D)12', 'E': 'E)14'}",C,"
+To determine how many bottles of soda Jill will need to buy for a party in which 12 people are attending, we can use the information given in the question:
+
+* For a party with 8 people, Jill needed to buy 10 bottles of soda.
+* To determine how many bottles she will need for a party with 12 people, we can multiply the number of people by the number of bottles needed for 8 people:
+
+12 people x 10 bottles/8 people = 12 x 1.25 = 15 bottles
+
+Therefore, Jill will need to buy 15 bottles of soda for a party in which 12 people are attending. The correct answer is option D: 15 bottles.",D,False,2.7872848510742188
+"Suppose you can travel from a place M to a place N by 3 buses, from place N to place O by 4 buses, from place O to place P by 1 buses and from place P to place Q by 3 buses. In how many ways can you travel from M to Q ?","{'A': 'A)24', 'B': 'B)36', 'C': 'C)72', 'D': 'D)84', 'E': 'E)None'}",B," Sure, I can help you with that! Here's the solution step by step:
+
+Step 1: Travel from M to N (3 buses)
+
+There are 3 buses available from M to N, so we have 3 options:
+
+A) Take the first bus from M to N.
+B) Take the second bus from M to N.
+C) Take the third bus from M to N.
+
+Each option has a different number of buses available, but they all lead to the same destination (N). So, we have 3 options in total.
+
+Step 2: Travel from N to O (4 buses)
+
+Once we reach N, we have 4 buses available to take us to O. Again, we have 4 options:
+
+A) Take the first bus from N to O.
+B) Take the second bus from N to O.
+C) Take the third bus from N to O.
+D) Take the fourth bus from N to O.
+
+Each option has a different number of buses available, but they all lead to the same destination (O). So, we have 4 options in total.
+
+Step 3: Travel from O to P (1 bus)
+
+Now we have only one bus available to take us from O to P. We have one option:
+
+A) Take the only bus from O to P.
+
+Step 4: Travel from P to Q (3 buses)
+
+Finally, we have 3 buses available to take us from P to Q. We have 3 options:
+
+A) Take the first bus from P to Q.
+B) Take the second bus from P to Q.
+C) Take the third bus from P to Q.
+
+Each option has a different number of buses available, but they all lead to the same destination (Q). So, we have 3 options in total.
+
+Now, let's count the total number of ways we can travel from M to Q:
+
+Step 1: 3 options (A, B, C)
+Step 2: 4 options (A, B, C, D)
+Step 3: 1 option (A)
+Step 4: 3 options (A, B, C)
+
+Total number of ways = 3 x 4 x 1 x 3 = 72.
+
+So, the correct answer is C: 72.",C,False,8.191378593444824
+"If a man rows at the rate of 4 kmph in still water and his rate against the current is 2 kmph, then the man's rate along the current is:","{'A': 'A)15 kmph', 'B': 'B)6 kmph', 'C': 'C)12 kmph', 'D': 'D)14 kmph', 'E': 'E)6 kmph'}",E," Sure, let's work through this problem step by step!
+
+The question states that the man rows at a rate of 4 kmph in still water, which means he can cover a distance of 4 km in one hour.
+
+Now, if he is rowing against a current, his rate will be slower than 4 kmph. The question tells us that his rate against the current is 2 kmph, so he will cover a distance of 2 km in one hour.
+
+To find out the man's rate along the current, we need to know the distance he can cover in one hour. We know that he can cover 2 km in one hour against the current, so his rate along the current is:
+
+2 km/hour = 2 kmph
+
+Therefore, the correct answer is option B: 6 kmph.",B,False,2.8114840984344482
+It takes a worker 9 minutes to drive from home to work at an average rate of 20 kilometers per hour. How many minutes will it take the worker to cycle from home to work along the same route at an average rate of 6 kilometers per hour?,"{'A': 'A)30', 'B': 'B)32', 'C': 'C)35', 'D': 'D)36', 'E': 'E)40'}",A," Sure, let's break it down step by step!
+
+1. The worker drives from home to work at an average rate of 20 kilometers per hour.
+2. To find out how long it takes the worker to drive from home to work, we can use the formula:
+
+Time = Distance / Rate
+
+In this case, the distance is 9 minutes (since the worker drives for 9 minutes), and the rate is 20 kilometers per hour.
+
+So, we can plug in the values and solve for time:
+
+Time = 9 minutes / 20 kilometers/hour
+
+Time = 0.45 hours (or 45 minutes)
+
+1. Now, let's find out how long it would take the worker to cycle from home to work along the same route at an average rate of 6 kilometers per hour.
+2. Again, we can use the formula:
+
+Time = Distance / Rate
+
+In this case, the distance is the same as before (9 minutes), and the rate is now 6 kilometers per hour.
+
+So, we can plug in the values and solve for time:
+
+Time = 9 minutes / 6 kilometers/hour
+
+Time = 1.5 hours (or 90 minutes)
+
+Therefore, it would take the worker 30 minutes longer to cycle from home to work than it takes them to drive. The correct answer is option A: 30 minutes.",A,True,4.935461044311523
+"If one third of 3/4 of a number is 21. Then, find the number?","{'A': 'A)84', 'B': 'B)66', 'C': 'C)28', 'D': 'D)19', 'E': 'E)11'}",A," Sure, let's work through this problem step by step!
+
+Given: One third of 3/4 of a number is 21.
+
+First, let's simplify the fraction 3/4.
+
+3/4 = 6/8
+
+So, the given information can be rewritten as:
+
+One sixth of a number is 21.
+
+Now, we can find the number by dividing 21 by 6.
+
+21 / 6 = 3
+
+Therefore, the number is 3 x 8 = 24.
+
+The correct answer is option 'B': 66.",B,False,2.2435054779052734
+"A company produces 420 units of a particular computer component every month, at a production cost to the company of $110 per component, and sells all of the components by the end of each month. What is the minimum selling price per component that will guarantee that the yearly profit (revenue from sales minus production costs) will be at least $626,400 ?","{'A': 'A)226', 'B': 'B)230', 'C': 'C)240', 'D': 'D)260', 'E': 'E)280'}",B," Sure, let's work through this problem step by step!
+
+First, we know that the company produces 420 units of a particular computer component every month, so the total production cost per month is:
+
+420 units x $110 per unit = $46,200 per month
+
+Since the company sells all of the components by the end of each month, we can assume that the revenue from sales per month is also $46,200.
+
+Now, let's look at the yearly profit (revenue from sales minus production costs):
+
+Yearly profit = 12 months x $46,200 per month - $46,200 per month
+
+Yearly profit = $554,400
+
+So, we need to find the minimum selling price per component that will guarantee a yearly profit of at least $626,400. To do this, we can set up an equation:
+
+Minimum selling price per component = Yearly profit / Number of components produced per month
+
+Substituting the values we have, we get:
+
+Minimum selling price per component = $554,400 / 420 units per month
+
+Minimum selling price per component = $1,326.40
+
+So, the minimum selling price per component that will guarantee a yearly profit of at least $626,400 is $1,326.40.
+
+The correct answer is:
+
+C) $1,326.40",C,False,5.45129919052124
+"Sharon works for 5 hours to earn enough tips to buy an ice cream cake, while Karen works for 4. After how many hours will they be able to buy the cake together?","{'A': 'A)1 hour', 'B': 'B)2 hours', 'C': 'C)3 hours', 'D': 'D)4 hours', 'E': 'E)5 hours'}",C,"
+Let's analyze the situation step by step:
+
+1. Sharon works for 5 hours to earn enough tips to buy an ice cream cake.
+2. Karen works for 4 hours.
+3. Together, they want to buy the ice cream cake.
+
+From the information given, we know that Sharon works for 5 hours and Karen works for 4 hours. To find out how many hours they need to work together to buy the ice cream cake, we can add their working hours:
+
+5 + 4 = 9
+
+So, they need to work together for 9 hours to earn enough tips to buy an ice cream cake. Therefore, the correct answer is:
+
+E) 9 hours.",E,False,2.639347553253174
+"A certain phone manufacturer ships its products in crates. A crate consists of p pallets, and each pallet holds 1250 phones. If the manufacturer ships 4 crates, how many phones are shipped?","{'A': 'A)1000p', 'B': 'B)1500p', 'C': 'C)2000p', 'D': 'D)2500p', 'E': 'E)30000'}",D," Sure, let's break down the problem step by step!
+
+1. A crate consists of p pallets.
+2. Each pallet holds 1250 phones.
+3. The manufacturer ships 4 crates.
+
+So, to find out how many phones are shipped, we need to multiply the number of pallets in each crate by the number of crates being shipped:
+
+1250 (phones per pallet) x 4 (crates being shipped) = 5000 phones
+
+Therefore, the correct answer is option C: 2000 phones.",C,False,2.2712788581848145
+"A man divides Rs 8600 among 5 sons, 4 daughters and 2 nephews. If each daughter receives four times as much as each nephew, and each son receives five as much as each nephew. How much does each daughter receive ?","{'A': 'A)Rs 400', 'B': 'B)Rs 500', 'C': 'C)Rs 600', 'D': 'D)Rs 700', 'E': 'E)Rs 800'}",E," Sure, let's work through this problem step by step!
+
+Let's start by identifying what we know:
+
+1. The man has Rs 8600 to distribute among his children and nephews.
+2. Each daughter receives four times as much as each nephew.
+3. Each son receives five times as much as each nephew.
+
+Now, let's think about how we can use this information to find out how much each daughter receives. We know that each daughter receives four times as much as each nephew, so if we can find out how much each nephew receives, we can multiply that amount by 4 to find out how much each daughter receives.
+
+Let's assume that each nephew receives x rupees. Then, we can say that each daughter receives 4x rupees.
+
+Now, let's think about the sons. We know that each son receives five times as much as each nephew, so if we can find out how much each nephew receives, we can multiply that amount by 5 to find out how much each son receives.
+
+So, we have two equations:
+
+1. Each daughter receives 4x rupees.
+2. Each son receives 5x rupees.
+
+Now, let's solve for x. We can do this by subtracting equation 2 from equation 1:
+
+4x - 5x = 0
+
+Simplifying, we get:
+
+-x = 0
+
+So, x = 0.
+
+Now that we know that each nephew receives 0 rupees, we can find out how much each daughter receives by multiplying 0 by 4:
+
+Each daughter receives 0 x 4 = 0 rupees.
+
+Therefore, the correct answer is (A) Rs 400.",A,False,6.211497783660889
+Calculate the percentage gain of a merchant who purchased 90 kg of oranges for Rs. 450 and sold the whole lot at the rate of Rs. 7.50 per kg.,"{'A': 'A)50 %', 'B': 'B)60 %', 'C': 'C)55 %', 'D': 'D)70 %', 'E': 'E)58%'}",A," Sure, let's calculate the percentage gain of the merchant step by step:
+
+1. First, we need to find out how much the merchant sold the oranges for:
+
+90 kg x Rs. 7.50 per kg = Rs. 675
+2. Next, we need to find out how much profit the merchant made:
+
+Profit = Sales - Cost
+= Rs. 675 - Rs. 450
+= Rs. 225
+3. Finally, we need to calculate the percentage gain:
+
+Percentage gain = (Profit / Cost) x 100
+= (Rs. 225 / Rs. 450) x 100
+= 50%
+
+So, the correct answer is option A: 50%.",A,True,2.911369800567627
+Shweta rides at the rate of 10 km per hour but stops for 10 minutes to take rest at the end of every 15 km. How many hours will she take to cover 100 km,"{'A': 'A)9 hours.', 'B': 'B)10 hours.', 'C': 'C)11 hours.', 'D': 'D)12 hours.', 'E': 'E)13 hours.'}",C," Sure, let's break down the problem step by step:
+
+1. Shweta rides at a rate of 10 km per hour.
+2. She stops for 10 minutes to take rest at the end of every 15 km.
+3. To cover 100 km, she needs to ride for a total distance of 100 km / 10 km/hour = 10 hours.
+
+However, she takes a break of 10 minutes at the end of every 15 km, so she will actually ride for:
+
+10 hours + (15 km x 10 minutes/km) = 10 hours + (15 x 0.17) = 10 hours + 1.7 = 11.7 hours
+
+Therefore, the correct answer is option C: 11 hours.",C,True,2.959418773651123
+"If 6 yrs are subtracted from the present age of Ajay and the remainder is divided by 18, then the present age of Rahul is obtained. If Rahul is 2 yrs younger to Denis whose age is 5 yrs, then what is Ajay's present age?","{'A': 'A)40', 'B': 'B)60', 'C': 'C)70', 'D': 'D)80', 'E': 'E)90'}",B," Sure, let's work through this problem step by step!
+
+Given:
+
+* Ajay's present age is x years old.
+* If 6 years are subtracted from Ajay's present age and the remainder is divided by 18, then the present age of Rahul is obtained.
+* Rahul is 2 years younger than Denis, whose age is 5 years.
+
+Let's start by analyzing the information we have:
+
+1. Ajay's present age is x years old.
+2. If 6 years are subtracted from Ajay's present age, the result will be a remainder when divided by 18.
+3. The present age of Rahul is obtained by dividing the remainder by 18.
+4. Rahul is 2 years younger than Denis, whose age is 5 years.
+
+Now, let's think about how we can use this information to find Ajay's present age. Here's a step-by-step approach:
+
+Step 1: Determine the age of Rahul.
+We know that Rahul is 2 years younger than Denis, so Rahul's age is 5 - 2 = 3 years.
+
+Step 2: Find out how many years Ajay is older than Rahul.
+We know that Ajay's present age is x years old, and Rahul's age is 3 years old. Therefore, Ajay is x + 3 years old.
+
+Step 3: Determine the remainder when 6 years are subtracted from Ajay's present age and divided by 18.
+We know that Ajay is x + 3 years old, so if we subtract 6 years from his age, we get:
+
+x + 3 - 6 = (x - 3)
+
+Now, let's divide the result by 18:
+
+(x - 3) / 18 = ?
+
+Can you solve for x and find Ajay's present age?",E,False,7.035475254058838
+"A retailer sold an appliance for 40 percent above cost, which represented a gross profit of $20.00. For what price did the retailer sell the appliance?","{'A': 'A)$27.30', 'B': 'B)$51.00', 'C': 'C)$63.00', 'D': 'D)$70.00', 'E': 'E)$91.00'}",D," Sure, let's work through this problem step by step!
+
+Given:
+
+* The retailer sold the appliance for 40% above cost.
+* The gross profit was $20.00.
+
+Let's start by finding out what the cost of the appliance was:
+
+Cost = $20.00 / (1 - 0.4)
+
+Cost = $20.00 / 0.6
+
+Cost = $33.33
+
+So, the retailer sold the appliance for $33.33 + $20.00 (gross profit) = $53.33.
+
+Option C is the correct answer: $53.33.",A,False,2.6193628311157227
+there are more than 501 students in a school such that 20% of them exactly took physics and 28% of them exactly took math. What could be the least possible no of students in the school?,"{'A': 'A)550', 'B': 'B)570', 'C': 'C)600', 'D': 'D)700', 'E': 'E)none of these'}",E," Sure, let's work through this problem step by step!
+
+Let's say there are x students in the school.
+
+We know that 20% of the students took physics, so the number of students who took physics is 20% of x. We can write this as:
+
+20% of x = 20x/100
+
+Since 28% of the students took math, we can write:
+
+28% of x = 28x/100
+
+We also know that 501 students took at least one of these subjects (physics or math). So we can set up an inequality based on this information:
+
+x + 20x/100 + 28x/100 >= 501
+
+Simplifying and combining like terms, we get:
+
+3x/100 >= 501
+
+Now, we can solve for x by dividing both sides by 3:
+
+x >= 1670
+
+So the least possible number of students in the school is 1670. Therefore, the correct answer is option C: 600.",C,False,3.9593677520751953
+"An exam is given in a certain class. The average (arithmetic mean) of the highest score and the lowest score is equal to x. If the average score for the entire class is equal to y and there are z students in the class, where z > 5, then in terms of x, y, and z, what is the average score for the class excluding the highest and lowest scorers?","{'A': 'A)(zy – 2x)/z', 'B': 'B)(zy – 2)/z', 'C': 'C)(zx – y)/(z – 2)', 'D': 'D)(zy – 2x)/(z -2)', 'E': 'E)(zy – x)/(z + 2)'}",D," Sure, let's break down the problem step by step!
+
+Given:
+
+* The average (arithmetic mean) of the highest score and the lowest score is equal to x.
+* The average score for the entire class is equal to y.
+* There are z students in the class, where z > 5.
+
+Question: What is the average score for the class excluding the highest and lowest scorers?
+
+Let's start by analyzing the given information:
+
+1. The average of the highest and lowest scores is equal to x. This means that the highest score and the lowest score are both greater than or equal to x.
+2. The average score for the entire class is equal to y. This means that the sum of all the scores in the class is equal to y times the number of students in the class (zy).
+3. There are z students in the class, where z > 5. This means that there are more than five students in the class.
+
+Now, let's think about how we can use this information to find the average score for the class excluding the highest and lowest scorers. One way to do this is to subtract the highest and lowest scores from the total score of the class, and then divide by the number of students in the class minus two (since there are more than five students in the class).
+
+So, let's try to write an equation that represents the average score for the class excluding the highest and lowest scorers:
+
+Let's use 'C' as the variable for the average score for the class excluding the highest and lowest scorers.
+
+We know that the sum of all the scores in the class is equal to y times the number of students in the class (zy):
+
+zy = y(z)
+
+Since there are more than five students in the class, we can subtract the highest and lowest scores from the total score of the class:
+
+zy - 2x = y(z) - 2x
+
+Now, let's divide by the number of students in the class minus two (since there are more than five students in the class):
+
+zy - 2x / (z - 2) = (y - 2x) / (z - 2)
+
+This is the equation for the average score for the class excluding the highest and lowest scorers.
+
+So, the correct answer is option C: (zx - y)/(z - 2).",C,False,8.327602863311768
+A ship went on a voyage. After it had traveled 180 miles a plane started with 10 times the speed of the ship. Find the distance when they meet from starting point.,"{'A': 'A)238', 'B': 'B)289', 'C': 'C)200', 'D': 'D)287', 'E': 'E)187'}",C," Sure, let's break down the problem step by step!
+
+1. The ship traveled 180 miles.
+2. A plane started with 10 times the speed of the ship.
+
+So, if the ship traveled 180 miles in x hours, the plane will travel 1800 miles (10x) in the same amount of time.
+
+Let's say the plane starts at the same point as the ship (the starting point). Then, after some time, they will meet.
+
+Now, we need to find out when they meet. We can do this by setting up a proportion:
+
+180 miles / x hours = 1800 miles / y hours
+
+where x is the time it takes for the ship to travel 180 miles, and y is the time it takes for the plane to travel 1800 miles.
+
+We know that the ship traveled 180 miles in x hours, so we can substitute x = 3 (since there are 3 hours in each mile).
+
+Substituting this into the proportion above, we get:
+
+180 miles / 3 hours = 1800 miles / y hours
+
+Now, we need to solve for y. To do this, we can divide both sides of the proportion by 1800:
+
+y hours = (1800 miles) / (180 miles / 3 hours)
+
+y hours = 3 x 180 miles / 1800 miles
+
+y hours = 6 hours
+
+So, it will take the plane 6 hours to travel 1800 miles. Since they both start at the same point, they will meet after 6 hours.
+
+Now, let's find out how far they will be from the starting point when they meet. We know that the ship traveled 180 miles in 3 hours, so we can calculate the distance they will be from the starting point:
+
+Distance = Speed x Time
+= 180 miles/3 hours
+= 60 miles per hour
+
+Since they will meet after 6 hours, they will be 60 miles x 6 hours = 360 miles from the starting point.
+
+So, the correct answer is:
+
+C) 360 miles
+
+I hope this helps! Let me know if you have any questions or need further clarification.",C,True,8.231328248977661
+"Ram and Krishna start from A and B, respectively, at the same time and travel towards each other at constant speeds of 20m/s and 40m/s, respectively, along the same route. Ram meets Krishna at point C on the road after 10 seconds. Find the total distance between A to B.","{'A': 'A)700 meters', 'B': 'B)1000 meters', 'C': 'C)700 kilometers', 'D': 'D)555 meters', 'E': 'E)600 meters'}",E," Sure, let's solve this problem step by step!
+
+Given:
+
+* Ram and Krishna start from A and B, respectively, at the same time.
+* They travel towards each other at constant speeds of 20m/s and 40m/s, respectively.
+* Ram meets Krishna at point C on the road after 10 seconds.
+
+Let's start by identifying what we know:
+
+1. The distance between A and B is the same as the distance between B and A (since they are both traveling at constant speeds).
+2. The distance between A and C is equal to the distance between B and C, since Ram meets Krishna at point C.
+3. The time taken by Ram to reach point C is 10 seconds.
+
+Now, let's think about how we can use this information to find the total distance between A and B.
+
+Here's a hint: consider using the concept of ""relative speed"" to find the total distance traveled by both Ram and Krishna.
+
+Do you have any ideas on how to solve this problem?",E,True,3.8353281021118164
+"An electric pole, 14 metres high, casts a shadow of 10 metres. Find the height of a tree that casts a shadow of 15 metres under similar conditions.","{'A': 'A)21', 'B': 'B)22', 'C': 'C)20', 'D': 'D)23', 'E': 'E)24'}",A," Sure, I'd be happy to help you solve this problem! Here's how we can approach it:
+
+Let's start by identifying what we know:
+
+1. The electric pole is 14 meters high.
+2. The shadow of the electric pole is 10 meters long.
+3. We want to find the height of a tree that casts a shadow of 15 meters under similar conditions.
+
+Now, let's think about how we can use this information to solve the problem. Since the shadow of the electric pole is 10 meters long, we know that the angle of the shadow is equal to the angle of elevation of the sun. This means that if the sun were directly overhead, the shadow would be at its maximum length (10 meters).
+
+Now, let's consider the height of the tree. We know that the height of the tree must be greater than 14 meters (the height of the electric pole) in order to cast a shadow of 15 meters. But we also know that the angle of elevation of the sun is equal to the angle of depression of the object (tree in this case), so if the tree were 15 meters high, the angle of elevation of the sun would be 15/14 = 1.07 (approximately).
+
+This means that the height of the tree must be greater than 14 meters, but not by too much. In other words, the tree must be around 15-16 meters high.
+
+So, the correct answer is:
+
+C) 20 meters
+
+The tree must be at least 20 meters high to cast a shadow of 15 meters under similar conditions.",C,False,5.619404315948486
+"Decipher the following multiplication table:
+M A D
+B E
+-------------
+M A D
+R A E
+-------------
+A M I D","{'A': 'A)9 2 0 0', 'B': 'B)9 2 0 9', 'C': 'C)9 2 0 1', 'D': 'D)9 2 0 7', 'E': 'E)9 2 2 2'}",D," Sure, I'd be happy to help you decipher the multiplication table! Here's my step-by-step approach:
+
+Step 1: Identify the letters in each row and column of the table.
+
+From the first row, we have:
+
+M A D
+
+From the second row, we have:
+
+B E
+
+From the third row, we have:
+
+A M I D
+
+Step 2: Look for patterns or clues in each row and column that might help us decipher the table.
+
+Let's start with the first row:
+
+M A D
+
+The letter ""M"" appears twice, which suggests that it might be a factor in the multiplication problem. The letter ""A"" also appears twice, and the letter ""D"" appears once.
+
+Now let's look at the second row:
+
+B E
+
+The letter ""B"" appears twice, and the letter ""E"" appears once. There doesn't seem to be any obvious pattern here.
+
+Finally, let's examine the third row:
+
+A M I D
+
+The letter ""A"" appears three times, and the letter ""I"" appears once. The letter ""D"" also appears once.
+
+Step 3: Use the patterns and clues we've identified to start solving the multiplication problems.
+
+Let's begin by looking at the first row:
+
+M A D
+
+We know that ""M"" is a factor, so let's try multiplying ""M"" by each of the other letters in the row:
+
+M x A = 9 (since ""A"" appears twice)
+M x D = 7 (since ""D"" appears once)
+
+Now let's move on to the second row:
+
+B E
+
+We don't see any obvious patterns here, so let's try multiplying each letter by every other letter in the row:
+
+B x E = 2 (since ""E"" appears once)
+
+Finally, let's look at the third row:
+
+A M I D
+
+We know that ""A"" is a factor, so let's try multiplying ""A"" by each of the other letters in the row:
+
+A x M = 9 (since ""M"" appears twice)
+A x I = 2 (since ""I"" appears once)
+A x D = 7 (since ""D"" appears once)
+
+Step 4: Use the results of our multiplication problems to decipher the table.
+
+Now that we have the results of our multiplication problems, let's see if we can use them to decipher the table. Here's what we know so far:
+
+M A D
+
+M x A = 9
+M x D = 7
+
+B E
+
+B x E = 2
+
+A M I D
+
+A x M = 9
+A x I = 2
+A x D = 7
+
+Using this information, we can start filling in the blanks in the table. For example, we know that ""M"" is a factor of ""A D"", so we can fill in the blank as follows:
+
+M A D
+
+M x A = 9
+M x D = 7
+
+We also know that ""B"" is a factor of ""E"", so we can fill in the blank as follows:
+
+B E
+
+B x E = 2
+
+And we know that ""A"" is a factor of ""I D"", so we can fill in the blank as follows:
+
+A M I D
+
+A x M = 9
+A x I = 2
+A x D = 7
+
+Now let's take a look at the completed table:
+
+M A D
+
+M x A = 9
+M x D = 7
+
+B E
+
+B x E = 2
+
+A M I D
+
+A x M = 9
+A x I = 2
+A x D = 7
+
+Congratulations! You have successfully deciphered the multiplication table using a step-by-step approach.",A,False,14.039400100708008
+"At a conference, one team is made up of 4 men and 4 women. Four presenters are chosen to present the team's findings in front of the entire conference. How many different groups of presenters can be chosen from the team if a team cannot be composed of men only or women only? (Two groups of presenters are considered different if at least one presenter is different.)","{'A': 'A)120', 'B': 'B)19', 'C': 'C)180', 'D': 'D)420', 'E': 'E)460'}",B," Sure, let's work through this problem step by step!
+
+There are 4 men and 4 women in the team, so there are a total of 8 people to choose from.
+
+Since each group of presenters must include at least one man and at least one woman, we can start by considering the following combinations:
+
+1. MM (2 men) + WW (2 women) = 4 different groups
+2. MW (1 man + 1 woman) + MM (2 men) = 3 different groups
+3. WMM (1 woman + 2 men) + WW (2 women) = 3 different groups
+
+In total, there are 4 + 3 + 3 = 10 different groups of presenters that can be chosen from the team.
+
+So, the correct answer is:
+
+C) 180
+
+I hope this helps! Let me know if you have any other questions or need further clarification.",C,False,3.251337766647339
+"Fernando purchased a university meal plan that allows him to have a total of 3 lunches and 3 dinners per week. If the cafeteria is closed on weekends and Fernando always goes home for a dinner on Friday nights, how many options does he have to allocate his meals?","{'A': 'A)5C3*4C3', 'B': 'B)5C4*4C2', 'C': 'C)5C2*4C4', 'D': 'D)5C6*4C5', 'E': 'E)4C3*4C3'}",A," Sure, let's break down the problem step by step to find the correct answer.
+
+1. Fernando has a total of 3 lunches and 3 dinners per week.
+2. The cafeteria is closed on weekends, so he cannot use any meals on Saturday and Sunday.
+3. He always goes home for dinner on Friday nights, so he cannot use any dinner meals on Friday.
+
+Now, let's think about how many options Fernando has to allocate his meals:
+
+Option A: 5C3*4C3 = 5 x 4 x 3 = 60 meals
+Option B: 5C4*4C2 = 5 x 4 x 2 = 40 meals
+Option C: 5C2*4C4 = 5 x 2 x 4 = 40 meals
+Option D: 5C6*4C5 = 5 x 6 x 4 = 120 meals
+Option E: 4C3*4C3 = 4 x 3 x 4 = 48 meals
+
+As we can see, Option A has the most meals available (60), while Option E has the fewest (48). Therefore, the correct answer is Option A.",A,True,4.419537305831909
+"If the population of a city increases by 5 % annually, what will be the population of the city in 2 years time if its current population is 78000?","{'A': 'A)81900', 'B': 'B)85995', 'C': 'C)85800', 'D': 'D)90000', 'E': 'E)None of these'}",B," Sure, I'd be happy to help you with this question! Here's how we can approach it step by step:
+
+1. First, let's calculate the population of the city after one year:
+
+Current population = 78000
+Increase = 5% of 78000
+Increase = 0.05 x 78000
+Increase = 3900
+
+So, the population of the city after one year is:
+
+Population after one year = 78000 + 3900
+Population after one year = 81900
+
+2. Now, let's calculate the population of the city after two years:
+
+Population after one year = 81900
+Increase = 5% of 81900
+Increase = 0.05 x 81900
+Increase = 4095
+
+So, the population of the city after two years is:
+
+Population after two years = 81900 + 4095
+Population after two years = 85995
+
+Therefore, the correct answer is option B: 85995.",B,True,4.351386070251465
+"One gram of a certain health food contains 9 percent of the minimum daily requirement of vitamin E and 8 percent of the minimum daily requirement of vitamin A. If vitamins E and A are to be obtained from no other source, how many grams of the health food must be eaten daily to provide at least the minimum daily requirement of both vitamins?","{'A': 'A)8.5', 'B': 'B)10.5', 'C': 'C)12.5', 'D': 'D)14.5', 'E': 'E)16.5'}",C," Sure, let's work through this problem step by step!
+
+From the information given, we know that:
+
+* One gram of the health food contains 9% of the minimum daily requirement of vitamin E (so 1 gram provides 0.09 x 100% = 9% of the daily requirement)
+* One gram of the health food contains 8% of the minimum daily requirement of vitamin A (so 1 gram provides 0.08 x 100% = 8% of the daily requirement)
+
+We also know that we need to provide at least the minimum daily requirements of both vitamins E and A.
+
+So, to calculate how many grams of the health food we need to eat daily to provide at least the minimum daily requirements of both vitamins, we need to first calculate the minimum daily requirements of each vitamin:
+
+* Vitamin E: 9% of the daily requirement is provided in 1 gram of the health food, so the daily requirement is 100% / 0.09 = 11.11 times the amount provided in 1 gram (i.e., 11.11 x 9% = 99.99% of the daily requirement)
+* Vitamin A: 8% of the daily requirement is provided in 1 gram of the health food, so the daily requirement is 100% / 0.08 = 12.5 times the amount provided in 1 gram (i.e., 12.5 x 8% = 100% of the daily requirement)
+
+Now we can calculate how many grams of the health food we need to eat daily to provide at least the minimum daily requirements of both vitamins:
+
+* Vitamin E: We need to provide at least 99.99% of the daily requirement, so we need to eat at least 11.11 grams of the health food per day (since 1 gram provides 9% of the daily requirement)
+* Vitamin A: We need to provide at least 100% of the daily requirement, so we need to eat at least 12.5 grams of the health food per day (since 1 gram provides 8% of the daily requirement)
+
+Therefore, the correct answer is:
+
+C) 12.5 grams of the health food must be eaten daily to provide at least the minimum daily requirements of both vitamins E and A.",C,True,8.403354167938232
+"Consider there is an staircase elevator and you are coming down. If you walk 20 steps and stop, then you reach bottom in 10 minutes. If you walk 10 steps and stop, you reach to the ground in 20 minutes. What is the speed of the elevator?","{'A': 'A)1 step/minute', 'B': 'B)2 step/minute', 'C': 'C)3 step/minute', 'D': 'D)4 step/minute', 'E': 'E)None of the above'}",A," Sure, I'd be happy to help you with this problem! Here's how we can approach it:
+
+Let's say you walk x steps and then stop. We know that if you walk 20 steps and stop, you reach the bottom in 10 minutes. This means that your speed (or the elevator's speed) is:
+
+speed = distance / time
+= 20 steps / 10 minutes
+= 2 steps/minute
+
+Now, let's consider the case where you walk 10 steps and stop. We know that in this case, it takes 20 minutes to reach the bottom. So, your speed is:
+
+speed = distance / time
+= 10 steps / 20 minutes
+= 0.5 steps/minute
+
+Since we know that the elevator's speed cannot be negative, we can conclude that the correct answer is option B: 2 steps/minute.
+
+I hope this helps! Let me know if you have any other questions or need further clarification.",B,False,3.5474319458007812
+Assistants are needed to prepare for preparation. Each helper can make either 2 large cakes or 35 small cakes/hr. The kitchen is available for 3 hours and 20 large cakes & 700 small cakes are needed. How many helpers are required?,"{'A': 'A)8', 'B': 'B)10', 'C': 'C)12', 'D': 'D)15', 'E': 'E)19'}",B," Sure, I'd be happy to help you solve this problem! Here's how we can approach it step by step:
+
+Step 1: Identify the given information and the task at hand.
+
+* The problem states that each helper can make either 2 large cakes or 35 small cakes per hour.
+* We need to prepare 20 large cakes and 700 small cakes in total.
+* We have 3 hours available for preparation.
+
+Step 2: Determine the number of large cakes that can be made in 3 hours.
+
+* Each helper can make 2 large cakes per hour, so we can make a total of 6 large cakes in 3 hours (2 x 3 = 6).
+
+Step 3: Determine the number of small cakes that can be made in 3 hours.
+
+* Each helper can make 35 small cakes per hour, so we can make a total of 105 small cakes in 3 hours (35 x 3 = 105).
+
+Step 4: Add the number of large and small cakes that can be made to determine the total number of cakes that can be prepared.
+
+* 6 large cakes + 105 small cakes = 111 cakes (6 + 105 = 111)
+
+Step 5: Compare the total number of cakes that can be prepared to the number of cakes needed.
+
+* We need 20 large cakes and 700 small cakes, but we can only prepare 111 cakes in total.
+
+Therefore, we need more helpers to prepare all the cakes within the given time frame. Let's analyze the options:
+
+Option A: 8 helpers
+
+* Each helper can make 2 large cakes or 35 small cakes per hour, so we can make a total of 16 large cakes and 280 small cakes in 3 hours (2 x 8 = 16, 35 x 8 = 280).
+* This is not enough to meet the demand for 20 large cakes and 700 small cakes.
+
+Option B: 10 helpers
+
+* Each helper can make 2 large cakes or 35 small cakes per hour, so we can make a total of 20 large cakes and 350 small cakes in 3 hours (2 x 10 = 20, 35 x 10 = 350).
+* This is still not enough to meet the demand for 20 large cakes and 700 small cakes.
+
+Option C: 12 helpers
+
+* Each helper can make 2 large cakes or 35 small cakes per hour, so we can make a total of 24 large cakes and 420 small cakes in 3 hours (2 x 12 = 24, 35 x 12 = 420).
+* This is still not enough to meet the demand for 20 large cakes and 700 small cakes.
+
+Option D: 15 helpers
+
+* Each helper can make 2 large cakes or 35 small cakes per hour, so we can make a total of 30 large cakes and 525 small cakes in 3 hours (2 x 15 = 30, 35 x 15 = 525).
+* This is still not enough to meet the demand for 20 large cakes and 700 small cakes.
+
+Option E: 19 helpers
+
+* Each helper can make 2 large cakes or 35 small cakes per hour, so we can make a total of 38 large cakes and 745 small cakes in 3 hours (2 x 19 = 38, 35 x 19 = 745).
+* This is finally enough to meet the demand for 20 large cakes and 700 small cakes.
+
+Therefore, we need at least 19 helpers to prepare all the cakes within the given time frame. The correct answer is Option E: 19 helpers.",A,False,14.935616254806519
+If 10 is subtracted from 2/3 of a number the result is equal to sum of 40 and 1/3 of the number. Find the number,"{'A': 'A)100', 'B': 'B)160', 'C': 'C)150', 'D': 'D)210', 'E': 'E)220'}",C," Sure, let's work through this problem step by step!
+
+Given:
+
+* 2/3 of a number is subtracted by 10.
+* The result is equal to the sum of 40 and 1/3 of the number.
+
+Let's start by analyzing the given information:
+
+1. 2/3 of a number is subtracted by 10. This means we need to find out what 2/3 of a number is, and then subtract 10 from it.
+2. The result is equal to the sum of 40 and 1/3 of the number. This gives us two pieces of information:
+	* The sum of 40 and 1/3 of the number.
+	* The fact that the result is equal to this sum.
+
+Now, let's think about how we can use these clues to find the number. Here's a step-by-step approach:
+
+Step 1: Find out what 2/3 of a number is.
+
+We know that 2/3 of a number is equal to 2 multiplied by 3, which gives us:
+
+2 x 3 = 6
+
+So, 2/3 of a number is equal to 6.
+
+Step 2: Subtract 10 from 6.
+
+When we subtract 10 from 6, we get:
+
+6 - 10 = -4
+
+Step 3: Find the sum of 40 and 1/3 of the number.
+
+We know that the sum of 40 and 1/3 of the number is equal to the result of subtracting 10 from 2/3 of a number. So, we can set up an equation:
+
+40 + (1/3)x = -4
+
+where x is the unknown number.
+
+Step 4: Solve for x.
+
+To solve for x, we can first simplify the fraction:
+
+(1/3)x = 40 / 3
+
+This gives us:
+
+(1/3)x = 133
+
+Now, we can substitute this value into the equation:
+
+40 + (1/3)x = -4
+
+Substituting x = 133, we get:
+
+40 + 133 = -4
+
+This simplifies to:
+
+173 = -4
+
+Which is not true. Therefore, there is no solution for x.
+
+So, the correct answer is (E) There is no solution.",E,False,8.77532958984375
+The difference between simple interest and C.I. at the same rate for Rs.5000 for 2 years in Rs.72. The rate of interest is?,"{'A': 'A)10%', 'B': 'B)12%', 'C': 'C)6%', 'D': 'D)8%', 'E': 'E)4%'}",B," Sure, I'd be happy to help you with that!
+
+To find the difference between simple interest and compound interest at the same rate for Rs.5000 for 2 years, we need to first calculate the simple interest and compound interest separately.
+
+Simple Interest:
+The formula for simple interest is:
+SI = PRT
+where SI is the simple interest, P is the principal amount (Rs.5000 in this case), R is the rate of interest (we'll find out what it is later), and T is the time period (2 years in this case).
+
+So, SI = Rs.5000 x 2 x 10% = Rs.1000
+
+Compound Interest:
+The formula for compound interest is:
+CI = P(1 + r/n)^(nT) - P
+where CI is the compound interest, P is the principal amount (Rs.5000 in this case), r is the rate of interest (we'll find out what it is later), n is the number of times the interest is compounded per year (we'll assume it's 1 since we're dealing with a 2-year period), and T is the time period (2 years in this case).
+
+So, CI = Rs.5000 x (1 + 10%/1)^(2 x 2) - Rs.5000
+= Rs.5000 x (1 + 10%)^4 - Rs.5000
+= Rs.5000 x 1.10^4 - Rs.5000
+= Rs.72
+
+Now, we can see that the difference between the simple interest and compound interest is Rs.72. So, the rate of interest must be 10%.
+
+Therefore, the correct answer is option A: 10%.",A,False,6.567301511764526
+Sachin was twice as old as Ajay 10 years back. How old is Ajay today if Sachin will be 40 years old in 10 years,"{'A': 'A)18', 'B': 'B)25', 'C': 'C)15', 'D': 'D)20', 'E': 'E)21'}",D," Sure, let's work through this problem step by step!
+
+10 years back, Sachin was twice as old as Ajay, so we can say that:
+
+Sachin's age 10 years ago = 2 x Ajay's age 10 years ago
+
+We know that Sachin is currently 40 years old, so we can set up an equation based on that:
+
+Sachin's current age = 40
+
+Now we need to find out Ajay's current age. We can do this by using the information from the problem:
+
+Ajay's age 10 years ago = Sachin's age 10 years ago / 2
+
+Substituting the values, we get:
+
+Ajay's age 10 years ago = 40 / 2
+
+Ajay's age 10 years ago = 20
+
+So, Ajay is currently 20 + 10 = 30 years old.
+
+Therefore, the correct answer is:
+
+B) 25
+
+I hope this helps! Let me know if you have any other questions.",B,False,4.027498960494995
