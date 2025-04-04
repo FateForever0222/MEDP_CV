@@ -5,7 +5,7 @@ import torch
 import random
 from typing import Dict, List, Tuple, Optional, Any
 from collections import Counter
-
+from src.utils.text_utils import extract_cot_and_answer, count_reasoning_steps
 from src.experts.expert_models import BaseExpert
 from src.llm.llm_interface import LLMInterface
 
@@ -305,61 +305,10 @@ class RetryMechanism:
         }
     
     def _extract_cot_and_answer(self, response: str) -> Tuple[str, str]:
-        """
-        从响应中提取思维链和最终答案
-        
-        Args:
-            response: LLM响应
-            
-        Returns:
-            (思维链, 最终答案)元组
-        """
-        # 尝试查找"Answer:"或"Therefore,"等标记最终答案的短语
-        answer_markers = ["Answer:", "Therefore,", "So the answer is", "The answer is", "Hence,", "In conclusion,"]
-        
-        for marker in answer_markers:
-            if marker in response:
-                parts = response.split(marker, 1)
-                return parts[0].strip(), parts[1].strip()
-        
-        # 如果没有找到标记，假设最后一行是答案
-        lines = response.strip().split('\n')
-        if len(lines) > 1:
-            return '\n'.join(lines[:-1]).strip(), lines[-1].strip()
-        else:
-            return "", response.strip()
+        return extract_cot_and_answer(response)
     
     def _count_reasoning_steps(self, cot: str) -> int:
-        """
-        计算思维链中的推理步骤数
-        
-        Args:
-            cot: 思维链文本
-            
-        Returns:
-            步骤数
-        """
-        # 通过寻找步骤标记来计数
-        step_markers = [
-            r"Step \d+", r"\d+\.", r"\(\d+\)", 
-            "First", "Second", "Third", "Fourth", "Fifth", 
-            "Next", "Then", "Finally"
-        ]
-        
-        steps = 0
-        lines = cot.split('\n')
-        
-        for line in lines:
-            if any(re.search(marker, line, re.IGNORECASE) for marker in step_markers):
-                steps += 1
-        
-        # 如果没有找到明确的步骤标记，则按段落计数
-        if steps == 0:
-            # 将文本分成段落，非空段落视为一个步骤
-            paragraphs = [p for p in re.split(r'\n\s*\n', cot) if p.strip()]
-            steps = len(paragraphs)
-        
-        return max(1, steps)  # 确保至少有1个步骤
+        return count_reasoning_steps(cot)
 
 
 class InferenceEngine:

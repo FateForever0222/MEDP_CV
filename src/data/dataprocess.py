@@ -10,6 +10,10 @@ from datasketch import MinHash, MinHashLSH
 from sklearn.model_selection import train_test_split
 from tqdm import tqdm  # 确保导入tqdm
 from src.llm.llm_interface import LLMInterface
+from src.utils.text_utils import (
+    normalize_answer, format_for_csv, extract_cot_and_answer, 
+    check_answer_correctness, count_reasoning_steps
+)
 
 logger = logging.getLogger(__name__)
 
@@ -250,7 +254,6 @@ class DataProcessor:
             raise FileNotFoundError(f"找不到处理后的数据: {processed_path}")
         
         return pd.read_csv(processed_path)
-    
     def save_processed_data(self, dataset_name: str, df: pd.DataFrame) -> None:
         """保存处理后的数据集"""
         processed_path = self.processed_path / f"{dataset_name}.csv"
@@ -360,89 +363,25 @@ class DataProcessor:
                 response = self.llm_interface.generate(prompt)
                 
                 # 提取思维链和最终答案
-                cot, final_answer = self._extract_cot_and_answer(response)
+                cot, final_answer = extract_cot_and_answer(response, dataset_name)
                 
                 results.append({
                     'dataset': dataset_name,
                     'question': question,
                     'options': options,
                     'prompt_template': prompt_template,
-                    'chain_of_thought': cot,
-                    'generated_answer': final_answer,
+                    'chain_of_thought': format_for_csv(cot),
+                    'generated_answer': format_for_csv(final_answer),
                     'correct_answer': answer,
-                    'is_correct': self._check_answer_correctness(final_answer, answer) if answer else None,
+                    'is_correct': check_answer_correctness(final_answer, answer) if answer else None,
                     'expert_type': expert_type,
-                    'num_steps': self._count_reasoning_steps(cot)
+                    'num_steps': count_reasoning_steps(cot)
                 })
                 
             except Exception as e:
                 logger.error(f"为数据集 {dataset_name} 问题生成思维链时出错: '{question[:30]}...': {e}")
         
         return pd.DataFrame(results)
-    
-    def _extract_cot_and_answer(self, response: str) -> Tuple[str, str]:
-        """从LLM响应中提取思维链和最终答案"""
-        # 尝试查找标记最终答案的短语
-        answer_markers = ["Answer:", "Therefore,", "So the answer is", "The answer is", "Hence,", "In conclusion,"]
-        
-        for marker in answer_markers:
-            if marker in response:
-                parts = response.split(marker, 1)
-                return parts[0].strip(), parts[1].strip()
-        
-        # 如果没有找到标记，假设最后一行是答案
-        lines = response.strip().split('\n')
-        if len(lines) > 1:
-            return '\n'.join(lines[:-1]).strip(), lines[-1].strip()
-        else:
-            return "", response.strip()
-    
-    def _count_reasoning_steps(self, cot: str) -> int:
-        """计算思维链中的推理步骤数"""
-        # 通过寻找步骤标记来计数
-        step_markers = [
-            r"Step \d+", r"\d+\.", r"\(\d+\)", 
-            "First", "Second", "Third", "Fourth", "Fifth", 
-            "Next", "Then", "Finally"
-        ]
-        
-        steps = 0
-        lines = cot.split('\n')
-        
-        for line in lines:
-            if any(re.search(marker, line, re.IGNORECASE) for marker in step_markers):
-                steps += 1
-        
-        # 如果没有找到明确的步骤标记，则按段落计数
-        if steps == 0:
-            paragraphs = [p for p in re.split(r'\n\s*\n', cot) if p.strip()]
-            steps = len(paragraphs)
-        
-        return max(1, steps)  # 确保至少有1个步骤
-    
-    def _check_answer_correctness(self, generated: str, correct: str) -> bool:
-        """检查生成的答案是否正确"""
-        if not correct or not generated:
-            return False
-        
-        # 标准化答案
-        def normalize(answer):
-            if not isinstance(answer, str):
-                answer = str(answer)
-            return re.sub(r'[^\w\s]', '', answer).lower().strip()
-        
-        norm_generated = normalize(generated)
-        norm_correct = normalize(correct)
-        
-        # 多选题的情况
-        if len(norm_correct) <= 3 and norm_correct.isalpha():
-            option_match = re.search(r'\b([A-Da-d])\b', generated)
-            if option_match:
-                extracted_option = option_match.group(1).upper()
-                return extracted_option == norm_correct.upper()
-        
-        # 检查答案是否匹配
-        return norm_generated == norm_correct or norm_correct in norm_generated
     
     def _tokenize(self, text: str) -> List[str]:
         """简单的文本分词"""

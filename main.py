@@ -10,14 +10,28 @@ from src.experts.expert_models import ShortChainExpert, MediumChainExpert, LongC
 from src.gating.expert_router import ExpertRouter
 from src.training.training import GRPOTrainer
 from src.inference.inference_engine import InferenceEngine
+import datetime
 
 # 设置日志
-def setup_logging(log_level="INFO"):
+def setup_logging(log_level="INFO", dataset_name=None, mode=None):
     """设置日志配置"""
     log_dir = Path("logs")
     log_dir.mkdir(exist_ok=True)
     
-    log_file = log_dir / "medp_cv.log"
+    # 使用时间戳、数据集名称和模式创建更有信息量的日志文件名
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    
+    # 构建文件名
+    filename_parts = ["medp_cv"]
+    if mode:
+        filename_parts.append(mode)
+    if dataset_name:
+        filename_parts.append(dataset_name)
+    filename_parts.append(timestamp)
+    
+    # 组合文件名
+    log_filename = "_".join(filename_parts) + ".log"
+    log_file = log_dir / log_filename
     
     logging.basicConfig(
         level=getattr(logging, log_level),
@@ -27,6 +41,13 @@ def setup_logging(log_level="INFO"):
             logging.StreamHandler(sys.stdout)
         ]
     )
+    
+    # 提高第三方库和网络请求相关日志级别
+    logging.getLogger("urllib3").setLevel(logging.WARNING)
+    logging.getLogger("requests").setLevel(logging.WARNING)
+    logging.getLogger("ollama").setLevel(logging.WARNING)
+    
+    return log_file
 
 def parse_args():
     """解析命令行参数"""
@@ -146,10 +167,15 @@ def main():
     """主函数"""
     args = parse_args()
     
-    # 设置日志
-    setup_logging(args.log_level)
+    # 设置日志，并获取日志文件路径
+    log_file = setup_logging(
+        log_level=args.log_level,
+        dataset_name=args.dataset,
+        mode=args.mode
+    )
     
     logging.info(f"开始运行 MEDP-CV，模式: {args.mode}")
+    logging.info(f"日志文件: {log_file}")
     
     if args.mode == "preprocess":
         preprocess_data(args.config, args.dataset)
