@@ -17,6 +17,7 @@ def setup_logging(log_level="INFO", dataset_name=None, mode=None):
     """设置日志配置"""
     log_dir = Path("logs")
     log_dir.mkdir(exist_ok=True)
+    
     # 使用时间戳、数据集名称和模式创建更有信息量的日志文件名
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     
@@ -32,24 +33,37 @@ def setup_logging(log_level="INFO", dataset_name=None, mode=None):
     log_filename = "_".join(filename_parts) + ".log"
     log_file = log_dir / log_filename
     
-    # 确保文件日志记录详细信息
-    file_handler = logging.FileHandler(log_file)
-    file_handler.setLevel(logging.DEBUG)  # 文件日志级别设为DEBUG
+    # 创建根日志记录器
+    root_logger = logging.getLogger()
+    # 清除所有现有处理程序
+    for handler in root_logger.handlers[:]:
+        root_logger.removeHandler(handler)
+    # 设置根日志记录器级别为最低级别（这样信息会传递给所有处理程序）
+    root_logger.setLevel(logging.DEBUG)
     
-    # 控制台日志可以保持INFO级别，避免输出过多信息
+    # 创建文件处理程序，级别为DEBUG
+    file_handler = logging.FileHandler(log_file)
+    file_handler.setLevel(logging.DEBUG)
+    
+    # 创建控制台处理程序，级别为INFO
     console_handler = logging.StreamHandler(sys.stdout)
     console_handler.setLevel(logging.INFO)
-    logging.basicConfig(
-        level=getattr(logging, log_level),
-        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-         handlers=[file_handler, console_handler]
-    )
     
-    # 提高第三方库和网络请求相关日志级别
+    # 创建格式化器
+    formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+    file_handler.setFormatter(formatter)
+    console_handler.setFormatter(formatter)
+    
+    # 将处理程序添加到根日志记录器
+    root_logger.addHandler(file_handler)
+    root_logger.addHandler(console_handler)
+    
+    # 设置第三方库的日志级别
     logging.getLogger("urllib3").setLevel(logging.WARNING)
     logging.getLogger("requests").setLevel(logging.WARNING)
     logging.getLogger("ollama").setLevel(logging.WARNING)
-    logging.getLogger("httpx").setLevel(logging.WARNING)  
+    
+    logging.info(f"日志配置完成，日志文件: {log_file}")
     return log_file
 
 def parse_args():

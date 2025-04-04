@@ -64,13 +64,13 @@ gating:
 training:
   grpo:
     batch_size: 32
-    num_groups: 8  # 每批次生成的专家组数量
+    num_groups: 4  # 每批次生成的专家组数量
     noise_std: 0.1  # 添加到专家权重的高斯噪声标准差
     kl_coef: 0.2  # KL散度正则化系数
     learning_rate: 0.0003
-    max_epochs: 100
-    early_stopping_patience: 10
-  
+    max_epochs: 20 # 50
+    early_stopping_patience: 3 #5
+    samples_per_epoch: 50  # 添加这一行来限制每个epoch的样本数
   reward:
     accuracy_weight: 0.7
     confidence_weight: 0.2

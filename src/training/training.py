@@ -209,81 +209,6 @@ class GroupSampler:
         
         return groups
     
-    def sample_groups_cluster(self, gating_network: Any, features: torch.Tensor, 
-                            num_clusters: int = 3) -> List[torch.Tensor]:
-        """采样多组专家权重，基于聚类的变种"""
-        try:
-            # 检查输入
-            if num_clusters <= 0:
-                logger.error(f"无效的聚类数: {num_clusters}")
-                # 设置默认值
-                num_clusters = 3
-                
-            # 获取当前策略下的基准权重
-            with torch.no_grad():
-                base_weights = gating_network(features)
-                logger.debug(f"基准权重形状: {base_weights.shape}")
-                
-            # 检查权重维度
-            if base_weights.nelement() == 0:
-                logger.error("基准权重为空")
-                # 创建默认权重
-                base_weights = torch.ones(1, num_clusters) / num_clusters
-                
-            # 采样多组权重
-            groups = []
-            
-            # 首先添加基准权重（无噪声）
-            groups.append(base_weights.clone())
-            
-            # 为每个聚类创建代表性权重
-            for cluster in range(min(num_clusters, base_weights.shape[1])):
-                # 创建偏向某个专家类型的权重
-                cluster_weights = torch.zeros_like(base_weights)
-                cluster_weights[0, cluster] = 1.0
-                groups.append(cluster_weights)
-            
-            # 添加混合权重
-            remaining_groups = self.num_groups - len(groups)
-            remaining_groups = max(0, remaining_groups)  # 确保不为负
-            
-            for _ in range(remaining_groups):
-                # 在基准权重和聚类权重之间插值
-                alpha = np.random.beta(0.5, 0.5)  # Beta分布，偏向极端值
-                if len(groups) <= 1:
-                    # 如果没有足够的组可以混合，使用基准权重
-                    mixed_weights = base_weights.clone()
-                else:
-                    cluster_idx = np.random.randint(1, len(groups))
-                    mixed_weights = alpha * base_weights + (1 - alpha) * groups[cluster_idx]
-                
-                # 添加少量噪声
-                noise = torch.randn_like(mixed_weights) * (self.noise_std / 2)
-                mixed_weights = mixed_weights + noise
-                
-                # 确保权重非负
-                mixed_weights = torch.relu(mixed_weights)
-                
-                # 归一化权重
-                sum_weights = torch.sum(mixed_weights)
-                if sum_weights > 0:
-                    normalized_weights = mixed_weights / sum_weights
-                else:
-                    # 如果所有权重都为0，使用均匀分布
-                    normalized_weights = torch.ones_like(mixed_weights) / mixed_weights.shape[1]
-                
-                groups.append(normalized_weights)
-            
-            return groups
-            
-        except Exception as e:
-            logger.error(f"生成专家组时出错: {e}")
-            import traceback
-            logger.error(traceback.format_exc())
-            # 返回默认组
-            return [torch.ones(1, num_clusters) / num_clusters]
-
-
 class GRPOTrainer:
     """
     GRPO (Group Relative Policy Optimization) 训练器
@@ -453,10 +378,9 @@ class GRPOTrainer:
             
             logger.debug(f"问题特征: {features.squeeze().tolist()}")
             try:
-                expert_groups = self.group_sampler.sample_groups_cluster(
+                expert_groups = self.group_sampler.sample_groups(
                     self.router.gating_network, 
                     features,
-                    num_clusters=len(self.router.experts)
                 )
                 logger.debug(f"生成了 {len(expert_groups)} 组专家权重")
             except Exception as e:
