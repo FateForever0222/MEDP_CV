@@ -90,29 +90,53 @@ def extract_cot_and_answer(response: str, dataset_type: str) -> Tuple[str, str]:
         return chain_of_thought, _extract_string_answer(answer_text)
     
 def _split_cot_and_answer_text(response: str) -> Tuple[str, str]:
-    """拆分思维链和答案文本"""
+    """
+    拆分思维链和答案文本，但保留答案句在思维链中
+    
+    Args:
+        response: LLM响应文本
+        
+    Returns:
+        (思维链, 答案文本)元组，其中思维链包含完整文本
+    """
     # 设置直接答案触发词
     answer_markers = [
         "Answer:", "Therefore,", "So the answer is", "The answer is", "Hence,", 
         "In conclusion,", "Thus,", "So,", "We get", "Finally,"
     ]
     
-    for marker in answer_markers:
-        if marker.lower() in response.lower():
-            parts = re.split(re.escape(marker), response, flags=re.IGNORECASE, maxsplit=1)
-            return parts[0].strip(), parts[1].strip()
+    # 标记匹配的位置
+    marker_pos = -1
+    matched_marker = ""
     
-    # 如果没有找到标记，尝试提取最后一段落
+    for marker in answer_markers:
+        pos = response.lower().find(marker.lower())
+        if pos > marker_pos:
+            marker_pos = pos
+            matched_marker = marker
+    
+    if marker_pos > 0:
+        # 找到了标记，提取答案部分但保留完整文本作为思维链
+        answer_part = response[marker_pos + len(matched_marker):].strip()
+        # 返回完整文本作为思维链
+        return response.strip(), answer_part
+    
+    # 如果没有找到标记，尝试使用最后一段落
     paragraphs = [p for p in re.split(r'\n\s*\n', response) if p.strip()]
     if len(paragraphs) > 1:
-        return '\n\n'.join(paragraphs[:-1]).strip(), paragraphs[-1].strip()
+        answer_part = paragraphs[-1].strip()
+        # 返回完整文本作为思维链
+        return response.strip(), answer_part
     
-    # 最后一行作为答案的备选方案
+    # 如果只有一个段落，尝试最后一行
     lines = response.strip().split('\n')
     if len(lines) > 1:
-        return '\n'.join(lines[:-1]).strip(), lines[-1].strip()
+        answer_part = lines[-1].strip()
+        # 返回完整文本作为思维链
+        return response.strip(), answer_part
     
-    return "", response.strip()
+    # 如果都失败了，返回整个文本
+    return response.strip(), response.strip()
 
 def _extract_multiple_choice_answer(answer_text: str) -> str:
     """提取选择题答案 (A/B/C/D/E)"""
