@@ -62,7 +62,8 @@ def setup_logging(log_level="INFO", dataset_name=None, mode=None):
     logging.getLogger("urllib3").setLevel(logging.WARNING)
     logging.getLogger("requests").setLevel(logging.WARNING)
     logging.getLogger("ollama").setLevel(logging.WARNING)
-    
+    logging.getLogger("httpcore").setLevel(logging.WARNING)  # 将HTTP相关日志设为WARNING级别
+    logging.getLogger("httpx").setLevel(logging.WARNING)     # 将HTTP相关日志设为WARNING级别
     logging.info(f"日志配置完成，日志文件: {log_file}")
     return log_file
 

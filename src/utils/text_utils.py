@@ -1,5 +1,11 @@
 import re
+import logging
+import yaml
 from typing import Tuple, List
+from pathlib import Path
+
+# 创建logger
+logger = logging.getLogger(__name__)
 
 def normalize_answer(text: str) -> str:
     """
@@ -45,7 +51,7 @@ def format_for_csv(text: str) -> str:
     text = re.sub(r'\s+', ' ', text)
     
     return text.strip()
-def extract_cot_and_answer(response: str, dataset_type: str) -> Tuple[str, str]:
+def extract_cot_and_answer(response: str, dataset_type: str = None) -> Tuple[str, str]:
     """
     从LLM响应中提取思维链和最终答案，根据数据集类型采用不同的提取策略
     
@@ -61,6 +67,19 @@ def extract_cot_and_answer(response: str, dataset_type: str) -> Tuple[str, str]:
     """
     if not response:
         return "", ""
+    
+    # 如果未提供数据集类型，从配置中读取
+    if dataset_type is None:
+        try:
+            # 获取配置文件路径，默认使用相对路径
+            config_path = "config/config.yaml"
+            with open(config_path, 'r', encoding='utf-8') as f:
+                config = yaml.safe_load(f)
+            
+            # 从配置中获取当前数据集
+            dataset_type = config.get('data', {}).get('current_dataset', "")
+        except Exception as e:
+            logger.error(f"从配置读取数据集类型失败: {e}")
     
     # 验证数据集类型
     valid_datasets = ["CSQA", "StrategyQA", "Letter", "Coin", "MultiArith", "AQuA"]

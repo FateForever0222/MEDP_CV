@@ -390,7 +390,8 @@ class InferenceEngine:
         for expert in experts:
             logger.debug(f"\n使用 {expert.expert_type} 推理")
             response, confidence = expert.reason(question, options)
-            
+            # 输出专家推理的完整结果
+            logger.debug(f"\n=== {expert.expert_type} 专家推理结果 ===\n{response}\n===================")
             # 提取思维链和最终答案
             cot, answer = self._extract_cot_and_answer(response)
             
@@ -426,7 +427,9 @@ class InferenceEngine:
                 final_answer = retry_result['answer']
                 confidence = retry_result['confidence']
                 expert_results.append(retry_result)
-        
+        # 输出最终结果
+        logger.debug(f"\n=== 最终答案 ===\n{final_answer}\n置信度: {confidence:.4f}\n===================")
+
         # 构建结果
         result = {
             'question': question,

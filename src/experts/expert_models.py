@@ -307,29 +307,32 @@ class BaseExpert(ABC):
             elif self.expert_type == 'long_chain':
                 prompt_template = "Let's analyze this in detail step by step"
         
-        # 构建示例部分
-        examples_text = ""
-        for _, example in similar_examples.iterrows():
-            examples_text += f"Question: {example['question']}\n\n"
+        # 添加清晰的指导语
+        prompt = "I'll show you some examples of how to solve similar problems. These are just examples to illustrate the reasoning process. "
+        prompt += f"After the examples, I'll give you a new question to solve using the {self.expert_type.replace('_', ' ')} approach.\n\n"
+        prompt += "=== EXAMPLES (FOR REFERENCE ONLY) ===\n\n"
+         # 构建示例部分
+        for i, (_, example) in enumerate(similar_examples.iterrows()):
+            prompt += f"Example {i+1}:\n"
+            prompt += f"Question: {example['question']}\n\n"
             
             if 'options' in example and pd.notna(example['options']):
-                examples_text += f"Options: {example['options']}\n\n"
+                prompt += f"Options: {example['options']}\n\n"
             
             if 'chain_of_thought' in example and pd.notna(example['chain_of_thought']):
-                examples_text += f"{example['chain_of_thought']}\n\n"
+                prompt += f"{example['chain_of_thought']}\n\n"
             
             if 'generated_answer' in example and pd.notna(example['generated_answer']):
-                examples_text += f"Answer: {example['generated_answer']}\n\n"
+                prompt += f"Answer: {example['generated_answer']}\n\n"
             
-            examples_text += "-" * 50 + "\n\n"
+            prompt += "-" * 50 + "\n\n"
         
-        # 构建最终提示
-        prompt = examples_text
+        # 添加清晰的分隔和新问题标记
+        prompt += "=== NOW, ANSWER THE FOLLOWING NEW QUESTION ===\n\n"
         prompt += f"Question: {question}\n\n"
         if options:
             prompt += f"Options: {options}\n\n"
-        prompt += f"{prompt_template}\n"
-        
+        prompt += f"Please {prompt_template} and provide your final answer.\n"
         return prompt
 
 

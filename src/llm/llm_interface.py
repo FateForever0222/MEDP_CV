@@ -87,7 +87,6 @@ class LLMInterface:
         except Exception as e:
             logger.error(f"生成过程中出错: {e}")
             return f"生成过程中出错: {str(e)}"
-    
     def generate_with_confidence(self, prompt: str) -> Tuple[str, float]:
         """
         生成文本响应并让模型自己估算置信度
@@ -98,28 +97,51 @@ class LLMInterface:
         Returns:
             (生成的响应, 置信度)元组
         """
-        # 修改提示，要求模型在回答后给出置信度
-        confidence_prompt = f"{prompt}\n\nAfter you provide your answer, please rate your confidence in your answer on a scale from 0.0 to 1.0, where 0.0 means completely uncertain and 1.0 means absolutely certain. Format your confidence as 'Confidence: [0.0-1.0]' on a new line after your answer."
+        # 改进提示语，鼓励更客观的置信度评估
+        confidence_prompt = (
+            f"{prompt}\n\n"
+            f"After you provide your answer, please rate your confidence in your answer on a scale from 0.0 to 1.0, "
+            f"where 0.0 means completely uncertain and 1.0 means absolutely certain. "
+            f"Be critical in your assessment, and provide a single specific number, not a range. "
+            f"Format your confidence as 'Confidence: X.X' on a new line after your answer."
+        )
         
         full_response = self.generate(confidence_prompt)
         
-        # 尝试从响应中提取答案和置信度
-        confidence_pattern = r"Confidence:\s*(0?\.\d+|1\.0)"
-        confidence_match = re.search(confidence_pattern, full_response, re.IGNORECASE)
+        # 添加详细日志，记录完整响应
+        logger.debug(f"=== LLM 完整响应 ===\n{full_response}\n===================")
         
-        if confidence_match:
-            # 提取置信度
-            confidence = float(confidence_match.group(1))
-            # 移除置信度部分以获取纯答案
-            answer = re.sub(r"\n*Confidence:\s*0?\.\d+\s*$", "", full_response, flags=re.IGNORECASE)
-        else:
-            # 如果没有找到置信度格式，使用默认置信度
-            answer = full_response
+        # 尝试从响应中提取答案和置信度 - 增强版正则表达式
+        confidence_patterns = [
+            r"Confidence:\s*(0?\.\d+|1\.0)",  # 匹配 Confidence: 0.8
+            r"Confidence:\s*\[(0?\.\d+|1\.0)\]",  # 匹配 Confidence: [0.8]
+            r"Confidence:\s*\[(0?\.\d+|1\.0)-(0?\.\d+|1\.0)\]"  # 匹配 Confidence: [0.8-0.9]
+        ]
+        
+        confidence = None
+        for pattern in confidence_patterns:
+            match = re.search(pattern, full_response, re.IGNORECASE)
+            if match:
+                if len(match.groups()) == 1:
+                    # 单一值格式
+                    confidence = float(match.group(1))
+                    break
+                elif len(match.groups()) == 2:
+                    # 范围格式，取平均值
+                    low = float(match.group(1))
+                    high = float(match.group(2))
+                    confidence = (low + high) / 2
+                    break
+        
+        # 移除置信度部分以获取纯答案
+        answer = re.sub(r"\n*Confidence:.*$", "", full_response, flags=re.IGNORECASE | re.DOTALL)
+        
+        # 如果没有找到置信度格式，使用默认置信度
+        if confidence is None:
             confidence = 0.7  # 默认中等置信度
-            logger.warning("模型未提供置信度，使用默认值0.7")
+            logger.warning("模型未提供置信度或格式无法识别，使用默认值0.7")
         
-        return answer, confidence
-    
+        return answer.strip(), confidence 
     def get_embedding(self, text: str) -> List[float]:
         """
         获取文本的嵌入向量，使用sentence-transformers

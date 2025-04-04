@@ -74,7 +74,7 @@ class ExpertRouter:
     专家路由器，用于动态选择最合适的专家，优先选择单一专家以减少资源消耗
     """
     
-    def __init__(self, config_path: str = "config/config.yaml", dataset_name: str = None):
+    def __init__(self, config_path: str = "config/config.yaml"):
         """
         初始化专家路由器
         
@@ -94,12 +94,10 @@ class ExpertRouter:
         
         # 创建专家实例
         try:
-            self.dataset_name = dataset_name
-            logger.info(f"当前处理的数据集: {self.dataset_name}")
             self.experts = {
-                0: ShortChainExpert(config_path, dataset_name=self.dataset_name),
-                1: MediumChainExpert(config_path, dataset_name=self.dataset_name),
-                2: LongChainExpert(config_path, dataset_name=self.dataset_name)
+                0: ShortChainExpert(config_path),
+                1: MediumChainExpert(config_path),
+                2: LongChainExpert(config_path)
             }
             
             # 专家名称映射
