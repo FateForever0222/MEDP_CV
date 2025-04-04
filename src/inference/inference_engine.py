@@ -328,6 +328,9 @@ class InferenceEngine:
         
         self.inference_config = self.config['inference']
         
+        # 获取当前数据集
+        self.dataset_name = self.config['data'].get('current_dataset')
+        
         # 创建LLM接口
         self.llm = LLMInterface(config_path)
         

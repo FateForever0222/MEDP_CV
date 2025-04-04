@@ -1,5 +1,6 @@
 # 数据集配置
 data:
+  current_dataset: AQuA  # 当前使用的数据集
   # 原始数据路径
   raw_path: data/raw
   # 数据集列表

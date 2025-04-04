@@ -120,7 +120,6 @@ def train_model(config_path, dataset_name):
     if not dataset_name:
         logging.error("训练模式需要指定数据集")
         return
-    
     trainer = GRPOTrainer(config_path)
     trainer.train(dataset_name)
     logging.info(f"在数据集 {dataset_name} 上完成门控网络训练")
@@ -130,7 +129,6 @@ def evaluate_model(config_path, dataset_name):
     if not dataset_name:
         logging.error("评估模式需要指定数据集")
         return
-    
     trainer = GRPOTrainer(config_path)
     metrics = trainer.evaluate(dataset_name)
     
@@ -193,6 +191,22 @@ def main():
     
     logging.info(f"开始运行 MEDP-CV，模式: {args.mode}")
     logging.info(f"日志文件: {log_file}")
+    
+    # 如果指定了数据集，更新配置文件中的当前数据集
+    if args.dataset:
+        try:
+            with open(args.config, 'r', encoding='utf-8') as f:
+                config = yaml.safe_load(f)
+            # 设置当前数据集
+            config['data']['current_dataset'] = args.dataset
+            
+            # 保存更新后的配置
+            with open(args.config, 'w', encoding='utf-8') as f:
+                yaml.dump(config, f, default_flow_style=False)
+            
+            logging.info(f"已更新配置，当前数据集: {args.dataset}")
+        except Exception as e:
+            logging.error(f"更新配置失败: {e}")
     
     if args.mode == "preprocess":
         preprocess_data(args.config, args.dataset)

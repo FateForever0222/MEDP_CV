@@ -22,7 +22,6 @@ class BaseExpert(ABC):
     """
     专家模型基类，定义了专家模型的通用接口和功能
     """
-    
     def __init__(self, expert_type: str, config_path: str = "config/config.yaml"):
         """
         初始化专家模型
@@ -30,6 +29,7 @@ class BaseExpert(ABC):
         Args:
             expert_type: 专家类型（'short_chain', 'medium_chain', 'long_chain'）
             config_path: 配置文件路径
+            dataset_name: 当前处理的数据集名称
         """
         self.expert_type = expert_type
         
@@ -45,12 +45,29 @@ class BaseExpert(ABC):
         
         # 加载数据
         self.data_loader = DataProcessor(config_path)
-        self.examples = self.data_loader.load_expert_library(expert_type)
+        dataset_name = self.data_config.get('current_dataset')
+        # 如果没有指定数据集，使用配置文件中的第一个数据集
+        if dataset_name is None and 'datasets' in self.data_config and self.data_config['datasets']:
+            dataset_name = self.data_config['datasets'][0]['name']
+            logger.info(f"未指定数据集，使用配置中的第一个数据集: {dataset_name}")
         
-        if self.examples.empty:
-            logger.warning(f"No examples found for {expert_type} expert")
+        # 尝试加载专家库
+        self.examples = pd.DataFrame()  # 默认为空DataFrame
+        
+        if dataset_name:
+            try:
+                logger.info(f"尝试从 {dataset_name} 加载 {expert_type} 专家库")
+                self.examples = self.data_loader.load_expert_library(dataset_name, expert_type)
+                if not self.examples.empty:
+                    logger.info(f"从 {dataset_name} 加载了 {len(self.examples)} 个 {expert_type} 专家示例")
+                else:
+                    logger.warning(f"从 {dataset_name} 加载的 {expert_type} 专家库为空")
+            except Exception as e:
+                logger.error(f"加载 {dataset_name} 的 {expert_type} 专家库失败: {e}")
+                import traceback
+                logger.error(traceback.format_exc())
         else:
-            logger.info(f"Loaded {len(self.examples)} examples for {expert_type} expert")
+            logger.warning(f"未指定数据集，无法加载专家库")
         
         # 初始化嵌入缓存
         self.embedding_cache = {}
@@ -58,7 +75,6 @@ class BaseExpert(ABC):
         
         # 加载持久化嵌入缓存
         self._load_embedding_cache()
-    
     def _load_embedding_cache(self):
         """
         从磁盘加载嵌入缓存
