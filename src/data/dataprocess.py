@@ -340,9 +340,12 @@ class DataProcessor:
         results = []
         
         for _, row in tqdm(df.iterrows(), 
-                     total=len(df), 
-                     desc=f"生成{expert_type}示例",
-                     ncols=80):
+                  total=len(df), 
+                  desc=f"生成{expert_type}示例",
+                  ncols=80,
+                  position=0,  # 固定位置
+                  leave=True,  # 完成后保留进度条
+            ): 
             question = row['question']
             answer = row['answer'] if 'answer' in row and not pd.isna(row['answer']) else None
             options = row['options'] if 'options' in row and not pd.isna(row['options']) else None

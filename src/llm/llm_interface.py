@@ -45,10 +45,11 @@ class LLMInterface:
         }
         
         # 初始化sentence-transformer作为嵌入模型
-        self.embedding_model_name = self.llm_config.get('embedding_model', 'sentence-transformers/all-MiniLM-L6-v2')
+        self.model_path = self.llm_config.get('embedding_model_path', './model/all-MiniLM-L6-v2/')
         try:
-            self.embedding_model = SentenceTransformer(self.embedding_model_name)
-            logger.info(f"加载嵌入模型: {self.embedding_model_name}")
+            # 加载本地模型
+            self.embedding_model = SentenceTransformer(self.model_path)
+            logger.info(f"加载嵌入模型: {self.model_path}")
         except Exception as e:
             logger.error(f"加载嵌入模型失败: {e}")
             self.embedding_model = None

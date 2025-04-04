@@ -46,7 +46,7 @@ def setup_logging(log_level="INFO", dataset_name=None, mode=None):
     logging.getLogger("urllib3").setLevel(logging.WARNING)
     logging.getLogger("requests").setLevel(logging.WARNING)
     logging.getLogger("ollama").setLevel(logging.WARNING)
-    
+    logging.getLogger("httpx").setLevel(logging.WARNING)  
     return log_file
 
 def parse_args():

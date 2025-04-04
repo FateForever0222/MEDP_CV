@@ -1,7 +1,7 @@
 from sentence_transformers import SentenceTransformer
 
 # 指定本地模型路径
-model_path = './models/all-MiniLM-L6-v2/'
+model_path = './model/all-MiniLM-L6-v2/'
 
 # 加载本地模型
 model = SentenceTransformer(model_path)
