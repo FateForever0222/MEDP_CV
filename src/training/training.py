@@ -289,12 +289,9 @@ class GRPOTrainer:
         # 开始训练
         logger.info(f"Starting GRPO training for {num_epochs} epochs")
         
-        # 创建外层epoch进度条
-        epoch_pbar = tqdm(range(num_epochs), desc="Training", ncols=100, position=0)
-        
-        for epoch in epoch_pbar:
+        for epoch in range(num_epochs):
             epoch_start_time = time.time()
-            
+            logger.info(f"===== 开始第 {epoch+1}/{num_epochs} 轮训练 =====")
             # 打乱数据
             train_data = train_data.sample(frac=1).reset_index(drop=True)
             
@@ -302,7 +299,6 @@ class GRPOTrainer:
             max_samples = min(self.training_config.get('samples_per_epoch', 100), len(train_data))
             logger.info(f"每个epoch处理的样本数: {max_samples}")
             epoch_data = train_data.iloc[:max_samples]
-            
             total_loss = 0.0
             total_reward = 0.0
             correct_predictions = 0
@@ -327,18 +323,12 @@ class GRPOTrainer:
                     if is_correct:
                         correct_predictions += 1
                     
-                    # 每隔一定数量的样本更新进度条信息
-                    if (idx + 1) % 5 == 0 or idx == len(epoch_data) - 1:
-                        current_accuracy = correct_predictions / (idx + 1)
-                        current_avg_loss = total_loss / (idx + 1)
-                        current_avg_reward = total_reward / (idx + 1)
-                        
-                        epoch_pbar.set_postfix({
-                            'sample': f"{idx+1}/{len(epoch_data)}", 
-                            'loss': f"{current_avg_loss:.4f}",
-                            'reward': f"{current_avg_reward:.4f}", 
-                            'acc': f"{current_accuracy:.4f}"
-                        })
+                    current_accuracy = correct_predictions / (idx + 1)
+                    current_avg_loss = total_loss / (idx + 1)
+                    current_avg_reward = total_reward / (idx + 1)
+                    logger.info(f"样本进度: {idx+1}/{len(epoch_data)} ({(idx+1)/len(epoch_data)*100:.1f}%) - "
+                           f"损失: {current_avg_loss:.4f}, 奖励: {current_avg_reward:.4f}, "
+                           f"准确率: {current_accuracy:.4f}")
                         
                 except Exception as e:
                     logger.error(f"Error training sample {idx}: {e}")
@@ -350,8 +340,8 @@ class GRPOTrainer:
             accuracy = correct_predictions / max(1, len(epoch_data))
             
             epoch_time = time.time() - epoch_start_time
-            logger.info(f"Epoch {epoch+1}/{num_epochs} - Loss: {avg_loss:.4f}, Reward: {avg_reward:.4f}, "
-                    f"Accuracy: {accuracy:.4f}, Time: {epoch_time:.2f}s")
+            logger.info(f"===== 第 {epoch+1}/{num_epochs} 轮训练完成 =====")
+            logger.info(f"平均损失: {avg_loss:.4f}, 平均奖励: {avg_reward:.4f}, 准确率: {accuracy:.4f}, 用时: {epoch_time:.2f}秒")
             
             # 检查是否需要保存模型
             if accuracy > self.best_accuracy:
@@ -372,9 +362,6 @@ class GRPOTrainer:
             if self.patience_counter >= patience:
                 logger.info(f"Early stopping after {epoch+1} epochs")
                 break
-        
-        # 关闭进度条
-        epoch_pbar.close()
         
         # 训练结束，加载最佳模型
         try:
@@ -398,6 +385,8 @@ class GRPOTrainer:
         Returns:
             (损失, 奖励, 是否正确)元组
         """
+        logger.debug(f"===== 开始训练样本 =====")
+        logger.debug(f"问题: {question[:50]}..." if len(question) > 50 else f"问题: {question}")
         try:
             # 获取问题特征
             features = self.router._get_combined_features(question, options)

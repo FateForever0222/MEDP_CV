@@ -82,14 +82,14 @@ logging:
   save_path: logs/
 training:
   grpo:
-    batch_size: 32
-    early_stopping_patience: 3
+    batch_size: 8
+    early_stopping_patience: 2
     kl_coef: 0.2
     learning_rate: 0.0003
-    max_epochs: 20
+    max_epochs: 5
     noise_std: 0.1
     num_groups: 4
-    samples_per_epoch: 50
+    samples_per_epoch: 10
   reward:
     accuracy_weight: 0.7
     confidence_weight: 0.2
