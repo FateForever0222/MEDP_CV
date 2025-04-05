@@ -411,8 +411,10 @@ class GRPOTrainer:
                 # 根据权重选择专家
                 selected_experts = []
                 expert_indices = []
+                max_weight = max(group_weights.squeeze().tolist())
+                relative_threshold = max_weight * 0.8
                 for expert_idx, weight in enumerate(group_weights.squeeze().tolist()):
-                    if weight > 0.1:  # 仅选择权重大于阈值的专家
+                    if weight > relative_threshold:  # 仅选择权重大于最大权重的专家
                         if expert_idx in self.router.experts:
                             selected_experts.append(self.router.experts[expert_idx])
                             expert_indices.append(expert_idx)
@@ -539,7 +541,7 @@ class GRPOTrainer:
         current_weights = self.router.gating_network(features)
         
         # 计算策略损失
-        policy_loss = 0.0
+        policy_loss = torch.tensor(0.0, requires_grad=True)
         kl_loss = 0.0
         
         for group_weights, advantage in zip(expert_groups, advantages):

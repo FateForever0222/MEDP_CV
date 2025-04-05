@@ -151,7 +151,6 @@ class ExpertRouter:
         Returns:
             组合特征张量
         """
-        # 简化版本：由于所有专家现在返回统一维度的特征，直接获取和组合
         features_list = []
         
         for expert_id, expert in self.experts.items():
