@@ -107,12 +107,15 @@ class RewardModel:
         """
         if correct_answer is None:
             # 如果没有正确答案，给予0分
+            logger.warning("正确答案为None，无法计算准确性得分")
             return 0.0
         
         # 使用文本处理工具获取标准化的答案
         norm_answer = normalize_answer(answer)
         norm_correct = normalize_answer(correct_answer)
-        
+         # 打印标准化前后的答案，帮助调试
+        # logger.debug(f"原始答案: '{answer}', 正确答案: '{correct_answer}'")
+        # logger.debug(f"标准化后: '{norm_answer}', 正确标准化: '{norm_correct}'")
         # 简单比较：相同为1，不同为0
         return 1.0 if norm_answer == norm_correct else 0.0
     
@@ -286,7 +289,10 @@ class GRPOTrainer:
         # 开始训练
         logger.info(f"Starting GRPO training for {num_epochs} epochs")
         
-        for epoch in range(num_epochs):
+        # 创建外层epoch进度条
+        epoch_pbar = tqdm(range(num_epochs), desc="Training", ncols=100, position=0)
+        
+        for epoch in epoch_pbar:
             epoch_start_time = time.time()
             
             # 打乱数据
@@ -294,17 +300,20 @@ class GRPOTrainer:
             
             # 限制每个epoch的样本数，以加快训练
             max_samples = min(self.training_config.get('samples_per_epoch', 100), len(train_data))
+            logger.info(f"每个epoch处理的样本数: {max_samples}")
             epoch_data = train_data.iloc[:max_samples]
             
             total_loss = 0.0
             total_reward = 0.0
             correct_predictions = 0
             
-            # 使用tqdm显示进度条
-            for idx, row in tqdm(epoch_data.iterrows(), total=len(epoch_data), desc=f"Epoch {epoch+1}/{num_epochs}"):
-                question = row['question']
-                options = row.get('options') if 'options' in row and pd.notna(row.get('options')) else None
-                correct_answer = row.get('answer') if 'answer' in row else None
+            # 创建样本进度条，不保留位置(disable=True)后在日志中单独显示
+            for idx, row in enumerate(epoch_data.iterrows()):
+                _, row_data = row  # 解包迭代器返回的元组
+                
+                question = row_data['question']
+                options = row_data.get('options') if 'options' in row_data and pd.notna(row_data.get('options')) else None
+                correct_answer = row_data.get('answer') if 'answer' in row_data else None
                 
                 if pd.isna(question) or not question:
                     continue
@@ -317,6 +326,20 @@ class GRPOTrainer:
                     total_reward += reward
                     if is_correct:
                         correct_predictions += 1
+                    
+                    # 每隔一定数量的样本更新进度条信息
+                    if (idx + 1) % 5 == 0 or idx == len(epoch_data) - 1:
+                        current_accuracy = correct_predictions / (idx + 1)
+                        current_avg_loss = total_loss / (idx + 1)
+                        current_avg_reward = total_reward / (idx + 1)
+                        
+                        epoch_pbar.set_postfix({
+                            'sample': f"{idx+1}/{len(epoch_data)}", 
+                            'loss': f"{current_avg_loss:.4f}",
+                            'reward': f"{current_avg_reward:.4f}", 
+                            'acc': f"{current_accuracy:.4f}"
+                        })
+                        
                 except Exception as e:
                     logger.error(f"Error training sample {idx}: {e}")
                     continue
@@ -328,7 +351,7 @@ class GRPOTrainer:
             
             epoch_time = time.time() - epoch_start_time
             logger.info(f"Epoch {epoch+1}/{num_epochs} - Loss: {avg_loss:.4f}, Reward: {avg_reward:.4f}, "
-                      f"Accuracy: {accuracy:.4f}, Time: {epoch_time:.2f}s")
+                    f"Accuracy: {accuracy:.4f}, Time: {epoch_time:.2f}s")
             
             # 检查是否需要保存模型
             if accuracy > self.best_accuracy:
@@ -349,6 +372,9 @@ class GRPOTrainer:
             if self.patience_counter >= patience:
                 logger.info(f"Early stopping after {epoch+1} epochs")
                 break
+        
+        # 关闭进度条
+        epoch_pbar.close()
         
         # 训练结束，加载最佳模型
         try:
@@ -441,7 +467,11 @@ class GRPOTrainer:
                     answer = result.get('final_answer', '')
                     confidence = result.get('confidence', 0.0)
                     step_count = result.get('step_count', 0)
+                    is_answer_correct = normalize_answer(answer) == normalize_answer(correct_answer)
+                    result['is_correct'] = is_answer_correct
                     logger.debug(f"推理结果: {answer}")
+                    logger.debug(f"正确答案: {correct_answer}")
+                    logger.debug(f"是否正确: {is_answer_correct}")
                     logger.debug(f"置信度: {confidence:.4f}")
                     logger.debug(f"步骤数: {step_count}")
                     # 计算该组的奖励
@@ -452,7 +482,7 @@ class GRPOTrainer:
                         step_count=step_count,
                         expert_types=[expert.expert_type for expert in selected_experts]
                     )
-                    logger.debug(f"奖励: {reward:.4f}")
+                    logger.debug(f"计算奖励 - 奖励: {reward:.4f}")
                     group_rewards.append(reward)
                     group_results.append(result)
                     
@@ -523,7 +553,7 @@ class GRPOTrainer:
         return advantages.tolist()
     
     def _update_policy(self, features: torch.Tensor, expert_groups: List[torch.Tensor], 
-                      advantages: List[float]) -> float:
+                    advantages: List[float]) -> float:
         """
         使用GRPO更新策略
         
@@ -540,33 +570,42 @@ class GRPOTrainer:
         # 当前策略下的专家权重
         current_weights = self.router.gating_network(features)
         
-        # 计算策略损失
-        policy_loss = torch.tensor(0.0, requires_grad=True)
-        kl_loss = 0.0
+        # 计算策略损失 - 不使用requires_grad=True
+        # 完全更改方法，使用列表收集所有项，然后再求和
+        policy_terms = []
+        kl_terms = []
         
         for group_weights, advantage in zip(expert_groups, advantages):
             if advantage == 0.0:
                 continue
-                
+                    
             # 计算比率 (重要性采样权重)
             eps = 1e-8  # 避免数值不稳定
             ratio = torch.sum(current_weights * group_weights) / (torch.sum(group_weights * group_weights) + eps)
             
-            # 策略梯度损失
-            policy_term = ratio * advantage
-            policy_loss -= policy_term
+            # 策略梯度损失 - 存入列表而非直接累加
+            policy_term = -ratio * advantage  # 注意这里加了负号
+            policy_terms.append(policy_term)
             
-            # KL散度正则化
+            # KL散度正则化 - 存入列表
             kl_div = F.kl_div(
                 F.log_softmax(current_weights, dim=-1),
                 F.softmax(group_weights.detach(), dim=-1),
                 reduction='sum'
             )
-            kl_loss += kl_div
+            kl_terms.append(kl_div)
         
-        # 总损失
+        # 汇总所有项
         kl_coef = self.training_config.get('kl_coef', 0.2)
-        total_loss = policy_loss + kl_coef * kl_loss
+        
+        # 如果列表为空，则创建零损失
+        if not policy_terms:
+            total_loss = torch.tensor(0.0, requires_grad=True)
+        else:
+            # 一次性计算总损失
+            policy_loss = torch.stack(policy_terms).sum() if policy_terms else 0.0
+            kl_loss = torch.stack(kl_terms).sum() if kl_terms else 0.0
+            total_loss = policy_loss + kl_coef * kl_loss
         
         # 反向传播
         total_loss.backward()
@@ -578,7 +617,6 @@ class GRPOTrainer:
         self.optimizer.step()
         
         return total_loss.item()
-    
     def evaluate(self, dataset_name: str, max_samples: int = 100) -> Dict[str, Any]:
         """
         评估门控网络

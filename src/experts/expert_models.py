@@ -332,7 +332,7 @@ class BaseExpert(ABC):
         prompt += f"Question: {question}\n\n"
         if options:
             prompt += f"Options: {options}\n\n"
-        prompt += f"Please {prompt_template} and provide your final answer.\n"
+        prompt += f"{prompt_template} and only after completing your reasoning, provide your final answer starting with 'Answer:'.\n"
         return prompt
 
 

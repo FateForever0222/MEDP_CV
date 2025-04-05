@@ -5,7 +5,7 @@ import torch
 import random
 from typing import Dict, List, Tuple, Optional, Any
 from collections import Counter
-from src.utils.text_utils import extract_cot_and_answer, count_reasoning_steps
+from src.utils.text_utils import extract_cot_and_answer, count_reasoning_steps,format_for_csv
 from src.experts.expert_models import BaseExpert
 from src.llm.llm_interface import LLMInterface
 
@@ -391,7 +391,7 @@ class InferenceEngine:
             logger.debug(f"\n使用 {expert.expert_type} 推理")
             response, confidence = expert.reason(question, options)
             # 输出专家推理的完整结果
-            logger.debug(f"\n=== {expert.expert_type} 专家推理结果 ===\n{response}\n===================")
+            logger.debug(f"\n=== {expert.expert_type} 专家推理结果 ===\n{format_for_csv(response)}\n===================")
             # 提取思维链和最终答案
             cot, answer = self._extract_cot_and_answer(response)
             

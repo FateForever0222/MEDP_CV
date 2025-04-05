@@ -109,7 +109,7 @@ class LLMInterface:
         full_response = self.generate(confidence_prompt)
         
         # 添加详细日志，记录完整响应
-        logger.debug(f"=== LLM 完整响应 ===\n{full_response}\n===================")
+        # logger.debug(f"=== LLM 完整响应 ===\n{full_response}\n===================")
         
         # 尝试从响应中提取答案和置信度 - 增强版正则表达式
         confidence_patterns = [
@@ -139,7 +139,7 @@ class LLMInterface:
         # 如果没有找到置信度格式，使用默认置信度
         if confidence is None:
             confidence = 0.7  # 默认中等置信度
-            logger.warning("模型未提供置信度或格式无法识别，使用默认值0.7")
+            logger.debug("模型未提供置信度或格式无法识别，使用默认值0.7")
         
         return answer.strip(), confidence 
     def get_embedding(self, text: str) -> List[float]:
